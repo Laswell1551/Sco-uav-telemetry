@@ -232,7 +232,7 @@ def main() -> None:
     plt.rcParams.update(
         {
             "font.family": "sans-serif",
-            "font.sans-serif": ["Arial", "DejaVu Sans"],
+            "font.sans-serif": ["Arial", "Liberation Sans", "DejaVu Sans"],
             "font.size": 7.2,
             "pdf.fonttype": 42,
             "ps.fonttype": 42,
@@ -475,7 +475,7 @@ def main() -> None:
         "sco-age-state",
         0.035,
         row1_y,
-        0.145,
+        0.155,
         row1_h,
         "SCO state\n" + r"$a_k^{\mathrm{ack}}$",
         edge=BLUE,
@@ -518,7 +518,7 @@ def main() -> None:
         face=WHITE,
         weight="bold",
     )
-    add_arrow(ax, (0.182, row1_c), (0.216, row1_c), color=GRAY)
+    add_arrow(ax, (0.192, row1_c), (0.216, row1_c), color=GRAY)
     add_arrow(ax, (0.382, row1_c), (0.416, row1_c), color=GRAY)
     add_arrow(ax, (0.622, row1_c), (0.666, row1_c), color=GRAY)
 
@@ -530,7 +530,7 @@ def main() -> None:
         "pa-state",
         0.035,
         row2_y,
-        0.145,
+        0.155,
         row2_h,
         "PA state\n" + r"$(a_k^{\mathrm{ack}},m_k)$",
         edge=ORANGE,
@@ -590,7 +590,7 @@ def main() -> None:
         face=PALE_ORANGE,
         weight="bold",
     )
-    add_arrow(ax, (0.182, row2_c), (0.216, row2_c), color=ORANGE)
+    add_arrow(ax, (0.192, row2_c), (0.216, row2_c), color=ORANGE)
     add_arrow(ax, (0.382, row2_c), (0.416, row2_c), color=ORANGE)
     add_arrow(ax, (0.652, row2_c), (0.686, row2_c), color=ORANGE)
     add_arrow(ax, (0.817, row2_c), (0.846, row2_c), color=ORANGE)

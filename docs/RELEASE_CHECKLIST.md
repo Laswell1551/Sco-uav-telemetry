@@ -32,7 +32,7 @@
       inherited history or remote configuration.
 - [x] Initialize the publication repository with default branch `main`.
 - [x] Create the remote repository without importing the manuscript workspace.
-- [ ] Add a short repository description and topic tags.
-- [ ] Push this allowlisted directory only.
+- [x] Add a short repository description and topic tags.
+- [x] Push this allowlisted directory only.
 - [ ] Tag `v0.1.0-rc3`; after author/policy sign-off, tag `v1.0.0`.
 - [ ] Archive the release in Zenodo and record the DOI.
