@@ -5,7 +5,7 @@
 - aligned the capacity--delay figure, metadata, and documentation with the
   manuscript's delay-unaware immediate-reset reference terminology;
 - expanded the capacity--delay legend to the formal method names;
-- hardened Figure 1 node padding and the Linux font fallback for identical
+- hardened schematic node padding and Linux font fallbacks for consistent
   publication QA across local and GitHub Actions renderers;
 - refreshed the frozen manifest, release verification, and distributable
   archive after the final manuscript consistency audit.

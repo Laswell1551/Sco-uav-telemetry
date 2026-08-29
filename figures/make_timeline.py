@@ -203,7 +203,7 @@ def main() -> None:
     plt.rcParams.update(
         {
             "font.family": "sans-serif",
-            "font.sans-serif": ["Arial", "DejaVu Sans"],
+            "font.sans-serif": ["Arial", "Liberation Sans", "DejaVu Sans"],
             "font.size": 7.2,
             "axes.linewidth": 0.8,
             "pdf.fonttype": 42,
@@ -285,7 +285,7 @@ def main() -> None:
     add_box(ax, tracked, 0.160, 0.285, 0.260, 0.090,
             r"$W_k/(1+\beta m_k)$", ORANGE, "#FFFFFF")
     add_arrow(ax, (0.432, 0.330), (0.585, 0.330), ORANGE, linewidth=1.55)
-    add_box(ax, tracked, 0.600, 0.285, 0.300, 0.090,
+    add_box(ax, tracked, 0.600, 0.285, 0.340, 0.090,
             "rank another stream", ORANGE, "#FFFFFF", weight="bold")
 
     # Exact boundary: no unresolved state survives to the next decision.
