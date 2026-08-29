@@ -24,7 +24,7 @@
 - [x] No absolute personal path, token, email, or private key is present.
 - [x] `results/frozen/MANIFEST.sha256` matches every rc3 frozen artifact.
 - [x] Git dry-run contains no caches, raw data, logs, pickle, or model archive.
-- [ ] CI passes on Python 3.10 and 3.12.
+- [x] CI passes on Python 3.10 and 3.12, including figure/table rendering.
 
 ## Release mechanics
 
