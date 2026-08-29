@@ -44,7 +44,7 @@ jobs:
         run: |
           python -B scripts/reproduce.py figures
           python -B scripts/reproduce.py tables
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: paper-figures-and-tables
           path: |
