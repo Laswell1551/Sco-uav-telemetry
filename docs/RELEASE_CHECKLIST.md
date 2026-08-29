@@ -34,5 +34,6 @@
 - [x] Create the remote repository without importing the manuscript workspace.
 - [x] Add a short repository description and topic tags.
 - [x] Push this allowlisted directory only.
-- [ ] Tag `v0.1.0-rc3`; after author/policy sign-off, tag `v1.0.0`.
+- [x] Tag the validated release candidate as `v0.1.0-rc3`.
+- [ ] After author and publication sign-off, tag `v1.0.0`.
 - [ ] Archive the release in Zenodo and record the DOI.
