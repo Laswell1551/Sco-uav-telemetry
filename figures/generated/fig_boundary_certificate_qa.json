@@ -1,0 +1,163 @@
+{
+  "schema_version": 2,
+  "renderer": {
+    "path": "figures/make_boundary_certificate.py",
+    "sha256": "337db4b04bb47c8e0685d2dd5a4e5f056d01c4e284bfaa31a61a7938295c71ac",
+    "bytes": 32050
+  },
+  "output_directory": "generated",
+  "design_contract": {
+    "target": "IEEE TMC true single-column figures",
+    "canvas_width_in": 3.48,
+    "minimum_font_pt": 7.0,
+    "artifact_policy": "additive v19 outputs; no manuscript or v18 edits",
+    "data_policy": "formal summary CSVs only; no synthetic or invented values",
+    "palette_policy": "color-vision-safe semantic palette consistent with TMC figures",
+    "no_fabrication": true
+  },
+  "figures": [
+    {
+      "stem": "fig_model_boundary_compact",
+      "canvas": {
+        "width_in": 3.48,
+        "height_in": 4.78,
+        "target_width_in": 3.48
+      },
+      "minimum_font_pt": 7.0,
+      "text_artist_count": 48,
+      "text_overflow_count": 0,
+      "axes_outside_canvas_count": 0,
+      "layout": {
+        "format": "single-column",
+        "width_in": 3.48,
+        "evidence_zones": 2,
+        "zone_a": "full-width 6-method x 3-dimension mean/CI trajectories",
+        "zone_b": "row-aligned cost-gap and action-disagreement tracks; long-age ratio rendered as an internal ribbon inset",
+        "max_age_role": "low-opacity contextual reference only"
+      },
+      "point_counts": {
+        "zone_a_method_dimension_mean_ci": 18,
+        "zone_b_cost_gap_mean_ci": 12,
+        "zone_b_action_disagreement_mean_ci": 12,
+        "zone_b_age_ratio_underlying_dimension_age_cells": 12,
+        "total_plotted_metric_observations": 54
+      },
+      "statistical_boundary": [
+        "All means and normal 95% intervals are read from formal summary CSVs.",
+        "N=1 and N=4 are encoded by filled and open markers; they are not pooled.",
+        "The age-ratio line is the descriptive median across the three displayed dimensions; the ribbon is the min-to-max envelope of their reported normal 95% intervals, not a pooled confidence interval.",
+        "Max age is rendered as a low-opacity reference and is not used to define the surrogate boundary."
+      ],
+      "sources": [
+        {
+          "path": "results/frozen/tmc_multiaxis_formal_summary.csv",
+          "sha256": "8a576ebbbccb10c7a56cc9a81f929d9222b55ad6f9eb4d26cb87bc3e74877bd6",
+          "bytes": 3750
+        },
+        {
+          "path": "results/frozen/tmc_ca_mismatch_formal_v2_n4_summary.csv",
+          "sha256": "a0c2cacafc0f10333b1c9a2411a732bb8d7b90f2ae544f578718825c5debbdfa",
+          "bytes": 3502
+        },
+        {
+          "path": "results/frozen/tmc_ca_mismatch_formal_v2_n1_summary.csv",
+          "sha256": "787a52bb11c10e768b07817a9266de6d5b1863b9b608699d660ea8c657e92b51",
+          "bytes": 3466
+        }
+      ],
+      "outputs": {
+        "pdf": {
+          "path": "generated/fig_model_boundary_compact.pdf",
+          "sha256": "d79e5dfdb45723615240f8a3cb046a149c21448a094a630ed793039ace315b94",
+          "bytes": 63140
+        },
+        "svg": {
+          "path": "generated/fig_model_boundary_compact.svg",
+          "sha256": "73eabac12d0a5be34a56e02d543cf2c26018ecae1f0f44fd0410249d012a5a58",
+          "bytes": 68871
+        },
+        "png": {
+          "path": "generated/fig_model_boundary_compact.png",
+          "sha256": "7793136887324640a59647b707a43075d886571f4af2aadc973a438e480184b7",
+          "bytes": 191366
+        }
+      },
+      "checks": {
+        "fixed_single_column_width": "pass",
+        "minimum_font_at_least_7pt": "pass",
+        "no_text_outside_canvas": "pass",
+        "all_axes_inside_canvas": "pass",
+        "pdf_svg_png_exported": "pass",
+        "png_dpi": 300,
+        "vector_text_preserved_in_svg": "pass"
+      }
+    },
+    {
+      "stem": "fig_certificate_operating_compact",
+      "canvas": {
+        "width_in": 3.48,
+        "height_in": 4.18,
+        "target_width_in": 3.48
+      },
+      "minimum_font_pt": 7.0,
+      "text_artist_count": 45,
+      "text_overflow_count": 0,
+      "axes_outside_canvas_count": 0,
+      "layout": {
+        "format": "single-column",
+        "width_in": 3.48,
+        "panels": 2,
+        "panel_a": "full-width firing-vs-coverage operating curve with x/y seed-level intervals, radius labels, and log-count marker-area encoding",
+        "panel_b": "full-width radius forest of seed-level conditional-error means and intervals with a separate aggregate wrong/certified text column"
+      },
+      "point_counts": {
+        "input_radius_rows": 6,
+        "panel_a_operating_points": 6,
+        "panel_b_seed_level_forest_points": 6,
+        "panel_b_aggregate_count_annotations": 6,
+        "total_plotted_statistical_points": 12
+      },
+      "statistical_boundary": [
+        "Panel (a) uses seed-level mean intervals for firing and joint index coverage; probability intervals are visually clipped to [0,100]%.",
+        "Panel (a) marker area uses a log transform of aggregate certified count for visibility and is not an uncertainty encoding.",
+        "Panel (b) reads certificate_error_rate_mean and its reported seed-level normal 95% interval directly from the summary CSV.",
+        "The right-hand wrong/certified values are aggregate counts and are not substituted for the seed-level mean or interval.",
+        "All radii share 38,400 aggregate batch-slots; the maximum absolute seed-mean versus pooled-count rate difference is 0.003013.",
+        "Zero aggregate wrong certificates is displayed as an observed count, not as a zero-risk statement."
+      ],
+      "sources": [
+        {
+          "path": "results/frozen/tmc_certificate_sweep_summary.csv",
+          "sha256": "9f56723fa7f281fe6d7727e107324bba506a0cfcd32baa571eaba89bc6793e0f",
+          "bytes": 2491
+        }
+      ],
+      "outputs": {
+        "pdf": {
+          "path": "generated/fig_certificate_operating_compact.pdf",
+          "sha256": "0fd0958a0158daf6e98f24780a57f9717121298719eaaba191b879610077b04a",
+          "bytes": 55193
+        },
+        "svg": {
+          "path": "generated/fig_certificate_operating_compact.svg",
+          "sha256": "c6bb1a40ac59fc539af992e1d624433e88c6c4d0257b02a384ee0eed281b150f",
+          "bytes": 40241
+        },
+        "png": {
+          "path": "generated/fig_certificate_operating_compact.png",
+          "sha256": "4675cbe22e16c7d68651d58eea25b4a3a8c378d7854cba41b30410c174161144",
+          "bytes": 157402
+        }
+      },
+      "checks": {
+        "fixed_single_column_width": "pass",
+        "minimum_font_at_least_7pt": "pass",
+        "no_text_outside_canvas": "pass",
+        "all_axes_inside_canvas": "pass",
+        "pdf_svg_png_exported": "pass",
+        "png_dpi": 300,
+        "vector_text_preserved_in_svg": "pass"
+      }
+    }
+  ]
+}

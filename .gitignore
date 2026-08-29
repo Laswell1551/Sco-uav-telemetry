@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Fresh experiment outputs
+runs/
+artifacts/tables/*.tmp
+
+# External data: keep only documentation and manifests
+data/*
+!data/README.md
+!data/external-data-manifest.json
+
+# Build/log products
+*.log
+*.pid
+*.out
+*.err
+*.stdout
+*.stderr
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# Large or unsafe binary artifacts
+*.ulg
+*.xls
+*.zip
+*.pkl
+*.pth
+*.pt
+
+# Editor and OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

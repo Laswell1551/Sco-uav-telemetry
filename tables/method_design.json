@@ -1,0 +1,68 @@
+[
+  {
+    "method_label": "Cumulative CE",
+    "matched_design": "All selected observations; point estimate; no forced exploration.",
+    "evidence_status": "primary comparator",
+    "source_paths": ["experiments/run_cv_piecewise_pilot.py"]
+  },
+  {
+    "method_label": "Cumulative UCB-CV",
+    "matched_design": "All selected observations; optimistic physical-moment estimate; no forced exploration.",
+    "evidence_status": "primary comparator",
+    "source_paths": ["experiments/run_cv_piecewise_pilot.py"]
+  },
+  {
+    "method_label": "SW-CE (32)",
+    "matched_design": "Last 32 selected observations; point estimate; no forced exploration.",
+    "evidence_status": "primary comparator",
+    "source_paths": ["experiments/run_cv_piecewise_pilot.py"]
+  },
+  {
+    "method_label": "SW-Whittle-CV (64)",
+    "matched_design": "Last 64 selected observations; optimistic estimate; no forced exploration.",
+    "evidence_status": "primary comparator",
+    "source_paths": ["experiments/run_cv_piecewise_pilot.py"]
+  },
+  {
+    "method_label": "DTS-Whittle-CV",
+    "matched_design": "Discounted selected-observation posterior; Thompson draw; gamma=0.99.",
+    "evidence_status": "retrospective matched adaptation",
+    "source_paths": ["results/frozen/tmc_v16_baseline_expansion.json"]
+  },
+  {
+    "method_label": "TS-Whittle-CV",
+    "matched_design": "Episodic selected-observation posterior; Thompson draw; episode length=1.",
+    "evidence_status": "retrospective matched adaptation",
+    "source_paths": ["results/frozen/tmc_ts_baseline_expansion.json"]
+  },
+  {
+    "method_label": "DE-CD-Whittle-CV",
+    "matched_design": "Detector reset plus explicit exploration blocks; alpha=0.5.",
+    "evidence_status": "retrospective matched adaptation",
+    "source_paths": ["results/frozen/tmc_v16_baseline_expansion.json"]
+  },
+  {
+    "method_label": "Max-Age",
+    "matched_design": "Public age state only; no model estimation or explicit probes.",
+    "evidence_status": "retrospective low-information comparator",
+    "source_paths": ["results/frozen/tmc_external_baseline_addendum_v1.json"]
+  },
+  {
+    "method_label": "Forced-reset-UCB",
+    "matched_design": "Reset-UCB learner plus a forced exploration epoch every 50 slots.",
+    "evidence_status": "primary comparator",
+    "source_paths": ["experiments/run_cv_piecewise_pilot.py"]
+  },
+  {
+    "method_label": "SCO-reset-CE",
+    "matched_design": "Since-reset selected observations; point estimate; scheduling-induced exploration only.",
+    "evidence_status": "proposed",
+    "source_paths": ["experiments/run_cv_piecewise_pilot.py"]
+  },
+  {
+    "method_label": "SCO-reset-UCB",
+    "matched_design": "Since-reset selected observations; confidence-aware index; scheduling-induced exploration only.",
+    "evidence_status": "proposed",
+    "source_paths": ["experiments/run_cv_piecewise_pilot.py"]
+  }
+]

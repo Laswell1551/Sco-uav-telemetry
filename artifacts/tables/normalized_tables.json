@@ -1,0 +1,589 @@
+{
+  "table_ii": [
+    {
+      "method_id": "cumulative_ce",
+      "method_label": "Cumulative CE",
+      "full": [
+        6.643,
+        6.16,
+        7.127
+      ],
+      "post": [
+        10.962,
+        10.089,
+        11.864
+      ],
+      "evidence_status": "primary"
+    },
+    {
+      "method_id": "cumulative_ucb_cv",
+      "method_label": "Cumulative UCB-CV",
+      "full": [
+        7.027,
+        6.707,
+        7.34
+      ],
+      "post": [
+        8.867,
+        8.348,
+        9.39
+      ],
+      "evidence_status": "primary"
+    },
+    {
+      "method_id": "sw_ce_32",
+      "method_label": "SW-CE (32)",
+      "full": [
+        4.7,
+        4.359,
+        5.039
+      ],
+      "post": [
+        5.956,
+        5.479,
+        6.465
+      ],
+      "evidence_status": "primary"
+    },
+    {
+      "method_id": "sw_ucb_cv_64",
+      "method_label": "SW-Whittle-CV (64)",
+      "full": [
+        5.969,
+        5.621,
+        6.315
+      ],
+      "post": [
+        6.377,
+        5.964,
+        6.792
+      ],
+      "evidence_status": "primary"
+    },
+    {
+      "method_id": "dts_whittle_cv",
+      "method_label": "DTS-Whittle-CV",
+      "full": [
+        5.195964268875276,
+        4.983461295076414,
+        5.401788555864063
+      ],
+      "post": [
+        5.905364489759734,
+        5.617718213376438,
+        6.2081446929018975
+      ],
+      "evidence_status": "retrospective matched adaptation"
+    },
+    {
+      "method_id": "ts_whittle_cv",
+      "method_label": "TS-Whittle-CV",
+      "full": [
+        6.798064979848975,
+        6.418908364397516,
+        7.178350260467757
+      ],
+      "post": [
+        10.78379012937193,
+        10.045872428359214,
+        11.54868398320554
+      ],
+      "evidence_status": "retrospective matched adaptation"
+    },
+    {
+      "method_id": "de_cd_whittle_cv",
+      "method_label": "DE-CD-Whittle-CV",
+      "full": [
+        15.359592293507058,
+        12.986927493402613,
+        18.01785819316042
+      ],
+      "post": [
+        25.310883903548177,
+        20.489773622302092,
+        30.818692340065006
+      ],
+      "evidence_status": "retrospective matched adaptation"
+    },
+    {
+      "method_id": "max_age",
+      "method_label": "Max-Age",
+      "full": [
+        29.495148940959503,
+        28.134689298683536,
+        30.89305457604174
+      ],
+      "post": [
+        24.31785614881056,
+        22.960307656902632,
+        25.673898973472546
+      ],
+      "evidence_status": "retrospective low-information comparator"
+    },
+    {
+      "method_id": "ps_forced_reset_ucb",
+      "method_label": "Forced-reset-UCB",
+      "full": [
+        6.615,
+        6.29,
+        6.935
+      ],
+      "post": [
+        5.621,
+        5.258,
+        5.989
+      ],
+      "evidence_status": "primary"
+    },
+    {
+      "method_id": "sco_reset_ce",
+      "method_label": "SCO-reset-CE",
+      "full": [
+        3.291,
+        2.953,
+        3.634
+      ],
+      "post": [
+        3.691,
+        3.259,
+        4.154
+      ],
+      "evidence_status": "primary"
+    },
+    {
+      "method_id": "sco_reset_ucb",
+      "method_label": "SCO-reset-UCB",
+      "full": [
+        4.752,
+        4.432,
+        5.066
+      ],
+      "post": [
+        3.978,
+        3.639,
+        4.328
+      ],
+      "evidence_status": "primary"
+    }
+  ],
+  "table_iii": [
+    {
+      "method_label": "Cumulative CE",
+      "matched_design": "All selected observations; point estimate; no forced exploration.",
+      "evidence_status": "primary comparator",
+      "source_paths": [
+        "experiments/run_cv_piecewise_pilot.py"
+      ]
+    },
+    {
+      "method_label": "Cumulative UCB-CV",
+      "matched_design": "All selected observations; optimistic physical-moment estimate; no forced exploration.",
+      "evidence_status": "primary comparator",
+      "source_paths": [
+        "experiments/run_cv_piecewise_pilot.py"
+      ]
+    },
+    {
+      "method_label": "SW-CE (32)",
+      "matched_design": "Last 32 selected observations; point estimate; no forced exploration.",
+      "evidence_status": "primary comparator",
+      "source_paths": [
+        "experiments/run_cv_piecewise_pilot.py"
+      ]
+    },
+    {
+      "method_label": "SW-Whittle-CV (64)",
+      "matched_design": "Last 64 selected observations; optimistic estimate; no forced exploration.",
+      "evidence_status": "primary comparator",
+      "source_paths": [
+        "experiments/run_cv_piecewise_pilot.py"
+      ]
+    },
+    {
+      "method_label": "DTS-Whittle-CV",
+      "matched_design": "Discounted selected-observation posterior; Thompson draw; gamma=0.99.",
+      "evidence_status": "retrospective matched adaptation",
+      "source_paths": [
+        "results/frozen/tmc_v16_baseline_expansion.json"
+      ]
+    },
+    {
+      "method_label": "TS-Whittle-CV",
+      "matched_design": "Episodic selected-observation posterior; Thompson draw; episode length=1.",
+      "evidence_status": "retrospective matched adaptation",
+      "source_paths": [
+        "results/frozen/tmc_ts_baseline_expansion.json"
+      ]
+    },
+    {
+      "method_label": "DE-CD-Whittle-CV",
+      "matched_design": "Detector reset plus explicit exploration blocks; alpha=0.5.",
+      "evidence_status": "retrospective matched adaptation",
+      "source_paths": [
+        "results/frozen/tmc_v16_baseline_expansion.json"
+      ]
+    },
+    {
+      "method_label": "Max-Age",
+      "matched_design": "Public age state only; no model estimation or explicit probes.",
+      "evidence_status": "retrospective low-information comparator",
+      "source_paths": [
+        "results/frozen/tmc_external_baseline_addendum_v1.json"
+      ]
+    },
+    {
+      "method_label": "Forced-reset-UCB",
+      "matched_design": "Reset-UCB learner plus a forced exploration epoch every 50 slots.",
+      "evidence_status": "primary comparator",
+      "source_paths": [
+        "experiments/run_cv_piecewise_pilot.py"
+      ]
+    },
+    {
+      "method_label": "SCO-reset-CE",
+      "matched_design": "Since-reset selected observations; point estimate; scheduling-induced exploration only.",
+      "evidence_status": "proposed",
+      "source_paths": [
+        "experiments/run_cv_piecewise_pilot.py"
+      ]
+    },
+    {
+      "method_label": "SCO-reset-UCB",
+      "matched_design": "Since-reset selected observations; confidence-aware index; scheduling-induced exploration only.",
+      "evidence_status": "proposed",
+      "source_paths": [
+        "experiments/run_cv_piecewise_pilot.py"
+      ]
+    }
+  ],
+  "table_iv": [
+    {
+      "method_id": "cumulative_ce",
+      "method_label": "Cumulative CE",
+      "evidence_status": "primary replay",
+      "uzh_fpv": [
+        17.526521748880803,
+        16.382571764064668,
+        18.715672320067373
+      ],
+      "m3ed_falcon": [
+        9.630838528149079,
+        9.240052160140241,
+        10.0271691604236
+      ]
+    },
+    {
+      "method_id": "cumulative_ucb_cv",
+      "method_label": "Cumulative UCB-CV",
+      "evidence_status": "primary replay",
+      "uzh_fpv": [
+        17.312056568606412,
+        16.254150567506635,
+        18.403463799330158
+      ],
+      "m3ed_falcon": [
+        8.44910647358784,
+        8.061103719483699,
+        8.839622585291504
+      ]
+    },
+    {
+      "method_id": "sw_ce_32",
+      "method_label": "SW-CE (32)",
+      "evidence_status": "primary replay",
+      "uzh_fpv": [
+        17.60975814528956,
+        16.59040338826674,
+        18.666456600010942
+      ],
+      "m3ed_falcon": [
+        9.158393698268851,
+        8.74904666430852,
+        9.598985092245758
+      ]
+    },
+    {
+      "method_id": "sw_ucb_cv_64",
+      "method_label": "SW-Whittle-CV (64)",
+      "evidence_status": "primary replay",
+      "uzh_fpv": [
+        17.324808802888676,
+        16.237850888336585,
+        18.45773846007322
+      ],
+      "m3ed_falcon": [
+        8.582058356607803,
+        8.215756165059755,
+        8.924412776044775
+      ]
+    },
+    {
+      "method_id": "dts_whittle_cv",
+      "method_label": "DTS-Whittle-CV",
+      "evidence_status": "retrospective matched adaptation",
+      "uzh_fpv": [
+        16.84431905601725,
+        15.805524316037637,
+        17.90054891062095
+      ],
+      "m3ed_falcon": [
+        8.180656473389087,
+        7.866825499023703,
+        8.503587974176106
+      ]
+    },
+    {
+      "method_id": "de_cd_whittle_cv",
+      "method_label": "DE-CD-Whittle-CV",
+      "evidence_status": "retrospective matched adaptation",
+      "uzh_fpv": [
+        80.64861539908631,
+        73.88662685651603,
+        87.92341576780944
+      ],
+      "m3ed_falcon": [
+        53.205381682121825,
+        48.20231922692011,
+        58.910634067414584
+      ]
+    },
+    {
+      "method_id": "aoi_round_robin",
+      "method_label": "AoI / round robin",
+      "evidence_status": "primary replay",
+      "uzh_fpv": [
+        40.616596538936356,
+        38.06543495362807,
+        43.293616084817124
+      ],
+      "m3ed_falcon": [
+        33.10052312146562,
+        31.174402531285086,
+        35.02274751884015
+      ]
+    },
+    {
+      "method_id": "forced_reset_ucb",
+      "method_label": "Forced-reset-UCB",
+      "evidence_status": "primary replay",
+      "uzh_fpv": [
+        18.404617854681785,
+        17.300538478703693,
+        19.539774894271645
+      ],
+      "m3ed_falcon": [
+        8.89016765541137,
+        8.562596067971969,
+        9.21741752284159
+      ]
+    },
+    {
+      "method_id": "sco_reset_ce",
+      "method_label": "SCO-reset-CE",
+      "evidence_status": "primary replay",
+      "uzh_fpv": [
+        17.879152815078633,
+        16.570519683271044,
+        19.255392603395364
+      ],
+      "m3ed_falcon": [
+        8.397769415005573,
+        8.033743089146697,
+        8.756061066379129
+      ]
+    },
+    {
+      "method_id": "sco_reset_ucb",
+      "method_label": "SCO-reset-UCB",
+      "evidence_status": "primary replay",
+      "uzh_fpv": [
+        16.736022898839707,
+        15.504057642873457,
+        17.962259931454856
+      ],
+      "m3ed_falcon": [
+        7.13936896306679,
+        6.820688319489031,
+        7.454559146494309
+      ]
+    }
+  ],
+  "table_v": [
+    {
+      "profile_id": "fixed",
+      "profile_label": "Fixed",
+      "seeds": 12,
+      "sco_post_cost": 3486.4406227579652,
+      "rm_ack_post_cost": 472.52215972331436,
+      "pa_post_cost": 426.02436417220366,
+      "gain_vs_sco": [
+        87.76097991350458,
+        87.5469490999034,
+        87.97501072710577
+      ],
+      "gain_vs_rm_ack": [
+        9.8082628368811,
+        7.961278697159833,
+        11.655246976602369
+      ]
+    },
+    {
+      "profile_id": "light_iid",
+      "profile_label": "Light i.i.d.",
+      "seeds": 12,
+      "sco_post_cost": 2797.9291280013167,
+      "rm_ack_post_cost": 600.6772714074574,
+      "pa_post_cost": 446.51981864430394,
+      "gain_vs_sco": [
+        84.01402291761615,
+        83.70884858956134,
+        84.31919724567095
+      ],
+      "gain_vs_rm_ack": [
+        25.46937348050675,
+        23.832973942588072,
+        27.105773018425428
+      ]
+    },
+    {
+      "profile_id": "markov_burst",
+      "profile_label": "Markov burst",
+      "seeds": 12,
+      "sco_post_cost": 2116.241906624064,
+      "rm_ack_post_cost": 1357.9728300323798,
+      "pa_post_cost": 503.07515947009284,
+      "gain_vs_sco": [
+        76.20871172321405,
+        75.70673541926041,
+        76.71068802716769
+      ],
+      "gain_vs_rm_ack": [
+        62.69491999097721,
+        60.98934594193132,
+        64.4004940400231
+      ]
+    },
+    {
+      "profile_id": "feedback_heavy",
+      "profile_label": "Feedback-heavy",
+      "seeds": 12,
+      "sco_post_cost": 2339.0881423472733,
+      "rm_ack_post_cost": 985.1628399108481,
+      "pa_post_cost": 455.31974073181055,
+      "gain_vs_sco": [
+        80.53492778833345,
+        80.2854390898103,
+        80.7844164868566
+      ],
+      "gain_vs_rm_ack": [
+        53.59646048630436,
+        52.30772119367472,
+        54.885199778933995
+      ]
+    },
+    {
+      "profile_id": "forward_heavy",
+      "profile_label": "Forward-heavy",
+      "seeds": 12,
+      "sco_post_cost": 1997.317530189902,
+      "rm_ack_post_cost": 1329.5459897138844,
+      "pa_post_cost": 458.48082872525515,
+      "gain_vs_sco": [
+        77.04098256146135,
+        76.69715360066652,
+        77.38481152225617
+      ],
+      "gain_vs_rm_ack": [
+        65.38104554768002,
+        64.32781122837034,
+        66.4342798669897
+      ]
+    },
+    {
+      "profile_id": "heavy_iid",
+      "profile_label": "Heavy i.i.d.",
+      "seeds": 12,
+      "sco_post_cost": 1261.2886689190962,
+      "rm_ack_post_cost": 1803.4764528683947,
+      "pa_post_cost": 470.23062358837814,
+      "gain_vs_sco": [
+        62.708358237215684,
+        62.26942062462582,
+        63.147295849805545
+      ],
+      "gain_vs_rm_ack": [
+        73.75231324821054,
+        72.7403020058171,
+        74.76432449060398
+      ]
+    },
+    {
+      "profile_id": "lognormal",
+      "profile_label": "Log-normal",
+      "seeds": 12,
+      "sco_post_cost": 1784.043945248651,
+      "rm_ack_post_cost": 8434.79041912484,
+      "pa_post_cost": 544.2879268621199,
+      "gain_vs_sco": [
+        69.44075243099967,
+        68.98601461097999,
+        69.89549025101934
+      ],
+      "gain_vs_rm_ack": [
+        93.30674959343054,
+        92.61252926282505,
+        94.00096992403603
+      ]
+    }
+  ],
+  "table_vi": [
+    {
+      "claim": "Natural scheduling revisits each stream under the stated reliable-feedback model.",
+      "main_evidence": "Structural theorem plus DARE and top-N loss checks.",
+      "boundary": "Requires the paper's stabilizability, observability, and reliable-feedback assumptions.",
+      "artifact_paths": [
+        "core/dare_monotonicity.py",
+        "tests/test_dare_monotonicity.py",
+        "tests/test_topn_loss.py"
+      ]
+    },
+    {
+      "claim": "Reset-based SCO improves adaptation after synthetic model drift.",
+      "main_evidence": "Thirty seed clusters with paired problem instances and frozen confidence intervals.",
+      "boundary": "Controlled simulator evidence; recent comparators are matched adaptations, not official reproductions.",
+      "artifact_paths": [
+        "results/frozen/tmc_confirmatory_summary.csv",
+        "results/frozen/tmc_v16_baseline_expansion.json"
+      ]
+    },
+    {
+      "claim": "The controlled ranking persists on UZH-FPV and M3ED replay inputs.",
+      "main_evidence": "Episode-level computational replays and paired trace addenda.",
+      "boundary": "Reused public flights are not independent physical trials or a field deployment.",
+      "artifact_paths": [
+        "results/frozen/uzh_trace_replay_v1.json",
+        "results/frozen/m3ed_trace_replay_v1.json",
+        "results/frozen/tmc_v16_trace_baseline_expansion.json"
+      ]
+    },
+    {
+      "claim": "In-flight-aware PA-SCO reduces duplicate transmissions under two-way delay.",
+      "main_evidence": "Fixed-delay and seven-profile random-delay paired evaluations.",
+      "boundary": "Robustness stress only; no global or random-delay optimality claim.",
+      "artifact_paths": [
+        "results/frozen/tmc_inflight_formal_summary.csv",
+        "results/frozen/tmc_random_delay_formal_paired_summary.csv"
+      ]
+    },
+    {
+      "claim": "The implementation exposes explicit model-mismatch and certificate limits.",
+      "main_evidence": "Multi-axis, constant-acceleration mismatch, and certificate sweeps.",
+      "boundary": "Independent-axis CV generalization and empirical proxy calibration only.",
+      "artifact_paths": [
+        "results/frozen/tmc_multiaxis_formal_summary.csv",
+        "results/frozen/tmc_ca_mismatch_formal_v2_n1_summary.csv",
+        "results/frozen/tmc_certificate_sweep_summary.csv"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "stem": "fig_overview_sco_pa_v21",
+  "width_in": 7.2,
+  "height_in": 3.05,
+  "minimum_font_pt": 7.0,
+  "text_artist_count": 27,
+  "canvas_overflow_count": 0,
+  "node_label_overflow_count": 0,
+  "text_overlap_count": 0,
+  "foreign_node_intersection_count": 0,
+  "semantic_checks": {
+    "reliable_feedback_learning_chain_present": true,
+    "age_priority_finite_revisit_present": true,
+    "no_forced_probe_boundary_present": true,
+    "age_only_information_gap_present": true,
+    "pipeline_aware_score_present": true,
+    "duplicate_suppression_present": true,
+    "zero_rtt_reduction_present": true
+  },
+  "palette": "SCO blue, PA-SCO orange, and neutral manuscript support",
+  "no_fabrication": "Conceptual protocol overview only; no experimental values added.",
+  "pdf": "generated/fig_overview_sco_pa_v21.pdf",
+  "svg": "generated/fig_overview_sco_pa_v21.svg",
+  "png": "generated/fig_overview_sco_pa_v21.png"
+}

@@ -1,0 +1,33 @@
+{
+  "mode": "formal",
+  "evidence_status": "formal_after_protocol_freeze",
+  "seeds": [
+    20268000,
+    20268001,
+    20268002,
+    20268003,
+    20268004,
+    20268005,
+    20268006,
+    20268007,
+    20268008,
+    20268009,
+    20268010,
+    20268011
+  ],
+  "dimensions": [
+    1,
+    2,
+    3
+  ],
+  "B": 4,
+  "K": 20,
+  "N": 4,
+  "H": 800,
+  "change_t": 400,
+  "n0": 8,
+  "block_length": 64,
+  "packet_semantics": "one selected UAV packet reveals all coordinate axes; age is shared and CV costs/indices add across axes",
+  "pairing": "same seed, latent per-axis parameters, change mask, and selected-observation banks within each dimension",
+  "claim_boundary": "independent-axis CV generalization; correlated-axis and constant-acceleration mismatch require separate tests"
+}

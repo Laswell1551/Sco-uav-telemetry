@@ -1,0 +1,33 @@
+{
+  "mode": "paper",
+  "seeds": [
+    20260900,
+    20260901,
+    20260902,
+    20260903,
+    20260904,
+    20260905,
+    20260906,
+    20260907,
+    20260908,
+    20260909,
+    20260910,
+    20260911
+  ],
+  "B": 4,
+  "K": 20,
+  "N": 4,
+  "H": 800,
+  "n0": 8,
+  "block_length": 64,
+  "scales": [
+    0.5,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    6.0
+  ],
+  "paired_design": "same latent problem and observation-indexed bank across scales",
+  "claim_boundary": "empirical calibration of a proxy radius; no finite-sample confidence-sequence claim"
+}

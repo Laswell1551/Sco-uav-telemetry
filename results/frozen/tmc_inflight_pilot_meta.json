@@ -1,0 +1,33 @@
+{
+  "mode": "pilot_not_for_manuscript",
+  "seeds": [
+    20262000,
+    20262001,
+    20262002,
+    20262003,
+    20262004,
+    20262005
+  ],
+  "B": 2,
+  "K": 12,
+  "N": 3,
+  "H": 320,
+  "change_t": 160,
+  "success_probability": 0.9,
+  "delays": [
+    1,
+    3,
+    5
+  ],
+  "candidate_betas": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "selection_rule": "minimum mean post-change excess across all pilot seeds and fixed delays",
+  "selected_beta": 4.0,
+  "seed_separation": "pilot seeds 20262000--20262005 are disjoint from formal seeds 20261000--20261011"
+}

@@ -1,0 +1,61 @@
+{
+  "artifact": "fig_controlled_grouped_v21",
+  "target": "IEEE TMC two-column full-width figure",
+  "canvas_inches": [
+    7.2,
+    4.8
+  ],
+  "media_box_pt": [
+    518.4,
+    345.59999999999997
+  ],
+  "minimum_font_pt": 7.0,
+  "required_minimum_font_pt": 7.0,
+  "text_object_count": 54,
+  "text_overflow_count": 0,
+  "text_overlap_count": 0,
+  "text_overflows": [],
+  "text_overlaps": [],
+  "point_counts": {
+    "panel_a_method_intervals": 11,
+    "panel_b_seed_points": 90,
+    "panel_b_mean_intervals": 3,
+    "panel_c_metric_points": 9
+  },
+  "family_encoding": {
+    "Existing": "#777777",
+    "Learning": "#56B4E9",
+    "Proposed": "#0072B2"
+  },
+  "source_artifacts": [
+    {
+      "path": "results/frozen/tmc_v16_baseline_expansion.json",
+      "sha256": "57b0653d72278068715af161b128067edb201997fee7ccd6d7a3d88663c3c892"
+    },
+    {
+      "path": "results/frozen/tmc_ts_baseline_expansion.json",
+      "sha256": "d5e243cea555d323099dee2f53ece188bab555bf578c0cf67a848562908bc6ab"
+    },
+    {
+      "path": "results/frozen/tmc_ts_paired_sco_addendum.json",
+      "sha256": "1a5eda72d5fb490cdace4f79deb274e371fbf46fdd2f1d60cf666d6685547853"
+    },
+    {
+      "path": "results/frozen/tmc_external_baseline_addendum_v1.json",
+      "sha256": "f0d3469825460efeed9e26b0b292b9eec8c872c0708b934a35fdfb1b27ed7b16"
+    },
+    {
+      "path": "results/frozen/tmc_confirmatory_summary.csv",
+      "sha256": "a155836c5ce8fb17f58695ae84a31e4de9ce55606fd5624438c41795228fa48f"
+    }
+  ],
+  "visual_contract": {
+    "core_claim": "SCO remains the low-cost method after the controlled change.",
+    "panel_a": "family-grouped post-change forest plot with unchanged 95% intervals",
+    "panel_b": "paired 30-seed baseline-minus-SCO effects",
+    "panel_c": "detector/service trade-off for SCO, forced reset, and DE-CD",
+    "numeric_point_labels": 0,
+    "no_fabrication": "All values are read from the five frozen v16 source artifacts."
+  },
+  "pass": true
+}

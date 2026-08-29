@@ -1,0 +1,22 @@
+{
+  "stem": "fig_pipeline_timeline_v21",
+  "width_in": 3.48,
+  "height_in": 2.82,
+  "minimum_font_pt": 7.0,
+  "text_artist_count": 22,
+  "canvas_overflow_count": 0,
+  "node_label_overflow_count": 0,
+  "text_overlap_count": 0,
+  "semantic_checks": {
+    "tx_arrival_ack_present": true,
+    "outstanding_in_flight_state_present": true,
+    "sco_duplicate_opportunity_present": true,
+    "pa_sco_duplicate_suppression_present": true,
+    "zero_delay_exact_reduction_present": true
+  },
+  "palette": "SCO blue, PA-SCO orange, and neutral event scaffolding",
+  "no_fabrication": "Protocol schematic only; no experimental values added.",
+  "pdf": "generated/fig_pipeline_timeline_v21.pdf",
+  "svg": "generated/fig_pipeline_timeline_v21.svg",
+  "png": "generated/fig_pipeline_timeline_v21.png"
+}

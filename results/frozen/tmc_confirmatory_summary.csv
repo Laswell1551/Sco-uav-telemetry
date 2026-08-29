@@ -1,0 +1,8 @@
+method,total_excess_mean,total_excess_ci_low,total_excess_ci_high,post_excess_mean,post_excess_ci_low,post_excess_ci_high,ranking_loss,detection,pre_false_alarms_per_10k,calendar_delay,observation_delay
+cumulative_ce,6.643,6.160,7.127,10.962,10.089,11.864,34.193,,,,
+cumulative_ucb_cv,7.027,6.707,7.340,8.867,8.348,9.390,28.396,,,,
+sw_ce_32,4.700,4.359,5.039,5.956,5.479,6.465,26.441,,,,
+sw_ucb_cv_64,5.969,5.621,6.315,6.377,5.964,6.792,23.390,,,,
+sco_reset_ce,3.291,2.953,3.634,3.691,3.259,4.154,18.568,0.946,0.744,40.29,7.61
+sco_reset_ucb,4.752,4.432,5.066,3.978,3.639,4.328,18.281,0.955,0.733,37.99,7.45
+ps_forced_reset_ucb,6.615,6.290,6.935,5.621,5.258,5.989,22.956,0.956,0.733,37.94,7.45

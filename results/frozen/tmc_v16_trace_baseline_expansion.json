@@ -1,0 +1,3618 @@
+{
+  "schema_version": "TMC_V16_TRACE_BASELINE_EXPANSION_v1",
+  "created_utc": "2026-07-28T14:51:36.822334+00:00",
+  "evidence_status": "retrospective_matched_trace_addendum",
+  "frozen_hyperparameters": {
+    "de_alpha": 0.5,
+    "dts_gamma": 0.99
+  },
+  "datasets": {
+    "uzh_fpv": {
+      "protocol": {
+        "seeds": [
+          410001,
+          410002,
+          410003,
+          410004,
+          410005,
+          410006,
+          410007,
+          410008,
+          410009,
+          410010,
+          410011,
+          410012,
+          410013,
+          410014,
+          410015,
+          410016,
+          410017,
+          410018,
+          410019,
+          410020,
+          410021,
+          410022,
+          410023,
+          410024,
+          410025,
+          410026,
+          410027,
+          410028,
+          410029,
+          410030
+        ],
+        "episodes": 30,
+        "K": 12,
+        "N": 3,
+        "length": 640,
+        "n0": 8,
+        "H": 632,
+        "episode_constructor": "run_uzh_trace_replay.make_episode",
+        "oracle": "run_uzh_trace_replay.run_method('oracle')",
+        "sco_reference": "run_uzh_trace_replay.run_method('sco_reset_ucb')",
+        "selected_only_update": true,
+        "hyperparameters_transferred_without_trace_tuning": true
+      },
+      "summary_mean_ci95": {
+        "resampling_unit": "paired computational replay episode; source flights are reused and are not 30 independent physical trials",
+        "bootstrap_replicates": 20000,
+        "confidence_level": 0.95,
+        "methods": {
+          "de_cd_whittle_cv": {
+            "cost": [
+              42.413270634601865,
+              39.58637254910411,
+              45.39458771002441
+            ],
+            "excess_pct": [
+              80.64861539908631,
+              73.88662685651603,
+              87.92341576780944
+            ],
+            "rank_loss": [
+              78.39024017039314,
+              68.57608342761229,
+              89.65003445825208
+            ],
+            "max_gap": [
+              12.833333333333334,
+              12.133333333333333,
+              13.633333333333333
+            ],
+            "alarms_per_10k_arm_slots": [
+              109.35302390998595,
+              105.7049929676512,
+              113.22081575246132
+            ],
+            "forced_slot_fraction": [
+              0.41286919831223634,
+              0.4022679324894515,
+              0.4237341772151899
+            ],
+            "exploration_blocks": [
+              78.96666666666667,
+              76.56666666666666,
+              81.5
+            ]
+          },
+          "dts_whittle_cv": {
+            "cost": [
+              27.57767653755081,
+              25.760699379062718,
+              29.433690309207684
+            ],
+            "excess_pct": [
+              16.84431905601725,
+              15.805524316037637,
+              17.90054891062095
+            ],
+            "rank_loss": [
+              13.039104564118537,
+              11.57836982527015,
+              14.56308614313619
+            ],
+            "max_gap": [
+              6.4,
+              6.2,
+              6.6
+            ],
+            "posterior_clip_fraction": [
+              0.0034502461322081573,
+              0.003195323488045007,
+              0.0037139592123769344
+            ],
+            "final_effective_weight_mean": [
+              24.97035906445204,
+              24.97035906445204,
+              24.970359064452044
+            ]
+          }
+        },
+        "sco_reset_ucb_reference": {
+          "cost": [
+            27.57203685710382,
+            25.7424078924061,
+            29.496480034035187
+          ],
+          "excess_pct": [
+            16.736022898839707,
+            15.528423602802203,
+            17.965626167341615
+          ],
+          "rank_loss": [
+            13.069888376597582,
+            11.43391995414683,
+            14.73271337680184
+          ],
+          "max_gap": [
+            7.066666666666666,
+            6.9,
+            7.233333333333333
+          ],
+          "alarms_per_10k_arm_slots": [
+            110.84739803094234,
+            107.63888888888889,
+            114.09985935302389
+          ]
+        },
+        "paired_method_minus_sco": {
+          "de_cd_whittle_cv": {
+            "direction": "de_cd_whittle_cv minus SCO-reset-UCB excess-cost percentage points; positive favors SCO",
+            "mean_ci95": [
+              63.91259250024659,
+              56.90548627321364,
+              71.3852183327237
+            ]
+          },
+          "dts_whittle_cv": {
+            "direction": "dts_whittle_cv minus SCO-reset-UCB excess-cost percentage points; positive favors SCO",
+            "mean_ci95": [
+              0.10829615717754955,
+              -0.31434174333778303,
+              0.5176641685135417
+            ]
+          }
+        }
+      },
+      "episodes": [
+        {
+          "seed": 410001,
+          "sequences": [
+            "indoor_45_9",
+            "indoor_forward_6",
+            "indoor_45_14",
+            "outdoor_forward_3",
+            "outdoor_forward_5",
+            "indoor_45_13",
+            "outdoor_45_1",
+            "indoor_45_12",
+            "indoor_forward_9",
+            "outdoor_forward_1",
+            "indoor_forward_7",
+            "indoor_forward_3"
+          ],
+          "oracle_cost": 22.22528394575601,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 25.449785502238093,
+              "rank_loss": 10.449343222858735,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 110.75949367088607,
+              "excess_pct": 14.508258091783844
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 43.77197789756708,
+              "rank_loss": 88.82852685697239,
+              "max_gap": 12,
+              "alarms_per_10k_arm_slots": 118.67088607594937,
+              "forced_slot_fraction": 0.4272151898734177,
+              "exploration_blocks": 85,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.052430199983064,
+              "excess_pct": 96.94676569441751
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 25.529626916928947,
+              "rank_loss": 10.549093762548104,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.003626054852320675,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.3924177999724634,
+              "excess_pct": 14.867494963113437
+            }
+          }
+        },
+        {
+          "seed": 410002,
+          "sequences": [
+            "indoor_forward_6",
+            "indoor_forward_9",
+            "indoor_forward_10",
+            "indoor_forward_3",
+            "indoor_forward_5",
+            "indoor_45_12",
+            "indoor_45_2",
+            "indoor_45_9",
+            "outdoor_forward_3",
+            "outdoor_forward_1",
+            "indoor_45_4",
+            "indoor_45_14"
+          ],
+          "oracle_cost": 21.02105817229411,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 24.382113178256002,
+              "rank_loss": 10.654385311160274,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 104.16666666666667,
+              "excess_pct": 15.988990556107119
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 33.38035583584895,
+              "rank_loss": 48.34656378778713,
+              "max_gap": 16,
+              "alarms_per_10k_arm_slots": 96.25527426160338,
+              "forced_slot_fraction": 0.38924050632911394,
+              "exploration_blocks": 70,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0212313999654725,
+              "excess_pct": 58.79484068905947
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 24.14090745844479,
+              "rank_loss": 10.219478380058394,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0029008438818565402,
+              "final_effective_weight_mean": 24.970359064452044,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.4446734999655746,
+              "excess_pct": 14.841542516935036
+            }
+          }
+        },
+        {
+          "seed": 410003,
+          "sequences": [
+            "indoor_45_2",
+            "indoor_forward_6",
+            "indoor_45_9",
+            "indoor_45_12",
+            "indoor_45_13",
+            "indoor_forward_9",
+            "indoor_forward_3",
+            "indoor_forward_7",
+            "indoor_forward_10",
+            "outdoor_forward_1",
+            "indoor_45_14",
+            "indoor_45_4"
+          ],
+          "oracle_cost": 27.19972209317121,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 33.74289536340722,
+              "rank_loss": 21.758177722000212,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 93.61814345991561,
+              "excess_pct": 24.05602986612405
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 46.68118408513418,
+              "rank_loss": 71.43492191159672,
+              "max_gap": 11,
+              "alarms_per_10k_arm_slots": 97.57383966244726,
+              "forced_slot_fraction": 0.38924050632911394,
+              "exploration_blocks": 73,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9807098000310361,
+              "excess_pct": 71.62375382083039
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 33.267858482471254,
+              "rank_loss": 19.570057329458432,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.004878691983122363,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.3827371000079438,
+              "excess_pct": 22.309552900996433
+            }
+          }
+        },
+        {
+          "seed": 410004,
+          "sequences": [
+            "outdoor_forward_5",
+            "indoor_forward_6",
+            "indoor_45_12",
+            "outdoor_forward_3",
+            "outdoor_45_1",
+            "indoor_forward_7",
+            "indoor_forward_3",
+            "indoor_45_9",
+            "indoor_forward_9",
+            "indoor_forward_10",
+            "indoor_45_2",
+            "outdoor_forward_1"
+          ],
+          "oracle_cost": 23.95229123853814,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 27.89557290691236,
+              "rank_loss": 13.248248550346664,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 109.44092827004219,
+              "excess_pct": 16.463066639861413
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 38.988084561730766,
+              "rank_loss": 57.820825285380735,
+              "max_gap": 12,
+              "alarms_per_10k_arm_slots": 117.35232067510549,
+              "forced_slot_fraction": 0.44145569620253167,
+              "exploration_blocks": 86,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.1356958000105806,
+              "excess_pct": 62.77392493875793
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 27.76019787145189,
+              "rank_loss": 12.439911714561765,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.002241561181434599,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.4155298999976367,
+              "excess_pct": 15.89788047828593
+            }
+          }
+        },
+        {
+          "seed": 410005,
+          "sequences": [
+            "outdoor_forward_3",
+            "indoor_forward_6",
+            "indoor_forward_5",
+            "indoor_forward_10",
+            "indoor_45_4",
+            "indoor_45_13",
+            "indoor_45_2",
+            "indoor_45_9",
+            "outdoor_45_1",
+            "indoor_45_14",
+            "indoor_45_12",
+            "indoor_forward_9"
+          ],
+          "oracle_cost": 21.14067958889167,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 24.246667520978708,
+              "rank_loss": 9.86995462094205,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 97.57383966244726,
+              "excess_pct": 14.69199662682119
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 36.31921846652078,
+              "rank_loss": 61.01505952639341,
+              "max_gap": 14,
+              "alarms_per_10k_arm_slots": 97.57383966244726,
+              "forced_slot_fraction": 0.375,
+              "exploration_blocks": 71,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0479111999738961,
+              "excess_pct": 71.79778121042358
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 24.576678087238523,
+              "rank_loss": 11.25600380852669,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.003560126582278481,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.4059108000365086,
+              "excess_pct": 16.253018186569058
+            }
+          }
+        },
+        {
+          "seed": 410006,
+          "sequences": [
+            "outdoor_forward_3",
+            "indoor_45_4",
+            "indoor_forward_5",
+            "indoor_forward_9",
+            "indoor_45_12",
+            "indoor_45_13",
+            "indoor_45_14",
+            "indoor_forward_6",
+            "indoor_forward_7",
+            "indoor_forward_3",
+            "outdoor_45_1",
+            "indoor_forward_10"
+          ],
+          "oracle_cost": 18.00623055016083,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 19.982569086510967,
+              "rank_loss": 6.609844312180835,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 112.07805907172995,
+              "excess_pct": 10.975859332937876
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 30.696711557692744,
+              "rank_loss": 54.23136356074651,
+              "max_gap": 13,
+              "alarms_per_10k_arm_slots": 110.75949367088607,
+              "forced_slot_fraction": 0.4161392405063291,
+              "exploration_blocks": 82,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0359014999703504,
+              "excess_pct": 70.47827679524276
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 20.135716613019646,
+              "rank_loss": 7.293611598197235,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.003691983122362869,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.44461649999720976,
+              "excess_pct": 11.826384522438516
+            }
+          }
+        },
+        {
+          "seed": 410007,
+          "sequences": [
+            "indoor_forward_7",
+            "outdoor_forward_3",
+            "indoor_forward_5",
+            "indoor_forward_9",
+            "indoor_forward_3",
+            "indoor_45_12",
+            "indoor_45_2",
+            "indoor_45_4",
+            "indoor_45_13",
+            "indoor_forward_10",
+            "indoor_45_9",
+            "outdoor_forward_1"
+          ],
+          "oracle_cost": 25.63655796689544,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 29.40896711477112,
+              "rank_loss": 12.080151770683944,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 113.39662447257383,
+              "excess_pct": 14.714959600844235
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 41.63434479537425,
+              "rank_loss": 71.62819644481213,
+              "max_gap": 16,
+              "alarms_per_10k_arm_slots": 114.71518987341773,
+              "forced_slot_fraction": 0.4272151898734177,
+              "exploration_blocks": 80,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0251056000124663,
+              "excess_pct": 62.40224155339726
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 29.60107688902912,
+              "rank_loss": 12.82541407437714,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.003032700421940928,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.397186599962879,
+              "excess_pct": 15.46431828817687
+            }
+          }
+        },
+        {
+          "seed": 410008,
+          "sequences": [
+            "indoor_45_14",
+            "outdoor_forward_1",
+            "indoor_45_12",
+            "indoor_45_13",
+            "indoor_forward_3",
+            "indoor_45_2",
+            "indoor_forward_7",
+            "indoor_forward_10",
+            "indoor_45_4",
+            "indoor_forward_9",
+            "outdoor_forward_5",
+            "indoor_forward_6"
+          ],
+          "oracle_cost": 33.08430744021575,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 40.24614214885121,
+              "rank_loss": 23.92914471291137,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 101.5295358649789,
+              "excess_pct": 21.647225717440488
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 53.55275004635283,
+              "rank_loss": 79.68135825000878,
+              "max_gap": 12,
+              "alarms_per_10k_arm_slots": 96.25527426160338,
+              "forced_slot_fraction": 0.3860759493670886,
+              "exploration_blocks": 69,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0982927999575622,
+              "excess_pct": 61.8675262981524
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 40.04650190421473,
+              "rank_loss": 23.13991406634442,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.003955696202531646,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.40799340000376105,
+              "excess_pct": 21.043796901536638
+            }
+          }
+        },
+        {
+          "seed": 410009,
+          "sequences": [
+            "indoor_forward_3",
+            "indoor_45_13",
+            "outdoor_forward_5",
+            "indoor_forward_7",
+            "outdoor_forward_1",
+            "outdoor_45_1",
+            "indoor_forward_6",
+            "outdoor_forward_3",
+            "indoor_45_14",
+            "indoor_45_12",
+            "indoor_45_9",
+            "indoor_45_2"
+          ],
+          "oracle_cost": 25.589805514644883,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 31.06340354068194,
+              "rank_loss": 17.50938372674033,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 108.12236286919831,
+              "excess_pct": 21.389760164079984
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 48.35567153540014,
+              "rank_loss": 95.89806305544384,
+              "max_gap": 14,
+              "alarms_per_10k_arm_slots": 102.84810126582279,
+              "forced_slot_fraction": 0.3829113924050633,
+              "exploration_blocks": 76,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9916517999954522,
+              "excess_pct": 88.9645918087439
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 31.243585181702034,
+              "rank_loss": 17.462132429373085,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.003691983122362869,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.4183642000425607,
+              "excess_pct": 22.093875093429418
+            }
+          }
+        },
+        {
+          "seed": 410010,
+          "sequences": [
+            "outdoor_forward_3",
+            "indoor_forward_5",
+            "indoor_45_12",
+            "outdoor_45_1",
+            "indoor_45_9",
+            "indoor_45_13",
+            "indoor_forward_9",
+            "indoor_forward_6",
+            "indoor_45_2",
+            "indoor_forward_7",
+            "indoor_45_14",
+            "indoor_forward_3"
+          ],
+          "oracle_cost": 26.28495706105565,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 32.17765830500567,
+              "rank_loss": 18.48244247781096,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 118.67088607594937,
+              "excess_pct": 22.418530988132268
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 48.693418282441925,
+              "rank_loss": 86.61975368565105,
+              "max_gap": 11,
+              "alarms_per_10k_arm_slots": 112.07805907172995,
+              "forced_slot_fraction": 0.40664556962025317,
+              "exploration_blocks": 77,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9677288999664597,
+              "excess_pct": 85.25203662815615
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 32.05449359050958,
+              "rank_loss": 18.375765888536773,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.004153481012658227,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.4054508000263013,
+              "excess_pct": 21.949956075835473
+            }
+          }
+        },
+        {
+          "seed": 410011,
+          "sequences": [
+            "indoor_45_14",
+            "indoor_45_4",
+            "indoor_forward_5",
+            "outdoor_forward_5",
+            "indoor_45_2",
+            "indoor_forward_7",
+            "indoor_forward_9",
+            "indoor_forward_10",
+            "indoor_forward_3",
+            "outdoor_forward_3",
+            "outdoor_45_1",
+            "indoor_45_13"
+          ],
+          "oracle_cost": 17.565719019869242,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 19.493249589546124,
+              "rank_loss": 6.191332584467725,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 104.16666666666667,
+              "excess_pct": 10.973251749595804
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 31.696295399053884,
+              "rank_loss": 54.708804762849056,
+              "max_gap": 13,
+              "alarms_per_10k_arm_slots": 106.80379746835443,
+              "forced_slot_fraction": 0.4272151898734177,
+              "exploration_blocks": 78,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9818388000130653,
+              "excess_pct": 80.44405334732394
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 19.675051206264964,
+              "rank_loss": 6.658176361758018,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0038897679324894517,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.45732799998950213,
+              "excess_pct": 12.008231396675416
+            }
+          }
+        },
+        {
+          "seed": 410012,
+          "sequences": [
+            "indoor_45_4",
+            "outdoor_forward_1",
+            "indoor_forward_3",
+            "outdoor_45_1",
+            "indoor_forward_10",
+            "indoor_45_12",
+            "indoor_45_13",
+            "indoor_45_14",
+            "indoor_45_2",
+            "outdoor_forward_3",
+            "indoor_forward_5",
+            "indoor_forward_9"
+          ],
+          "oracle_cost": 28.049367059000943,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 33.55592489408413,
+              "rank_loss": 17.827853738441718,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 113.39662447257383,
+              "excess_pct": 19.631665211911265
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 59.732925700415116,
+              "rank_loss": 128.4510508363691,
+              "max_gap": 11,
+              "alarms_per_10k_arm_slots": 122.62658227848101,
+              "forced_slot_fraction": 0.44936708860759494,
+              "exploration_blocks": 87,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9678848000476137,
+              "excess_pct": 112.9564120814877
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 33.726460683108044,
+              "rank_loss": 18.151734312289538,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0030986286919831223,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.4009883999824524,
+              "excess_pct": 20.23964965828111
+            }
+          }
+        },
+        {
+          "seed": 410013,
+          "sequences": [
+            "indoor_forward_3",
+            "outdoor_forward_3",
+            "indoor_45_4",
+            "indoor_45_13",
+            "indoor_forward_10",
+            "indoor_45_14",
+            "outdoor_forward_1",
+            "indoor_45_9",
+            "outdoor_forward_5",
+            "indoor_45_12",
+            "indoor_forward_7",
+            "outdoor_45_1"
+          ],
+          "oracle_cost": 25.405216090385547,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 29.40101166970167,
+              "rank_loss": 13.170163885417784,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 110.75949367088607,
+              "excess_pct": 15.728248738763174
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 54.30737289661263,
+              "rank_loss": 179.52146973787214,
+              "max_gap": 20,
+              "alarms_per_10k_arm_slots": 114.71518987341773,
+              "forced_slot_fraction": 0.4224683544303797,
+              "exploration_blocks": 83,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9629959000158124,
+              "excess_pct": 113.76465645243981
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 29.315240139674632,
+              "rank_loss": 12.748763887685326,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0031645569620253164,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.4050390000338666,
+              "excess_pct": 15.390634881349463
+            }
+          }
+        },
+        {
+          "seed": 410014,
+          "sequences": [
+            "indoor_forward_5",
+            "indoor_forward_7",
+            "indoor_45_12",
+            "indoor_forward_3",
+            "outdoor_45_1",
+            "outdoor_forward_1",
+            "indoor_45_2",
+            "indoor_forward_10",
+            "outdoor_forward_3",
+            "indoor_forward_6",
+            "indoor_45_9",
+            "indoor_45_14"
+          ],
+          "oracle_cost": 25.9910519298479,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 30.58381786177628,
+              "rank_loss": 14.928796618934387,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 110.75949367088607,
+              "excess_pct": 17.670565794430537
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 44.54111599328803,
+              "rank_loss": 66.85663405110442,
+              "max_gap": 12,
+              "alarms_per_10k_arm_slots": 113.39662447257383,
+              "forced_slot_fraction": 0.4129746835443038,
+              "exploration_blocks": 81,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9722080999636091,
+              "excess_pct": 71.37096302800042
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 30.3735387314443,
+              "rank_loss": 13.992386693818151,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.002834915611814346,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.4550210000015795,
+              "excess_pct": 16.86152147063964
+            }
+          }
+        },
+        {
+          "seed": 410015,
+          "sequences": [
+            "outdoor_forward_5",
+            "indoor_forward_9",
+            "indoor_forward_10",
+            "indoor_45_4",
+            "indoor_forward_7",
+            "indoor_45_12",
+            "indoor_45_2",
+            "outdoor_45_1",
+            "indoor_45_9",
+            "indoor_forward_3",
+            "outdoor_forward_1",
+            "outdoor_forward_3"
+          ],
+          "oracle_cost": 20.336964822356194,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 23.56632577267509,
+              "rank_loss": 10.346071230722357,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 117.35232067510549,
+              "excess_pct": 15.879267031867483
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 37.50376650343657,
+              "rank_loss": 62.92405459627062,
+              "max_gap": 10,
+              "alarms_per_10k_arm_slots": 105.48523206751055,
+              "forced_slot_fraction": 0.3924050632911392,
+              "exploration_blocks": 75,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9655400000046939,
+              "excess_pct": 84.41181774681101
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 23.397480376401873,
+              "rank_loss": 10.070533172291903,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.003362341772151899,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.39945110003463924,
+              "excess_pct": 15.04902811594231
+            }
+          }
+        },
+        {
+          "seed": 410016,
+          "sequences": [
+            "outdoor_45_1",
+            "indoor_45_13",
+            "indoor_45_4",
+            "outdoor_forward_3",
+            "indoor_forward_5",
+            "indoor_forward_3",
+            "indoor_45_9",
+            "indoor_45_12",
+            "indoor_forward_6",
+            "indoor_45_2",
+            "outdoor_forward_1",
+            "indoor_45_14"
+          ],
+          "oracle_cost": 25.187982503504042,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 28.860380175284057,
+              "rank_loss": 11.773662277652715,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 109.44092827004219,
+              "excess_pct": 14.579959594894621
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 39.42326788715258,
+              "rank_loss": 58.82371062977643,
+              "max_gap": 14,
+              "alarms_per_10k_arm_slots": 109.44092827004219,
+              "forced_slot_fraction": 0.40822784810126583,
+              "exploration_blocks": 78,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.965526600019075,
+              "excess_pct": 56.516179418769205
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 28.870328763637897,
+              "rank_loss": 11.985117442475056,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.004417194092827004,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.37330659996951,
+              "excess_pct": 14.619456955798604
+            }
+          }
+        },
+        {
+          "seed": 410017,
+          "sequences": [
+            "indoor_forward_9",
+            "indoor_45_4",
+            "indoor_45_14",
+            "outdoor_forward_1",
+            "outdoor_45_1",
+            "indoor_45_13",
+            "indoor_forward_5",
+            "outdoor_forward_3",
+            "indoor_45_12",
+            "indoor_forward_7",
+            "indoor_45_2",
+            "indoor_forward_10"
+          ],
+          "oracle_cost": 19.389119789437487,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 21.877493189188947,
+              "rank_loss": 7.764092621773881,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 114.71518987341773,
+              "excess_pct": 12.833864697184637
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 39.25091540052876,
+              "rank_loss": 80.02519697745751,
+              "max_gap": 11,
+              "alarms_per_10k_arm_slots": 129.2194092827004,
+              "forced_slot_fraction": 0.45569620253164556,
+              "exploration_blocks": 90,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9226355000282638,
+              "excess_pct": 102.4378405352433
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 21.97405912003751,
+              "rank_loss": 8.294091740521477,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0037579113924050634,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.384832700015977,
+              "excess_pct": 13.331906546929506
+            }
+          }
+        },
+        {
+          "seed": 410018,
+          "sequences": [
+            "indoor_forward_10",
+            "indoor_forward_3",
+            "outdoor_45_1",
+            "outdoor_forward_5",
+            "indoor_45_13",
+            "indoor_forward_6",
+            "outdoor_forward_3",
+            "indoor_forward_7",
+            "indoor_45_9",
+            "indoor_45_12",
+            "indoor_forward_5",
+            "outdoor_forward_1"
+          ],
+          "oracle_cost": 25.46658617474209,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 30.20074535822604,
+              "rank_loss": 14.81082337729902,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 121.30801687763713,
+              "excess_pct": 18.58968905765357
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 41.3540905647429,
+              "rank_loss": 55.53675223148643,
+              "max_gap": 11,
+              "alarms_per_10k_arm_slots": 108.12236286919831,
+              "forced_slot_fraction": 0.439873417721519,
+              "exploration_blocks": 79,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9538262999849394,
+              "excess_pct": 62.38568562345481
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 29.8192301135868,
+              "rank_loss": 14.756331274478715,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.002241561181434599,
+              "final_effective_weight_mean": 24.97035906445203,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.39522979996399954,
+              "excess_pct": 17.091587812274934
+            }
+          }
+        },
+        {
+          "seed": 410019,
+          "sequences": [
+            "indoor_45_4",
+            "indoor_45_12",
+            "indoor_45_13",
+            "outdoor_45_1",
+            "outdoor_forward_5",
+            "indoor_forward_7",
+            "indoor_forward_3",
+            "indoor_45_9",
+            "indoor_forward_5",
+            "outdoor_forward_1",
+            "indoor_forward_6",
+            "outdoor_forward_3"
+          ],
+          "oracle_cost": 23.18787131061105,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 26.688622891513614,
+              "rank_loss": 11.39374964215712,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 126.58227848101266,
+              "excess_pct": 15.097339182232638
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 53.30624684032014,
+              "rank_loss": 124.44548631884332,
+              "max_gap": 12,
+              "alarms_per_10k_arm_slots": 138.4493670886076,
+              "forced_slot_fraction": 0.4873417721518987,
+              "exploration_blocks": 100,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9580267000128515,
+              "excess_pct": 129.88848836644422
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 26.97082108706385,
+              "rank_loss": 12.214336090521957,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0026371308016877636,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.37688779999734834,
+              "excess_pct": 16.314346952243408
+            }
+          }
+        },
+        {
+          "seed": 410020,
+          "sequences": [
+            "indoor_45_4",
+            "outdoor_45_1",
+            "indoor_45_12",
+            "indoor_forward_6",
+            "indoor_45_14",
+            "indoor_45_2",
+            "outdoor_forward_3",
+            "indoor_forward_7",
+            "indoor_45_9",
+            "indoor_forward_9",
+            "indoor_45_13",
+            "outdoor_forward_5"
+          ],
+          "oracle_cost": 21.990703539678876,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 26.04529020141192,
+              "rank_loss": 13.317407534888225,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 118.67088607594937,
+              "excess_pct": 18.437730536529486
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 34.98094281230022,
+              "rank_loss": 45.12635897841781,
+              "max_gap": 14,
+              "alarms_per_10k_arm_slots": 100.21097046413502,
+              "forced_slot_fraction": 0.40348101265822783,
+              "exploration_blocks": 75,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0871431999839842,
+              "excess_pct": 59.071503779687795
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 26.002526859743654,
+              "rank_loss": 13.112468445317786,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.005274261603375527,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.4198976999614388,
+              "excess_pct": 18.243269538084817
+            }
+          }
+        },
+        {
+          "seed": 410021,
+          "sequences": [
+            "outdoor_forward_3",
+            "outdoor_forward_5",
+            "indoor_45_2",
+            "indoor_45_12",
+            "indoor_forward_9",
+            "indoor_forward_3",
+            "indoor_45_13",
+            "indoor_45_4",
+            "indoor_forward_5",
+            "indoor_forward_10",
+            "outdoor_forward_1",
+            "indoor_45_9"
+          ],
+          "oracle_cost": 26.49018099398218,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 30.929139181387193,
+              "rank_loss": 14.47243482174318,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 116.03375527426161,
+              "excess_pct": 16.756994557392503
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 45.71297364049659,
+              "rank_loss": 91.35859927229147,
+              "max_gap": 13,
+              "alarms_per_10k_arm_slots": 117.35232067510549,
+              "forced_slot_fraction": 0.43670886075949367,
+              "exploration_blocks": 84,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0115875999908894,
+              "excess_pct": 72.56572784791953
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 30.904125603631005,
+              "rank_loss": 14.401369533909943,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.003362341772151899,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.4186446000239812,
+              "excess_pct": 16.66256871046503
+            }
+          }
+        },
+        {
+          "seed": 410022,
+          "sequences": [
+            "indoor_forward_5",
+            "indoor_forward_7",
+            "indoor_forward_3",
+            "indoor_45_2",
+            "indoor_45_14",
+            "indoor_forward_6",
+            "indoor_45_9",
+            "indoor_45_13",
+            "indoor_forward_10",
+            "outdoor_forward_3",
+            "indoor_45_12",
+            "outdoor_45_1"
+          ],
+          "oracle_cost": 22.2155378999137,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 25.378484393135363,
+              "rank_loss": 9.954465708701914,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 110.75949367088607,
+              "excess_pct": 14.237541793817886
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 42.58032726709436,
+              "rank_loss": 99.25733122004654,
+              "max_gap": 16,
+              "alarms_per_10k_arm_slots": 105.48523206751055,
+              "forced_slot_fraction": 0.39556962025316456,
+              "exploration_blocks": 78,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9873208999633789,
+              "excess_pct": 91.66912572150582
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 25.598664515498868,
+              "rank_loss": 10.729650882225636,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.004153481012658227,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.421279699949082,
+              "excess_pct": 15.228650464494553
+            }
+          }
+        },
+        {
+          "seed": 410023,
+          "sequences": [
+            "indoor_45_4",
+            "indoor_forward_7",
+            "indoor_45_9",
+            "indoor_45_12",
+            "outdoor_forward_5",
+            "outdoor_forward_1",
+            "indoor_forward_9",
+            "indoor_45_2",
+            "indoor_forward_3",
+            "outdoor_forward_3",
+            "indoor_forward_6",
+            "indoor_45_14"
+          ],
+          "oracle_cost": 17.875522013441266,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 20.35907901225071,
+              "rank_loss": 8.050604137505402,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 101.5295358649789,
+              "excess_pct": 13.893619425166804
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 34.500913236866474,
+              "rank_loss": 73.44413358576105,
+              "max_gap": 13,
+              "alarms_per_10k_arm_slots": 94.9367088607595,
+              "forced_slot_fraction": 0.3575949367088608,
+              "exploration_blocks": 70,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.017543800000567,
+              "excess_pct": 93.00646555062258
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 20.64517692320548,
+              "rank_loss": 8.495994137932106,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.003691983122362869,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.38837729999795556,
+              "excess_pct": 15.494120438449887
+            }
+          }
+        },
+        {
+          "seed": 410024,
+          "sequences": [
+            "indoor_forward_7",
+            "indoor_45_2",
+            "outdoor_forward_1",
+            "indoor_45_9",
+            "indoor_45_12",
+            "outdoor_forward_3",
+            "indoor_45_14",
+            "outdoor_forward_5",
+            "indoor_forward_10",
+            "indoor_forward_3",
+            "indoor_forward_9",
+            "indoor_forward_5"
+          ],
+          "oracle_cost": 22.54254671020078,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 26.13334830955944,
+              "rank_loss": 11.293906254690679,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 110.75949367088607,
+              "excess_pct": 15.928997045102179
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 37.72822991857368,
+              "rank_loss": 61.77756508237785,
+              "max_gap": 12,
+              "alarms_per_10k_arm_slots": 108.12236286919831,
+              "forced_slot_fraction": 0.3924050632911392,
+              "exploration_blocks": 76,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0697475000051782,
+              "excess_pct": 67.36454138742536
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 26.137885379003226,
+              "rank_loss": 11.34630704599428,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0023734177215189874,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.40327509999042377,
+              "excess_pct": 15.949123739313409
+            }
+          }
+        },
+        {
+          "seed": 410025,
+          "sequences": [
+            "indoor_forward_6",
+            "outdoor_45_1",
+            "indoor_forward_5",
+            "indoor_45_2",
+            "indoor_45_9",
+            "indoor_45_14",
+            "indoor_forward_9",
+            "outdoor_forward_5",
+            "indoor_forward_10",
+            "outdoor_forward_3",
+            "outdoor_forward_1",
+            "indoor_forward_7"
+          ],
+          "oracle_cost": 16.32470991514252,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 18.098775622004524,
+              "rank_loss": 5.405774486675336,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 119.98945147679325,
+              "excess_pct": 10.867364357981103
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 35.05639608431186,
+              "rank_loss": 72.9364865618604,
+              "max_gap": 12,
+              "alarms_per_10k_arm_slots": 121.30801687763713,
+              "forced_slot_fraction": 0.4699367088607595,
+              "exploration_blocks": 88,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.211415899975691,
+              "excess_pct": 114.74437381453342
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 18.376167846208784,
+              "rank_loss": 6.0817952898031935,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0025052742616033757,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.438631400000304,
+              "excess_pct": 12.566581223984663
+            }
+          }
+        },
+        {
+          "seed": 410026,
+          "sequences": [
+            "indoor_45_2",
+            "indoor_forward_10",
+            "indoor_forward_9",
+            "indoor_forward_7",
+            "indoor_forward_3",
+            "indoor_45_14",
+            "indoor_45_9",
+            "indoor_forward_5",
+            "outdoor_forward_5",
+            "indoor_forward_6",
+            "indoor_45_12",
+            "indoor_45_4"
+          ],
+          "oracle_cost": 23.102924615355935,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 27.454081233172577,
+              "rank_loss": 13.877561406797644,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 96.25527426160338,
+              "excess_pct": 18.83379135005503
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 34.15638909473708,
+              "rank_loss": 40.20213717931317,
+              "max_gap": 12,
+              "alarms_per_10k_arm_slots": 104.16666666666667,
+              "forced_slot_fraction": 0.40189873417721517,
+              "exploration_blocks": 77,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9540869999909773,
+              "excess_pct": 47.84443815409494
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 28.03448081968016,
+              "rank_loss": 15.485658570121592,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.003032700421940928,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.40032529999734834,
+              "excess_pct": 21.346025606846087
+            }
+          }
+        },
+        {
+          "seed": 410027,
+          "sequences": [
+            "indoor_forward_9",
+            "outdoor_forward_1",
+            "outdoor_forward_3",
+            "indoor_45_14",
+            "outdoor_forward_5",
+            "indoor_forward_3",
+            "indoor_forward_5",
+            "indoor_45_4",
+            "indoor_45_2",
+            "indoor_forward_7",
+            "outdoor_45_1",
+            "indoor_forward_6"
+          ],
+          "oracle_cost": 24.72597195675395,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 29.39027885653734,
+              "rank_loss": 14.95689802957891,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 117.35232067510549,
+              "excess_pct": 18.863998179490473
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 45.743738529776074,
+              "rank_loss": 87.20355775539305,
+              "max_gap": 10,
+              "alarms_per_10k_arm_slots": 110.75949367088607,
+              "forced_slot_fraction": 0.38924050632911394,
+              "exploration_blocks": 77,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9591962999547832,
+              "excess_pct": 85.00279224526533
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 28.6853312724211,
+              "rank_loss": 12.928769013523882,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0027030590717299578,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.37578330002725124,
+              "excess_pct": 16.01295723618923
+            }
+          }
+        },
+        {
+          "seed": 410028,
+          "sequences": [
+            "indoor_45_14",
+            "indoor_45_2",
+            "indoor_forward_6",
+            "indoor_forward_3",
+            "indoor_forward_9",
+            "indoor_45_12",
+            "outdoor_forward_5",
+            "indoor_forward_10",
+            "indoor_45_13",
+            "outdoor_45_1",
+            "indoor_forward_5",
+            "outdoor_forward_3"
+          ],
+          "oracle_cost": 24.94800382086045,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 30.15187334705515,
+              "rank_loss": 16.745741823178893,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 134.49367088607596,
+              "excess_pct": 20.858861348431603
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 46.53997769845849,
+              "rank_loss": 90.00998561238148,
+              "max_gap": 11,
+              "alarms_per_10k_arm_slots": 116.03375527426161,
+              "forced_slot_fraction": 0.4430379746835443,
+              "exploration_blocks": 83,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9987566000199877,
+              "excess_pct": 86.54790191888524
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 29.85265546406174,
+              "rank_loss": 15.7084907087499,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.004153481012658227,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.427578300004825,
+              "excess_pct": 19.65949531841995
+            }
+          }
+        },
+        {
+          "seed": 410029,
+          "sequences": [
+            "indoor_45_14",
+            "indoor_45_4",
+            "outdoor_forward_3",
+            "indoor_forward_10",
+            "indoor_45_9",
+            "outdoor_forward_5",
+            "indoor_forward_6",
+            "indoor_45_12",
+            "indoor_45_13",
+            "indoor_forward_3",
+            "indoor_forward_7",
+            "indoor_forward_9"
+          ],
+          "oracle_cost": 18.963908106148043,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 21.72632790097052,
+              "rank_loss": 9.179963601445499,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 96.25527426160338,
+              "excess_pct": 14.566722108967145
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 31.737879992483467,
+              "rank_loss": 46.748667636937846,
+              "max_gap": 14,
+              "alarms_per_10k_arm_slots": 93.61814345991561,
+              "forced_slot_fraction": 0.370253164556962,
+              "exploration_blocks": 69,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0208472999511287,
+              "excess_pct": 67.35938507418805
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 21.94565891482677,
+              "rank_loss": 9.549831586577392,
+              "max_gap": 6,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0034941983122362867,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.41137450002133846,
+              "excess_pct": 15.72329285708809
+            }
+          }
+        },
+        {
+          "seed": 410030,
+          "sequences": [
+            "indoor_45_14",
+            "outdoor_forward_5",
+            "indoor_forward_9",
+            "indoor_forward_6",
+            "outdoor_45_1",
+            "indoor_45_12",
+            "indoor_45_9",
+            "indoor_forward_7",
+            "outdoor_forward_1",
+            "indoor_45_2",
+            "outdoor_forward_3",
+            "indoor_45_13"
+          ],
+          "oracle_cost": 31.960486098867804,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 38.671081586020655,
+              "rank_loss": 22.0442710882197,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 105.48523206751055,
+              "excess_pct": 20.99653761959075
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 60.4706365133437,
+              "rank_loss": 116.84458972019245,
+              "max_gap": 13,
+              "alarms_per_10k_arm_slots": 96.25527426160338,
+              "forced_slot_fraction": 0.38924050632911394,
+              "exploration_blocks": 72,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0524762999848463,
+              "excess_pct": 89.20437044130523
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 38.66876931201316,
+              "rank_loss": 21.329947681578254,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.003626054852320675,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.41721009998582304,
+              "excess_pct": 20.989302829730725
+            }
+          }
+        }
+      ],
+      "runtime_seconds": 77.9374410000164
+    },
+    "m3ed_falcon": {
+      "protocol": {
+        "seeds": [
+          420001,
+          420002,
+          420003,
+          420004,
+          420005,
+          420006,
+          420007,
+          420008,
+          420009,
+          420010,
+          420011,
+          420012,
+          420013,
+          420014,
+          420015,
+          420016,
+          420017,
+          420018,
+          420019,
+          420020,
+          420021,
+          420022,
+          420023,
+          420024,
+          420025,
+          420026,
+          420027,
+          420028,
+          420029,
+          420030
+        ],
+        "episodes": 30,
+        "K": 12,
+        "N": 3,
+        "length": 640,
+        "n0": 8,
+        "H": 632,
+        "episode_constructor": "run_uzh_trace_replay.make_episode",
+        "oracle": "run_uzh_trace_replay.run_method('oracle')",
+        "sco_reference": "run_uzh_trace_replay.run_method('sco_reset_ucb')",
+        "selected_only_update": true,
+        "hyperparameters_transferred_without_trace_tuning": true
+      },
+      "summary_mean_ci95": {
+        "resampling_unit": "paired computational replay episode; source flights are reused and are not 30 independent physical trials",
+        "bootstrap_replicates": 20000,
+        "confidence_level": 0.95,
+        "methods": {
+          "de_cd_whittle_cv": {
+            "cost": [
+              53.571564997706936,
+              50.32078330027347,
+              56.73261038341842
+            ],
+            "excess_pct": [
+              53.205381682121825,
+              48.20231922692011,
+              58.910634067414584
+            ],
+            "rank_loss": [
+              74.8570868224024,
+              63.45722408624153,
+              87.97124780717425
+            ],
+            "max_gap": [
+              12.1,
+              11.566666666666666,
+              12.666666666666666
+            ],
+            "alarms_per_10k_arm_slots": [
+              97.1782700421941,
+              94.10161744022503,
+              100.25492264416314
+            ],
+            "forced_slot_fraction": [
+              0.3824894514767932,
+              0.37241561181434607,
+              0.39282700421940936
+            ],
+            "exploration_blocks": [
+              71.53333333333333,
+              69.1,
+              73.93333333333334
+            ]
+          },
+          "dts_whittle_cv": {
+            "cost": [
+              37.75734266290008,
+              36.021770416755835,
+              39.48785324083022
+            ],
+            "excess_pct": [
+              8.180656473389087,
+              7.866825499023703,
+              8.503587974176106
+            ],
+            "rank_loss": [
+              9.784342862440429,
+              9.139342709961717,
+              10.46741864433814
+            ],
+            "max_gap": [
+              7.5,
+              7.3,
+              7.7
+            ],
+            "posterior_clip_fraction": [
+              0.0009076125175808721,
+              0.0008087201125175808,
+              0.0010109001406469762
+            ],
+            "final_effective_weight_mean": [
+              24.97035906445204,
+              24.97035906445204,
+              24.97035906445204
+            ]
+          }
+        },
+        "sco_reset_ucb_reference": {
+          "cost": [
+            37.405849672453094,
+            35.69232482338685,
+            39.170644840273546
+          ],
+          "excess_pct": [
+            7.13936896306679,
+            6.82335872431787,
+            7.459916981655985
+          ],
+          "rank_loss": [
+            9.037638227776442,
+            8.31754151897728,
+            9.786431218761102
+          ],
+          "max_gap": [
+            7.966666666666667,
+            7.766666666666667,
+            8.166666666666666
+          ],
+          "alarms_per_10k_arm_slots": [
+            99.24402250351619,
+            96.38713080168776,
+            102.05696202531644
+          ]
+        },
+        "paired_method_minus_sco": {
+          "de_cd_whittle_cv": {
+            "direction": "de_cd_whittle_cv minus SCO-reset-UCB excess-cost percentage points; positive favors SCO",
+            "mean_ci95": [
+              46.06601271905504,
+              41.154303026874935,
+              51.73035319133688
+            ]
+          },
+          "dts_whittle_cv": {
+            "direction": "dts_whittle_cv minus SCO-reset-UCB excess-cost percentage points; positive favors SCO",
+            "mean_ci95": [
+              1.0412875103222965,
+              0.7947482999698655,
+              1.287720472118702
+            ]
+          }
+        }
+      },
+      "episodes": [
+        {
+          "seed": 420001,
+          "sequences": [
+            "falcon_forest_into_forest_2",
+            "falcon_forest_road_forest",
+            "falcon_outdoor_day_penno_trees",
+            "falcon_forest_into_forest_1",
+            "falcon_indoor_flight_1",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_outdoor_day_fast_flight_2",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_forest_into_forest_4",
+            "falcon_forest_road_2",
+            "falcon_indoor_flight_2",
+            "falcon_outdoor_night_penno_parking_2"
+          ],
+          "oracle_cost": 38.2636025761101,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 41.143352948713186,
+              "rank_loss": 10.290863826492508,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 101.5295358649789,
+              "excess_pct": 7.5260826966697
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 54.521252850120455,
+              "rank_loss": 56.37366717973499,
+              "max_gap": 12,
+              "alarms_per_10k_arm_slots": 92.29957805907173,
+              "forced_slot_fraction": 0.37816455696202533,
+              "exploration_blocks": 69,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0743593000224791,
+              "excess_pct": 42.488550945176364
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 41.385394514436825,
+              "rank_loss": 10.610817595911369,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0007252109704641351,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.5001224000006914,
+              "excess_pct": 8.158646149737647
+            }
+          }
+        },
+        {
+          "seed": 420002,
+          "sequences": [
+            "falcon_forest_into_forest_1",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_outdoor_day_fast_flight_2",
+            "falcon_forest_into_forest_2",
+            "falcon_forest_into_forest_4",
+            "falcon_outdoor_day_penno_parking_1",
+            "falcon_outdoor_night_high_beams",
+            "falcon_indoor_flight_1",
+            "falcon_forest_road_2",
+            "falcon_indoor_flight_2",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_outdoor_day_penno_trees"
+          ],
+          "oracle_cost": 32.059647411068774,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 34.46600808417345,
+              "rank_loss": 8.5339307574959,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 105.48523206751055,
+              "excess_pct": 7.505886269584705
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 44.56195715968559,
+              "rank_loss": 44.26134016493338,
+              "max_gap": 11,
+              "alarms_per_10k_arm_slots": 98.89240506329114,
+              "forced_slot_fraction": 0.370253164556962,
+              "exploration_blocks": 68,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0050386999500915,
+              "excess_pct": 38.99702822152786
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 35.222618055066285,
+              "rank_loss": 10.664549500692514,
+              "max_gap": 9,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0012526371308016879,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.39306410000426695,
+              "excess_pct": 9.865893418732608
+            }
+          }
+        },
+        {
+          "seed": 420003,
+          "sequences": [
+            "falcon_indoor_flight_2",
+            "falcon_outdoor_day_penno_parking_1",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_forest_into_forest_1",
+            "falcon_outdoor_day_fast_flight_2",
+            "falcon_indoor_flight_1",
+            "falcon_forest_into_forest_4",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_outdoor_night_penno_parking_2",
+            "falcon_outdoor_day_penno_trees",
+            "falcon_outdoor_night_high_beams",
+            "falcon_forest_into_forest_2"
+          ],
+          "oracle_cost": 33.355471461086005,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 35.65669816582594,
+              "rank_loss": 8.415358781523988,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 92.29957805907173,
+              "excess_pct": 6.899098120752534
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 50.948990479097276,
+              "rank_loss": 67.13229001386281,
+              "max_gap": 15,
+              "alarms_per_10k_arm_slots": 89.66244725738396,
+              "forced_slot_fraction": 0.3512658227848101,
+              "exploration_blocks": 64,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0867874999530613,
+              "excess_pct": 52.74552643795385
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 36.09806060505139,
+              "rank_loss": 10.036034730082697,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0005933544303797469,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.46511840005405247,
+              "excess_pct": 8.222306637653176
+            }
+          }
+        },
+        {
+          "seed": 420004,
+          "sequences": [
+            "falcon_forest_road_2",
+            "falcon_forest_into_forest_2",
+            "falcon_outdoor_day_penno_trees",
+            "falcon_forest_road_forest",
+            "falcon_indoor_flight_2",
+            "falcon_indoor_flight_3",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_outdoor_day_fast_flight_2",
+            "falcon_forest_road_1",
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_outdoor_day_fast_flight_1",
+            "falcon_outdoor_day_penno_parking_1"
+          ],
+          "oracle_cost": 40.56012025028216,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 43.00906854814915,
+              "rank_loss": 9.796078880826407,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 102.84810126582279,
+              "excess_pct": 6.0378230704332125
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 59.082194716479705,
+              "rank_loss": 67.4227961797901,
+              "max_gap": 12,
+              "alarms_per_10k_arm_slots": 104.16666666666667,
+              "forced_slot_fraction": 0.40189873417721517,
+              "exploration_blocks": 75,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.023127000022214,
+              "excess_pct": 45.66572868104033
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 43.27178715602063,
+              "rank_loss": 10.229553545010301,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0007252109704641351,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.39651200000662357,
+              "excess_pct": 6.685549473240537
+            }
+          }
+        },
+        {
+          "seed": 420005,
+          "sequences": [
+            "falcon_outdoor_day_penno_parking_1",
+            "falcon_outdoor_night_high_beams",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_forest_road_forest",
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_outdoor_night_penno_parking_2",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_outdoor_day_fast_flight_1",
+            "falcon_forest_into_forest_2",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_forest_road_1",
+            "falcon_indoor_flight_3"
+          ],
+          "oracle_cost": 31.97408924572106,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 34.00667557059965,
+              "rank_loss": 7.341827322929281,
+              "max_gap": 9,
+              "alarms_per_10k_arm_slots": 100.21097046413502,
+              "excess_pct": 6.356979581992617
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 49.807908734833326,
+              "rank_loss": 66.48979485644936,
+              "max_gap": 11,
+              "alarms_per_10k_arm_slots": 101.5295358649789,
+              "forced_slot_fraction": 0.40664556962025317,
+              "exploration_blocks": 74,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0453980999882333,
+              "excess_pct": 55.77584822529036
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 34.34946051168267,
+              "rank_loss": 8.329606571865707,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0006592827004219409,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.39635729999281466,
+              "excess_pct": 7.429050590641917
+            }
+          }
+        },
+        {
+          "seed": 420006,
+          "sequences": [
+            "falcon_indoor_flight_2",
+            "falcon_forest_road_forest",
+            "falcon_outdoor_day_penno_trees",
+            "falcon_forest_into_forest_4",
+            "falcon_indoor_flight_3",
+            "falcon_forest_road_1",
+            "falcon_outdoor_day_penno_parking_1",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_forest_road_2",
+            "falcon_indoor_flight_1"
+          ],
+          "oracle_cost": 38.999447981933905,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 42.021695866885636,
+              "rank_loss": 11.303426026825802,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 102.84810126582279,
+              "excess_pct": 7.749463239458554
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 62.727345651736535,
+              "rank_loss": 94.81002783473522,
+              "max_gap": 12,
+              "alarms_per_10k_arm_slots": 104.16666666666667,
+              "forced_slot_fraction": 0.40664556962025317,
+              "exploration_blocks": 78,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9655813000281341,
+              "excess_pct": 60.84162442707992
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 42.401299432707354,
+              "rank_loss": 11.818760002248736,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0011207805907172996,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.44737670000176877,
+              "excess_pct": 8.722819493110068
+            }
+          }
+        },
+        {
+          "seed": 420007,
+          "sequences": [
+            "falcon_outdoor_day_penno_trees",
+            "falcon_outdoor_day_fast_flight_2",
+            "falcon_forest_into_forest_1",
+            "falcon_outdoor_night_high_beams",
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_forest_road_2",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_outdoor_day_fast_flight_1",
+            "falcon_outdoor_night_penno_parking_2",
+            "falcon_indoor_flight_2",
+            "falcon_forest_into_forest_2",
+            "falcon_indoor_flight_3"
+          ],
+          "oracle_cost": 36.25876837577657,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 38.4054178366845,
+              "rank_loss": 7.972355376029743,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 100.21097046413502,
+              "excess_pct": 5.920359562852795
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 52.001765763449974,
+              "rank_loss": 60.26253482710034,
+              "max_gap": 13,
+              "alarms_per_10k_arm_slots": 96.25527426160338,
+              "forced_slot_fraction": 0.3575949367088608,
+              "exploration_blocks": 69,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9646562000270933,
+              "excess_pct": 43.418455984265705
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 38.993724106552,
+              "rank_loss": 9.180659111369804,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0009229957805907173,
+              "final_effective_weight_mean": 24.97035906445203,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.3798384999972768,
+              "excess_pct": 7.542880945185604
+            }
+          }
+        },
+        {
+          "seed": 420008,
+          "sequences": [
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_indoor_flight_2",
+            "falcon_outdoor_day_fast_flight_2",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_forest_into_forest_2",
+            "falcon_forest_into_forest_4",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_outdoor_night_penno_parking_2",
+            "falcon_forest_into_forest_1",
+            "falcon_forest_road_1",
+            "falcon_forest_road_2",
+            "falcon_indoor_flight_1"
+          ],
+          "oracle_cost": 30.635447526393477,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 32.818791625422875,
+              "rank_loss": 6.956904162716346,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 88.34388185654008,
+              "excess_pct": 7.126855571959156
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 41.55688415160838,
+              "rank_loss": 38.02555830492136,
+              "max_gap": 12,
+              "alarms_per_10k_arm_slots": 84.38818565400844,
+              "forced_slot_fraction": 0.3338607594936709,
+              "exploration_blocks": 61,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0578392999595962,
+              "excess_pct": 35.64967221649271
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 33.259277972911285,
+              "rank_loss": 8.101443689923418,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0009229957805907173,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.3961360999965109,
+              "excess_pct": 8.56468783182387
+            }
+          }
+        },
+        {
+          "seed": 420009,
+          "sequences": [
+            "falcon_outdoor_day_penno_parking_1",
+            "falcon_forest_road_1",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_forest_into_forest_4",
+            "falcon_indoor_flight_2",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_outdoor_day_fast_flight_2",
+            "falcon_forest_into_forest_1",
+            "falcon_forest_road_forest",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_indoor_flight_3"
+          ],
+          "oracle_cost": 30.511750439120107,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 32.61602856825152,
+              "rank_loss": 6.971746481859533,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 90.98101265822785,
+              "excess_pct": 6.896615562355457
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 44.831423151746485,
+              "rank_loss": 51.356892919492225,
+              "max_gap": 13,
+              "alarms_per_10k_arm_slots": 85.70675105485232,
+              "forced_slot_fraction": 0.35443037974683544,
+              "exploration_blocks": 66,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9580621999921277,
+              "excess_pct": 46.93166569121732
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 32.877638919660555,
+              "rank_loss": 7.785047038201381,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0005274261603375527,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.3942183000035584,
+              "excess_pct": 7.754024093966971
+            }
+          }
+        },
+        {
+          "seed": 420010,
+          "sequences": [
+            "falcon_outdoor_day_fast_flight_2",
+            "falcon_forest_road_1",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_indoor_flight_1",
+            "falcon_forest_into_forest_2",
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_outdoor_day_fast_flight_1",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_indoor_flight_2",
+            "falcon_outdoor_day_penno_trees",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_forest_into_forest_1"
+          ],
+          "oracle_cost": 34.67085213479251,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 37.41264558315193,
+              "rank_loss": 9.32178750049808,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 104.16666666666667,
+              "excess_pct": 7.908064785082103
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 54.76042824581628,
+              "rank_loss": 76.8014472819587,
+              "max_gap": 11,
+              "alarms_per_10k_arm_slots": 97.57383966244726,
+              "forced_slot_fraction": 0.4177215189873418,
+              "exploration_blocks": 74,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9346147000323981,
+              "excess_pct": 57.94370450694431
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 37.96488276479788,
+              "rank_loss": 10.777550537182867,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0006592827004219409,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.4238550000009127,
+              "excess_pct": 9.500864349104866
+            }
+          }
+        },
+        {
+          "seed": 420011,
+          "sequences": [
+            "falcon_forest_road_2",
+            "falcon_outdoor_night_high_beams",
+            "falcon_forest_into_forest_1",
+            "falcon_forest_into_forest_2",
+            "falcon_indoor_flight_3",
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_outdoor_night_penno_parking_2",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_indoor_flight_2",
+            "falcon_outdoor_day_penno_parking_1",
+            "falcon_outdoor_day_fast_flight_2",
+            "falcon_outdoor_day_penno_cars"
+          ],
+          "oracle_cost": 30.161163331789304,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 32.05788562260008,
+              "rank_loss": 6.430556820538748,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 98.89240506329114,
+              "excess_pct": 6.288624447093749
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 42.51603071292178,
+              "rank_loss": 39.33797030855928,
+              "max_gap": 9,
+              "alarms_per_10k_arm_slots": 84.38818565400844,
+              "forced_slot_fraction": 0.3512658227848101,
+              "exploration_blocks": 62,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9534398000105284,
+              "excess_pct": 40.962834374862055
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 32.42225704702676,
+              "rank_loss": 6.975575258263243,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0011867088607594937,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.374894599954132,
+              "excess_pct": 7.496705914039814
+            }
+          }
+        },
+        {
+          "seed": 420012,
+          "sequences": [
+            "falcon_outdoor_day_fast_flight_2",
+            "falcon_forest_road_forest",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_indoor_flight_1",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_indoor_flight_2",
+            "falcon_forest_road_1",
+            "falcon_forest_into_forest_4",
+            "falcon_outdoor_day_fast_flight_1",
+            "falcon_forest_into_forest_2",
+            "falcon_outdoor_day_penno_trees",
+            "falcon_forest_road_2"
+          ],
+          "oracle_cost": 40.23670013051966,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 42.66081888700746,
+              "rank_loss": 9.326303203807457,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 109.44092827004219,
+              "excess_pct": 6.024646028686376
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 67.12588533749725,
+              "rank_loss": 105.52613340666379,
+              "max_gap": 11,
+              "alarms_per_10k_arm_slots": 110.75949367088607,
+              "forced_slot_fraction": 0.435126582278481,
+              "exploration_blocks": 82,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9786442999611609,
+              "excess_pct": 66.82751100302598
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 43.04667135829655,
+              "rank_loss": 9.82040050654747,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0007911392405063291,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.42058380000526085,
+              "excess_pct": 6.983602578397119
+            }
+          }
+        },
+        {
+          "seed": 420013,
+          "sequences": [
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_outdoor_day_fast_flight_1",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_outdoor_night_penno_parking_2",
+            "falcon_outdoor_day_fast_flight_2",
+            "falcon_indoor_flight_1",
+            "falcon_outdoor_day_penno_parking_1",
+            "falcon_forest_into_forest_2",
+            "falcon_forest_into_forest_4",
+            "falcon_forest_into_forest_1"
+          ],
+          "oracle_cost": 32.586980700805874,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 35.04825157455133,
+              "rank_loss": 8.242941406941963,
+              "max_gap": 9,
+              "alarms_per_10k_arm_slots": 89.66244725738396,
+              "excess_pct": 7.552927030409373
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 49.734866520105776,
+              "rank_loss": 59.29695902263918,
+              "max_gap": 11,
+              "alarms_per_10k_arm_slots": 85.70675105485232,
+              "forced_slot_fraction": 0.3575949367088608,
+              "exploration_blocks": 64,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9957500000018626,
+              "excess_pct": 52.62189208856603
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 35.22816130635853,
+              "rank_loss": 8.871109473860121,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0006592827004219409,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.40141099999891594,
+              "excess_pct": 8.105017859133357
+            }
+          }
+        },
+        {
+          "seed": 420014,
+          "sequences": [
+            "falcon_outdoor_day_fast_flight_1",
+            "falcon_forest_into_forest_1",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_outdoor_night_high_beams",
+            "falcon_indoor_flight_2",
+            "falcon_forest_into_forest_2",
+            "falcon_forest_road_forest",
+            "falcon_outdoor_night_penno_parking_2",
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_forest_into_forest_4",
+            "falcon_outdoor_day_penno_trees"
+          ],
+          "oracle_cost": 30.851194211994063,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 33.45168551680133,
+              "rank_loss": 8.698593453614583,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 88.34388185654008,
+              "excess_pct": 8.429143089042125
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 48.48356864715378,
+              "rank_loss": 70.74573766488402,
+              "max_gap": 11,
+              "alarms_per_10k_arm_slots": 83.06962025316456,
+              "forced_slot_fraction": 0.34177215189873417,
+              "exploration_blocks": 60,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9873481999966316,
+              "excess_pct": 57.15297214752471
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 33.93996513624069,
+              "rank_loss": 10.299630745131612,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0013185654008438818,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.41263699997216463,
+              "excess_pct": 10.011835856408435
+            }
+          }
+        },
+        {
+          "seed": 420015,
+          "sequences": [
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_forest_road_forest",
+            "falcon_outdoor_day_penno_trees",
+            "falcon_indoor_flight_2",
+            "falcon_forest_road_2",
+            "falcon_indoor_flight_3",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_forest_into_forest_2",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_outdoor_day_fast_flight_1",
+            "falcon_outdoor_night_penno_parking_2"
+          ],
+          "oracle_cost": 38.66281559097199,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 41.29074409182424,
+              "rank_loss": 10.223847789683816,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 112.07805907172995,
+              "excess_pct": 6.797043776257938
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 58.53502962629053,
+              "rank_loss": 84.65966203830838,
+              "max_gap": 14,
+              "alarms_per_10k_arm_slots": 104.16666666666667,
+              "forced_slot_fraction": 0.4050632911392405,
+              "exploration_blocks": 78,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0082630999968387,
+              "excess_pct": 51.398776140759985
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 41.472587681098005,
+              "rank_loss": 10.479677182435259,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0010548523206751054,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.378393099992536,
+              "excess_pct": 7.267375764485484
+            }
+          }
+        },
+        {
+          "seed": 420016,
+          "sequences": [
+            "falcon_outdoor_night_high_beams",
+            "falcon_indoor_flight_2",
+            "falcon_forest_into_forest_4",
+            "falcon_indoor_flight_3",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_forest_road_2",
+            "falcon_forest_road_1",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_outdoor_day_penno_trees",
+            "falcon_forest_road_forest",
+            "falcon_outdoor_day_fast_flight_1"
+          ],
+          "oracle_cost": 33.884577261797205,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 35.82811178153069,
+              "rank_loss": 7.123963768812714,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 102.84810126582279,
+              "excess_pct": 5.735749644203758
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 66.23889274320533,
+              "rank_loss": 149.9076021152925,
+              "max_gap": 13,
+              "alarms_per_10k_arm_slots": 105.48523206751055,
+              "forced_slot_fraction": 0.375,
+              "exploration_blocks": 77,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9918728999909945,
+              "excess_pct": 95.48389885886415
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 36.593592684840026,
+              "rank_loss": 9.60913202237831,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0009229957805907173,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.3916717999964021,
+              "excess_pct": 7.994833171777738
+            }
+          }
+        },
+        {
+          "seed": 420017,
+          "sequences": [
+            "falcon_outdoor_day_fast_flight_2",
+            "falcon_outdoor_day_fast_flight_1",
+            "falcon_outdoor_night_high_beams",
+            "falcon_forest_into_forest_2",
+            "falcon_outdoor_day_penno_trees",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_forest_road_2",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_forest_into_forest_1",
+            "falcon_indoor_flight_3",
+            "falcon_outdoor_night_penno_parking_2"
+          ],
+          "oracle_cost": 38.44252113641587,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 40.89140263424562,
+              "rank_loss": 9.85996589509575,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 88.34388185654008,
+              "excess_pct": 6.370241663234655
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 54.1317830280142,
+              "rank_loss": 59.718307590182256,
+              "max_gap": 12,
+              "alarms_per_10k_arm_slots": 92.29957805907173,
+              "forced_slot_fraction": 0.3449367088607595,
+              "exploration_blocks": 66,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0588435999816284,
+              "excess_pct": 40.81226055888458
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 41.67170876251183,
+              "rank_loss": 11.606958261234428,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0007252109704641351,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.38269579998450354,
+              "excess_pct": 8.400041232043453
+            }
+          }
+        },
+        {
+          "seed": 420018,
+          "sequences": [
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_forest_road_forest",
+            "falcon_outdoor_day_penno_parking_1",
+            "falcon_forest_into_forest_1",
+            "falcon_indoor_flight_2",
+            "falcon_forest_into_forest_2",
+            "falcon_outdoor_night_penno_parking_2",
+            "falcon_outdoor_day_fast_flight_2",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_indoor_flight_3",
+            "falcon_forest_road_2",
+            "falcon_outdoor_night_penno_parking_1"
+          ],
+          "oracle_cost": 32.15496294656587,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 33.9165665479888,
+              "rank_loss": 6.4888078238724045,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 84.38818565400844,
+              "excess_pct": 5.478481204753094
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 44.43376039637015,
+              "rank_loss": 44.1309045942628,
+              "max_gap": 11,
+              "alarms_per_10k_arm_slots": 90.98101265822785,
+              "forced_slot_fraction": 0.3512658227848101,
+              "exploration_blocks": 67,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.965632600011304,
+              "excess_pct": 38.18632125376355
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 34.49588329845245,
+              "rank_loss": 7.610132012436735,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0006592827004219409,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.4030560999526642,
+              "excess_pct": 7.280121441211573
+            }
+          }
+        },
+        {
+          "seed": 420019,
+          "sequences": [
+            "falcon_forest_into_forest_2",
+            "falcon_forest_road_1",
+            "falcon_indoor_flight_1",
+            "falcon_outdoor_day_fast_flight_1",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_forest_road_2",
+            "falcon_indoor_flight_2",
+            "falcon_forest_into_forest_1",
+            "falcon_outdoor_night_high_beams",
+            "falcon_outdoor_day_penno_trees"
+          ],
+          "oracle_cost": 34.2936963871235,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 37.144864931993396,
+              "rank_loss": 10.72749152941813,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 108.12236286919831,
+              "excess_pct": 8.313972669159252
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 63.87744518464647,
+              "rank_loss": 142.50300812672415,
+              "max_gap": 13,
+              "alarms_per_10k_arm_slots": 113.39662447257383,
+              "forced_slot_fraction": 0.435126582278481,
+              "exploration_blocks": 85,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9170229000155814,
+              "excess_pct": 86.26585032878229
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 37.33855600433458,
+              "rank_loss": 10.421677395960117,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0011867088607594937,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.37611130002187565,
+              "excess_pct": 8.878773471483692
+            }
+          }
+        },
+        {
+          "seed": 420020,
+          "sequences": [
+            "falcon_outdoor_day_penno_trees",
+            "falcon_forest_into_forest_1",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_indoor_flight_1",
+            "falcon_outdoor_night_high_beams",
+            "falcon_forest_into_forest_2",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_outdoor_day_fast_flight_2",
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_forest_road_1",
+            "falcon_outdoor_night_penno_parking_2"
+          ],
+          "oracle_cost": 38.182016672465274,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 41.27711414348702,
+              "rank_loss": 10.895355122585157,
+              "max_gap": 9,
+              "alarms_per_10k_arm_slots": 108.12236286919831,
+              "excess_pct": 8.106165521774965
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 71.05424837523881,
+              "rank_loss": 189.99320036718035,
+              "max_gap": 17,
+              "alarms_per_10k_arm_slots": 105.48523206751055,
+              "forced_slot_fraction": 0.40348101265822783,
+              "exploration_blocks": 78,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9217595999944024,
+              "excess_pct": 86.0934926113506
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 41.40802109199121,
+              "rank_loss": 11.33516187999004,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0008570675105485233,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.3999070999561809,
+              "excess_pct": 8.449015271245086
+            }
+          }
+        },
+        {
+          "seed": 420021,
+          "sequences": [
+            "falcon_outdoor_day_fast_flight_1",
+            "falcon_forest_into_forest_2",
+            "falcon_outdoor_night_high_beams",
+            "falcon_indoor_flight_2",
+            "falcon_forest_road_1",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_forest_into_forest_1",
+            "falcon_indoor_flight_3",
+            "falcon_forest_into_forest_4",
+            "falcon_outdoor_day_penno_parking_1",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_outdoor_day_penno_trees"
+          ],
+          "oracle_cost": 32.33977036814161,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 34.83774275642523,
+              "rank_loss": 8.62292221908357,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 104.16666666666667,
+              "excess_pct": 7.724150047597167
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 51.68059741786858,
+              "rank_loss": 71.74541555745638,
+              "max_gap": 11,
+              "alarms_per_10k_arm_slots": 102.84810126582279,
+              "forced_slot_fraction": 0.39556962025316456,
+              "exploration_blocks": 77,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9470587000250816,
+              "excess_pct": 59.80508466683461
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 34.98757213410527,
+              "rank_loss": 8.988607645828502,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0009229957805907173,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.36997930001234636,
+              "excess_pct": 8.18744764054371
+            }
+          }
+        },
+        {
+          "seed": 420022,
+          "sequences": [
+            "falcon_outdoor_day_penno_parking_1",
+            "falcon_forest_into_forest_2",
+            "falcon_forest_into_forest_1",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_outdoor_night_high_beams",
+            "falcon_outdoor_day_fast_flight_1",
+            "falcon_forest_road_2",
+            "falcon_outdoor_night_penno_parking_2",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_outdoor_day_penno_trees",
+            "falcon_forest_road_1",
+            "falcon_indoor_flight_2"
+          ],
+          "oracle_cost": 43.43915324561828,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 47.063516862338204,
+              "rank_loss": 13.440723057004769,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 106.80379746835443,
+              "excess_pct": 8.343541128038723
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 66.16347732240223,
+              "rank_loss": 87.02196728356823,
+              "max_gap": 14,
+              "alarms_per_10k_arm_slots": 110.75949367088607,
+              "forced_slot_fraction": 0.435126582278481,
+              "exploration_blocks": 82,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.8933458999963477,
+              "excess_pct": 52.31299963029588
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 47.77203929264653,
+              "rank_loss": 15.150886746869265,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0014504219409282701,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.3742263999884017,
+              "excess_pct": 9.974609823835156
+            }
+          }
+        },
+        {
+          "seed": 420023,
+          "sequences": [
+            "falcon_forest_into_forest_2",
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_outdoor_night_penno_parking_2",
+            "falcon_outdoor_day_penno_trees",
+            "falcon_forest_road_2",
+            "falcon_outdoor_night_high_beams",
+            "falcon_indoor_flight_1",
+            "falcon_forest_into_forest_1",
+            "falcon_outdoor_day_fast_flight_2",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_outdoor_day_penno_parking_1",
+            "falcon_outdoor_day_penno_plaza"
+          ],
+          "oracle_cost": 38.40838059950296,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 41.27598326495458,
+              "rank_loss": 10.69868546900518,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 97.57383966244726,
+              "excess_pct": 7.466085840361436
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 56.891932935453546,
+              "rank_loss": 71.71326929271005,
+              "max_gap": 11,
+              "alarms_per_10k_arm_slots": 98.89240506329114,
+              "forced_slot_fraction": 0.3813291139240506,
+              "exploration_blocks": 72,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.2260589000070468,
+              "excess_pct": 48.123748118111955
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 41.372632561336815,
+              "rank_loss": 10.391246538199368,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0005274261603375527,
+              "final_effective_weight_mean": 24.97035906445203,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.38974239997332916,
+              "excess_pct": 7.717721798122912
+            }
+          }
+        },
+        {
+          "seed": 420024,
+          "sequences": [
+            "falcon_forest_road_2",
+            "falcon_forest_road_1",
+            "falcon_forest_into_forest_2",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_indoor_flight_1",
+            "falcon_forest_into_forest_1",
+            "falcon_outdoor_night_high_beams",
+            "falcon_outdoor_day_penno_parking_1",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_indoor_flight_2",
+            "falcon_outdoor_day_fast_flight_1",
+            "falcon_outdoor_night_penno_parking_1"
+          ],
+          "oracle_cost": 25.76788939197726,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 27.55566900702023,
+              "rank_loss": 6.0404364296870865,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 83.06962025316456,
+              "excess_pct": 6.9380133849828995
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 33.843177578315284,
+              "rank_loss": 25.468170885721495,
+              "max_gap": 10,
+              "alarms_per_10k_arm_slots": 83.06962025316456,
+              "forced_slot_fraction": 0.3512658227848101,
+              "exploration_blocks": 61,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9244821000029333,
+              "excess_pct": 31.338570511142592
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 28.012357453275587,
+              "rank_loss": 6.959535259486828,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0007252109704641351,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.37650319997919723,
+              "excess_pct": 8.71032946143091
+            }
+          }
+        },
+        {
+          "seed": 420025,
+          "sequences": [
+            "falcon_forest_into_forest_1",
+            "falcon_outdoor_night_penno_parking_2",
+            "falcon_outdoor_day_penno_trees",
+            "falcon_outdoor_day_penno_parking_1",
+            "falcon_forest_road_forest",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_forest_road_1",
+            "falcon_outdoor_day_fast_flight_2",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_outdoor_night_high_beams",
+            "falcon_forest_into_forest_2"
+          ],
+          "oracle_cost": 41.15738619443585,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 44.788472911580385,
+              "rank_loss": 13.699615508406275,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 100.21097046413502,
+              "excess_pct": 8.822442465103443
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 59.20087406975846,
+              "rank_loss": 76.055830641614,
+              "max_gap": 12,
+              "alarms_per_10k_arm_slots": 102.84810126582279,
+              "forced_slot_fraction": 0.3987341772151899,
+              "exploration_blocks": 75,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9607333000167273,
+              "excess_pct": 43.840218108315995
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 44.60085448224091,
+              "rank_loss": 12.59670533673836,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0009229957805907173,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.38049889996182173,
+              "excess_pct": 8.36658642883059
+            }
+          }
+        },
+        {
+          "seed": 420026,
+          "sequences": [
+            "falcon_indoor_flight_2",
+            "falcon_outdoor_night_penno_parking_2",
+            "falcon_forest_road_1",
+            "falcon_forest_into_forest_1",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_outdoor_day_fast_flight_1",
+            "falcon_indoor_flight_1",
+            "falcon_outdoor_day_penno_trees",
+            "falcon_outdoor_day_penno_parking_1",
+            "falcon_outdoor_night_high_beams",
+            "falcon_indoor_flight_3",
+            "falcon_outdoor_day_penno_parking_2"
+          ],
+          "oracle_cost": 27.696744265005275,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 29.873926566241096,
+              "rank_loss": 7.232167890026477,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 98.89240506329114,
+              "excess_pct": 7.860787825472615
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 39.24307304587081,
+              "rank_loss": 44.12342729135387,
+              "max_gap": 13,
+              "alarms_per_10k_arm_slots": 104.16666666666667,
+              "forced_slot_fraction": 0.40822784810126583,
+              "exploration_blocks": 77,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.9688992999726906,
+              "excess_pct": 41.68839727293967
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 30.188753982635884,
+              "rank_loss": 8.544704043486314,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0013185654008438818,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.41532259999075904,
+              "excess_pct": 8.997482497534026
+            }
+          }
+        },
+        {
+          "seed": 420027,
+          "sequences": [
+            "falcon_outdoor_day_fast_flight_2",
+            "falcon_forest_road_1",
+            "falcon_forest_into_forest_4",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_outdoor_day_penno_trees",
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_indoor_flight_2",
+            "falcon_indoor_flight_1",
+            "falcon_forest_into_forest_1",
+            "falcon_forest_road_forest",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_forest_into_forest_2"
+          ],
+          "oracle_cost": 35.385200345277006,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 37.893111092557156,
+              "rank_loss": 8.528213552288953,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 100.21097046413502,
+              "excess_pct": 7.08745668474049
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 52.323324261813,
+              "rank_loss": 59.81606664498242,
+              "max_gap": 11,
+              "alarms_per_10k_arm_slots": 90.98101265822785,
+              "forced_slot_fraction": 0.3860759493670886,
+              "exploration_blocks": 68,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.035599299997557,
+              "excess_pct": 47.8678197417548
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 38.058227444354216,
+              "rank_loss": 8.51521333737646,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0005933544303797469,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.45068750000791624,
+              "excess_pct": 7.554082138845342
+            }
+          }
+        },
+        {
+          "seed": 420028,
+          "sequences": [
+            "falcon_outdoor_night_penno_parking_2",
+            "falcon_outdoor_night_high_beams",
+            "falcon_forest_road_forest",
+            "falcon_forest_into_forest_4",
+            "falcon_indoor_flight_3",
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_outdoor_day_fast_flight_1",
+            "falcon_forest_road_1",
+            "falcon_outdoor_day_penno_trees",
+            "falcon_forest_road_2",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_indoor_flight_2"
+          ],
+          "oracle_cost": 34.424537930068055,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 36.71871074400129,
+              "rank_loss": 8.560598084117933,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 112.07805907172995,
+              "excess_pct": 6.664353254628286
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 55.55568184285078,
+              "rank_loss": 91.88409703136213,
+              "max_gap": 12,
+              "alarms_per_10k_arm_slots": 96.25527426160338,
+              "forced_slot_fraction": 0.3860759493670886,
+              "exploration_blocks": 72,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0533745999564417,
+              "excess_pct": 61.383958023517174
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 36.680775821519795,
+              "rank_loss": 7.985810051795255,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0008570675105485233,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.42619979998562485,
+              "excess_pct": 6.554155922252858
+            }
+          }
+        },
+        {
+          "seed": 420029,
+          "sequences": [
+            "falcon_outdoor_night_high_beams",
+            "falcon_outdoor_day_penno_parking_1",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_forest_road_2",
+            "falcon_indoor_flight_2",
+            "falcon_forest_road_forest",
+            "falcon_outdoor_night_penno_parking_1",
+            "falcon_indoor_flight_1",
+            "falcon_forest_into_forest_4",
+            "falcon_indoor_flight_3",
+            "falcon_forest_into_forest_2"
+          ],
+          "oracle_cost": 28.981955214049368,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 30.748862605934065,
+              "rank_loss": 6.294912883302721,
+              "max_gap": 8,
+              "alarms_per_10k_arm_slots": 93.61814345991561,
+              "excess_pct": 6.0965776078080625
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 48.007159931833556,
+              "rank_loss": 65.66208559034501,
+              "max_gap": 12,
+              "alarms_per_10k_arm_slots": 96.25527426160338,
+              "forced_slot_fraction": 0.379746835443038,
+              "exploration_blocks": 72,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0535669000237249,
+              "excess_pct": 65.6450007505411
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 31.18202604277077,
+              "rank_loss": 7.185816174611878,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0016482067510548524,
+              "final_effective_weight_mean": 24.97035906445204,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.43263629998546094,
+              "excess_pct": 7.59117462045793
+            }
+          }
+        },
+        {
+          "seed": 420030,
+          "sequences": [
+            "falcon_forest_into_forest_2",
+            "falcon_forest_into_forest_4",
+            "falcon_outdoor_day_penno_cars",
+            "falcon_forest_road_1",
+            "falcon_forest_road_2",
+            "falcon_indoor_flight_3",
+            "falcon_indoor_flight_2",
+            "falcon_outdoor_day_penno_trees",
+            "falcon_outdoor_night_penno_parking_2",
+            "falcon_outdoor_day_penno_plaza",
+            "falcon_outdoor_day_penno_parking_2",
+            "falcon_forest_road_forest"
+          ],
+          "oracle_cost": 42.805542816313846,
+          "references": {
+            "sco_reset_ucb": {
+              "cost": 46.29566583265274,
+              "rank_loss": 13.088765808801945,
+              "max_gap": 9,
+              "alarms_per_10k_arm_slots": 101.5295358649789,
+              "excess_pct": 8.153437117514484
+            }
+          },
+          "methods": {
+            "de_cd_whittle_cv": {
+              "method": "de_cd_whittle_cv",
+              "cost": 63.305990049023556,
+              "rank_loss": 83.4664396552832,
+              "max_gap": 13,
+              "alarms_per_10k_arm_slots": 98.89240506329114,
+              "forced_slot_fraction": 0.37341772151898733,
+              "exploration_blocks": 73,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 1.0347150000161491,
+              "excess_pct": 47.89203893682823
+            },
+            "dts_whittle_cv": {
+              "method": "dts_whittle_cv",
+              "cost": 46.42349226207918,
+              "rank_loss": 12.648283678094563,
+              "max_gap": 7,
+              "alarms_per_10k_arm_slots": 0.0,
+              "posterior_clip_fraction": 0.0007911392405063291,
+              "final_effective_weight_mean": 24.970359064452037,
+              "selected_observation_blocks": 1896,
+              "runtime_seconds": 0.4138461999827996,
+              "excess_pct": 8.452058326396173
+            }
+          }
+        }
+      ],
+      "runtime_seconds": 77.20951699995203
+    }
+  },
+  "provenance": {
+    "retrospective_matched_addendum": true,
+    "not_official_reproduction": true,
+    "reason_retrospective": "The original UZH-FPV and M3ED policy outcomes were inspected before these two baseline adapters were added.",
+    "algorithm_provenance": {
+      "de_cd_whittle_cv": {
+        "public_source": {
+          "title": "A Modularized Framework for Piecewise-Stationary Restless Bandits",
+          "authors": "Kuan-Ta Li; Chia-Chun Lin; Ping-Chun Hsieh; Yu-Chih Huang",
+          "venue": "AISTATS 2026 Spotlight",
+          "arxiv": "2604.10177v1",
+          "url": "https://arxiv.org/abs/2604.10177"
+        },
+        "source_schedule": {
+          "initial_cursor": "ceil((alpha - K/(4*alpha))^2), lower-bounded at 1",
+          "recurrence": "ceil(u + K*sqrt(u)/alpha + K^2/(4*alpha^2))",
+          "alarm_reset": "segment origin becomes alarm round; u=1"
+        },
+        "matched_adaptations": [
+          "N>1: each uniform-exploration block uses ceil(K/N) cyclic N-arm slots instead of K one-arm slots",
+          "independent simulator batches maintain independent exploration cursors and reset on any arm alarm",
+          "the existing selected-only TwoWindowCVMomentDetector and per-arm ResettableOnlineCVMomentEstimator replace the source reward detector and global base-solver reset",
+          "forced-exploration CV moments are shared with both the detector and UCB-CV base learner"
+        ]
+      },
+      "dts_whittle_cv": {
+        "public_source": {
+          "title": "Discounted Thompson Sampling for Non-Stationary Bandit Problems",
+          "authors": "Han Qi; Yue Wang; Li Zhu",
+          "year": 2023,
+          "arxiv": "2305.10718",
+          "url": "https://arxiv.org/abs/2305.10718"
+        },
+        "matched_adaptations": [
+          "calendar-time gamma discount is applied to every arm's CV-moment effective weight and centered second moment",
+          "selected arms alone receive a new physical-moment block",
+          "a diagonal Gaussian plug-in posterior replaces the source bandit's reward posterior and is redrawn per slot",
+          "draws are projected to the frozen physical variance box [0.01,1.0] before the shared Riccati/Whittle map"
+        ]
+      }
+    },
+    "hyperparameter_transfer": {
+      "source": "results/tmc_v16_baseline_expansion.json",
+      "source_sha256": "57b0653d72278068715af161b128067edb201997fee7ccd6d7a3d88663c3c892",
+      "selection_seeds": [
+        309901,
+        309902,
+        309903,
+        309904,
+        309905,
+        309906,
+        309907,
+        309908,
+        309909,
+        309910,
+        309911,
+        309912
+      ],
+      "trace_results_used_for_selection": false
+    },
+    "feedback_contract": {
+      "initial_information": "the same first eight per-arm physical-moment observations",
+      "online_information": "only selected streams' current physical moments; unselected entries are zeroed before detector/posterior update",
+      "evaluation_only_information": "the full current trace is used only for true cost, oracle action, and ranking-loss evaluation"
+    },
+    "paired_randomness": {
+      "episodes_and_projections": "the frozen 410001--410030 and 420001--420030 make_episode calls are unchanged",
+      "dts_draws": "dataset-specific NumPy SeedSequence keyed by episode seed"
+    },
+    "inference_boundary": "Episode bootstrap describes replay variation; episodes reuse public source flights and do not represent independent trials.",
+    "source_file_sha256": {
+      "run_tmc_v16_baseline_expansion.py": "1ea85fa93af9d3a86692bd4a4c25d12d9a9e19884bdca33e6e1a7961f7baede5",
+      "run_uzh_trace_replay.py": "03e3272f91eaa486735c113a269f7cefeea5278a721d825e952600a41bc59a1f",
+      "run_m3ed_trace_replay.py": "5728438c74bce37422186bbc9a678a19a285b3fcf55cf0f1d265d52205bcf5ea",
+      "core/uzh_fpv_replay_v2.py": "31aef499425db96de298a0bd8cf91b03e4334361aa239fb39df14f42c86e3e52",
+      "core/m3ed_pose.py": "79689b453301b4220f480c9ec956b0dc69f243b26fe1ad0b300f88c68d0a2443"
+    },
+    "runner_sha256": "0aba26b01e8a5738257931b1ee2fcd8a242e4b0ddaddf1888eb98df1a7ab4a29",
+    "environment": {
+      "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "numpy": "1.26.4"
+    }
+  },
+  "runtime_seconds": 157.26901599997655
+}

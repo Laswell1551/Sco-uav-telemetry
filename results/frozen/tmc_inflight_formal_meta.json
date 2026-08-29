@@ -1,0 +1,79 @@
+{
+  "mode": "paper",
+  "formal_seeds": [
+    20261000,
+    20261001,
+    20261002,
+    20261003,
+    20261004,
+    20261005,
+    20261006,
+    20261007,
+    20261008,
+    20261009,
+    20261010,
+    20261011
+  ],
+  "pilot_seeds": [
+    20262000,
+    20262001,
+    20262002,
+    20262003,
+    20262004,
+    20262005
+  ],
+  "frozen_inflight_beta": 16.0,
+  "B": 4,
+  "K": 20,
+  "H": 800,
+  "change_t": 400,
+  "n0": 8,
+  "block_length": 64,
+  "settings": [
+    {
+      "family": "delay",
+      "success_probability": 0.9,
+      "delay_slots": 0,
+      "capacity": 4
+    },
+    {
+      "family": "delay",
+      "success_probability": 0.9,
+      "delay_slots": 1,
+      "capacity": 4
+    },
+    {
+      "family": "delay",
+      "success_probability": 0.9,
+      "delay_slots": 3,
+      "capacity": 4
+    },
+    {
+      "family": "delay",
+      "success_probability": 0.9,
+      "delay_slots": 5,
+      "capacity": 4
+    },
+    {
+      "family": "capacity",
+      "success_probability": 0.9,
+      "delay_slots": 1,
+      "capacity": 2
+    },
+    {
+      "family": "capacity",
+      "success_probability": 0.9,
+      "delay_slots": 1,
+      "capacity": 4
+    },
+    {
+      "family": "capacity",
+      "success_probability": 0.9,
+      "delay_slots": 1,
+      "capacity": 8
+    }
+  ],
+  "pairing": "same latent problem, observation-indexed CV bank, and attempt-indexed channel uniforms within each formal seed",
+  "reference_boundary": "true-model immediate-reset Whittle run over the same delayed channel; it is a reference and can be outperformed",
+  "zero_delay_boundary": "pipeline-aware SCO is exactly identical to SCO at delay zero"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "claim": "Natural scheduling revisits each stream under the stated reliable-feedback model.",
+    "main_evidence": "Structural theorem plus DARE and top-N loss checks.",
+    "boundary": "Requires the paper's stabilizability, observability, and reliable-feedback assumptions.",
+    "artifact_paths": ["core/dare_monotonicity.py", "tests/test_dare_monotonicity.py", "tests/test_topn_loss.py"]
+  },
+  {
+    "claim": "Reset-based SCO improves adaptation after synthetic model drift.",
+    "main_evidence": "Thirty seed clusters with paired problem instances and frozen confidence intervals.",
+    "boundary": "Controlled simulator evidence; recent comparators are matched adaptations, not official reproductions.",
+    "artifact_paths": ["results/frozen/tmc_confirmatory_summary.csv", "results/frozen/tmc_v16_baseline_expansion.json"]
+  },
+  {
+    "claim": "The controlled ranking persists on UZH-FPV and M3ED replay inputs.",
+    "main_evidence": "Episode-level computational replays and paired trace addenda.",
+    "boundary": "Reused public flights are not independent physical trials or a field deployment.",
+    "artifact_paths": ["results/frozen/uzh_trace_replay_v1.json", "results/frozen/m3ed_trace_replay_v1.json", "results/frozen/tmc_v16_trace_baseline_expansion.json"]
+  },
+  {
+    "claim": "In-flight-aware PA-SCO reduces duplicate transmissions under two-way delay.",
+    "main_evidence": "Fixed-delay and seven-profile random-delay paired evaluations.",
+    "boundary": "Robustness stress only; no global or random-delay optimality claim.",
+    "artifact_paths": ["results/frozen/tmc_inflight_formal_summary.csv", "results/frozen/tmc_random_delay_formal_paired_summary.csv"]
+  },
+  {
+    "claim": "The implementation exposes explicit model-mismatch and certificate limits.",
+    "main_evidence": "Multi-axis, constant-acceleration mismatch, and certificate sweeps.",
+    "boundary": "Independent-axis CV generalization and empirical proxy calibration only.",
+    "artifact_paths": ["results/frozen/tmc_multiaxis_formal_summary.csv", "results/frozen/tmc_ca_mismatch_formal_v2_n1_summary.csv", "results/frozen/tmc_certificate_sweep_summary.csv"]
+  }
+]

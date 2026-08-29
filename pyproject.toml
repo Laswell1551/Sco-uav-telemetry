@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sco-uav-telemetry"
+version = "0.1.0rc3"
+description = "Reproduction artifact for self-exploring Whittle UAV telemetry control"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Jiaqi Lin"},
+  {name = "Shi Yan"},
+  {name = "Mugen Peng"},
+]
+dependencies = [
+  "numpy==1.26.4",
+  "scipy==1.13.1",
+  "sympy==1.14.0",
+  "matplotlib==3.9.2",
+]
+
+[project.optional-dependencies]
+traces = ["h5py==3.11.0"]
+dev = ["h5py==3.11.0", "pytest==7.4.4"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["core*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "experiments"]
+addopts = "-p no:cacheprovider"

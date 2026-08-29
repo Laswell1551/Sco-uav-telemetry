@@ -1,0 +1,593 @@
+{
+  "figure": "fig_capacity_delay_trajectory_4x3_v36",
+  "layout": "4 columns (delay) x 3 rows (capacity ratio)",
+  "canvas_in": [
+    7.16,
+    5.3
+  ],
+  "panel_count": 12,
+  "curves_per_panel": 4,
+  "x_count_per_curve": 40,
+  "x_values": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120,
+    130,
+    140,
+    150,
+    160,
+    170,
+    180,
+    190,
+    200,
+    210,
+    220,
+    230,
+    240,
+    250,
+    260,
+    270,
+    280,
+    290,
+    300,
+    310,
+    320,
+    330,
+    340,
+    350,
+    360,
+    370,
+    380,
+    390,
+    400
+  ],
+  "uncertainty": "pointwise normal-approximation 95% confidence intervals over 12 independent seed-cluster values; four paired batches are averaged within each seed",
+  "no_interpolation": true,
+  "no_synthetic_points": true,
+  "render_qa": {
+    "minimum_font_pt": 8.0,
+    "text_overflow_count": 0
+  },
+  "simulation_audit": {
+    "frozen_endpoint_matches": 288,
+    "maximum_absolute_endpoint_error": 1.8189894035458565e-12,
+    "zero_delay_sco_pa_sco_exact_checks": 36,
+    "zero_delay_identity": true
+  },
+  "figure_audit": {
+    "endpoints": [
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 0,
+        "method": "cumulative_ucb_cv",
+        "endpoint_mean_pct": 14.277783403505914,
+        "endpoint_ci_low_pct": 12.524623200610865,
+        "endpoint_ci_high_pct": 16.030943606400964
+      },
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 0,
+        "method": "sco_reset_ucb",
+        "endpoint_mean_pct": 9.453829230693193,
+        "endpoint_ci_low_pct": 7.9835451679366525,
+        "endpoint_ci_high_pct": 10.924113293449734
+      },
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 0,
+        "method": "ps_forced_reset_ucb",
+        "endpoint_mean_pct": 11.778458116282657,
+        "endpoint_ci_low_pct": 10.329468883317455,
+        "endpoint_ci_high_pct": 13.227447349247859
+      },
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 0,
+        "method": "inflight_sco_ucb",
+        "endpoint_mean_pct": 9.453829230693193,
+        "endpoint_ci_low_pct": 7.9835451679366525,
+        "endpoint_ci_high_pct": 10.924113293449734
+      },
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 1,
+        "method": "cumulative_ucb_cv",
+        "endpoint_mean_pct": 15.767257255336313,
+        "endpoint_ci_low_pct": 14.03734421372406,
+        "endpoint_ci_high_pct": 17.497170296948568
+      },
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 1,
+        "method": "sco_reset_ucb",
+        "endpoint_mean_pct": 10.954581994648942,
+        "endpoint_ci_low_pct": 9.53851541514854,
+        "endpoint_ci_high_pct": 12.370648574149344
+      },
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 1,
+        "method": "ps_forced_reset_ucb",
+        "endpoint_mean_pct": 7.760292495341926,
+        "endpoint_ci_low_pct": 6.073839480857448,
+        "endpoint_ci_high_pct": 9.446745509826405
+      },
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 1,
+        "method": "inflight_sco_ucb",
+        "endpoint_mean_pct": -70.14224026429133,
+        "endpoint_ci_low_pct": -70.61735377948402,
+        "endpoint_ci_high_pct": -69.66712674909864
+      },
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 3,
+        "method": "cumulative_ucb_cv",
+        "endpoint_mean_pct": 17.091750385709517,
+        "endpoint_ci_low_pct": 15.431530154007284,
+        "endpoint_ci_high_pct": 18.75197061741175
+      },
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 3,
+        "method": "sco_reset_ucb",
+        "endpoint_mean_pct": 12.538875787088719,
+        "endpoint_ci_low_pct": 11.163990702102293,
+        "endpoint_ci_high_pct": 13.913760872075144
+      },
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 3,
+        "method": "ps_forced_reset_ucb",
+        "endpoint_mean_pct": 4.260751299053996,
+        "endpoint_ci_low_pct": 2.4026333914216744,
+        "endpoint_ci_high_pct": 6.118869206686317
+      },
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 3,
+        "method": "inflight_sco_ucb",
+        "endpoint_mean_pct": -90.94348015363143,
+        "endpoint_ci_low_pct": -91.11666584757435,
+        "endpoint_ci_high_pct": -90.7702944596885
+      },
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 5,
+        "method": "cumulative_ucb_cv",
+        "endpoint_mean_pct": 19.006957049145054,
+        "endpoint_ci_low_pct": 17.84761054646753,
+        "endpoint_ci_high_pct": 20.16630355182258
+      },
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 5,
+        "method": "sco_reset_ucb",
+        "endpoint_mean_pct": 14.796035951122521,
+        "endpoint_ci_low_pct": 13.241036687539488,
+        "endpoint_ci_high_pct": 16.351035214705554
+      },
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 5,
+        "method": "ps_forced_reset_ucb",
+        "endpoint_mean_pct": 1.022145139003121,
+        "endpoint_ci_low_pct": -0.5257210572277933,
+        "endpoint_ci_high_pct": 2.5700113352340352
+      },
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 5,
+        "method": "inflight_sco_ucb",
+        "endpoint_mean_pct": -94.80945220521255,
+        "endpoint_ci_low_pct": -94.91619627259605,
+        "endpoint_ci_high_pct": -94.70270813782905
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 0,
+        "method": "cumulative_ucb_cv",
+        "endpoint_mean_pct": 10.04574998045223,
+        "endpoint_ci_low_pct": 9.046281783789894,
+        "endpoint_ci_high_pct": 11.045218177114567
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 0,
+        "method": "sco_reset_ucb",
+        "endpoint_mean_pct": 4.940028742006309,
+        "endpoint_ci_low_pct": 4.293300981988623,
+        "endpoint_ci_high_pct": 5.586756502023994
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 0,
+        "method": "ps_forced_reset_ucb",
+        "endpoint_mean_pct": 6.601379461258255,
+        "endpoint_ci_low_pct": 6.015836835655604,
+        "endpoint_ci_high_pct": 7.186922086860907
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 0,
+        "method": "inflight_sco_ucb",
+        "endpoint_mean_pct": 4.940028742006309,
+        "endpoint_ci_low_pct": 4.293300981988623,
+        "endpoint_ci_high_pct": 5.586756502023994
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 1,
+        "method": "cumulative_ucb_cv",
+        "endpoint_mean_pct": 11.96342609638802,
+        "endpoint_ci_low_pct": 10.741819597871517,
+        "endpoint_ci_high_pct": 13.185032594904522
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 1,
+        "method": "sco_reset_ucb",
+        "endpoint_mean_pct": 6.875263148979097,
+        "endpoint_ci_low_pct": 6.005898011411592,
+        "endpoint_ci_high_pct": 7.744628286546602
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 1,
+        "method": "ps_forced_reset_ucb",
+        "endpoint_mean_pct": 5.803127645808551,
+        "endpoint_ci_low_pct": 4.870644363706394,
+        "endpoint_ci_high_pct": 6.735610927910707
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 1,
+        "method": "inflight_sco_ucb",
+        "endpoint_mean_pct": -55.271734748522285,
+        "endpoint_ci_low_pct": -55.673167103475905,
+        "endpoint_ci_high_pct": -54.870302393568664
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 3,
+        "method": "cumulative_ucb_cv",
+        "endpoint_mean_pct": 13.24037102705491,
+        "endpoint_ci_low_pct": 12.136982153741236,
+        "endpoint_ci_high_pct": 14.343759900368585
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 3,
+        "method": "sco_reset_ucb",
+        "endpoint_mean_pct": 8.051501312047959,
+        "endpoint_ci_low_pct": 7.338702434074716,
+        "endpoint_ci_high_pct": 8.764300190021203
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 3,
+        "method": "ps_forced_reset_ucb",
+        "endpoint_mean_pct": 2.7204294421317727,
+        "endpoint_ci_low_pct": 1.7132191119642883,
+        "endpoint_ci_high_pct": 3.7276397722992574
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 3,
+        "method": "inflight_sco_ucb",
+        "endpoint_mean_pct": -77.54981036304859,
+        "endpoint_ci_low_pct": -77.79076608061258,
+        "endpoint_ci_high_pct": -77.3088546454846
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 5,
+        "method": "cumulative_ucb_cv",
+        "endpoint_mean_pct": 14.195845992899324,
+        "endpoint_ci_low_pct": 12.636838567836477,
+        "endpoint_ci_high_pct": 15.75485341796217
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 5,
+        "method": "sco_reset_ucb",
+        "endpoint_mean_pct": 9.57780884023038,
+        "endpoint_ci_low_pct": 8.312131429971574,
+        "endpoint_ci_high_pct": 10.843486250489187
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 5,
+        "method": "ps_forced_reset_ucb",
+        "endpoint_mean_pct": 0.5391730776546533,
+        "endpoint_ci_low_pct": -0.871261858328253,
+        "endpoint_ci_high_pct": 1.9496080136375595
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 5,
+        "method": "inflight_sco_ucb",
+        "endpoint_mean_pct": -83.09680007008025,
+        "endpoint_ci_low_pct": -83.31582606629185,
+        "endpoint_ci_high_pct": -82.87777407386865
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 0,
+        "method": "cumulative_ucb_cv",
+        "endpoint_mean_pct": 5.342858370770883,
+        "endpoint_ci_low_pct": 4.683001295017852,
+        "endpoint_ci_high_pct": 6.002715446523914
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 0,
+        "method": "sco_reset_ucb",
+        "endpoint_mean_pct": 2.0402548933401747,
+        "endpoint_ci_low_pct": 1.7568207788668897,
+        "endpoint_ci_high_pct": 2.32368900781346
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 0,
+        "method": "ps_forced_reset_ucb",
+        "endpoint_mean_pct": 3.2384770623439607,
+        "endpoint_ci_low_pct": 2.9283043312803474,
+        "endpoint_ci_high_pct": 3.548649793407574
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 0,
+        "method": "inflight_sco_ucb",
+        "endpoint_mean_pct": 2.0402548933401747,
+        "endpoint_ci_low_pct": 1.7568207788668897,
+        "endpoint_ci_high_pct": 2.32368900781346
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 1,
+        "method": "cumulative_ucb_cv",
+        "endpoint_mean_pct": 6.650397486043684,
+        "endpoint_ci_low_pct": 6.0256987033873575,
+        "endpoint_ci_high_pct": 7.275096268700011
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 1,
+        "method": "sco_reset_ucb",
+        "endpoint_mean_pct": 2.998243796471401,
+        "endpoint_ci_low_pct": 2.604934084409415,
+        "endpoint_ci_high_pct": 3.3915535085333866
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 1,
+        "method": "ps_forced_reset_ucb",
+        "endpoint_mean_pct": 3.071773465331408,
+        "endpoint_ci_low_pct": 2.7355122055112475,
+        "endpoint_ci_high_pct": 3.4080347251515684
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 1,
+        "method": "inflight_sco_ucb",
+        "endpoint_mean_pct": -22.33005695394212,
+        "endpoint_ci_low_pct": -22.621485466770032,
+        "endpoint_ci_high_pct": -22.038628441114206
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 3,
+        "method": "cumulative_ucb_cv",
+        "endpoint_mean_pct": 7.14125727435895,
+        "endpoint_ci_low_pct": 6.163478071978455,
+        "endpoint_ci_high_pct": 8.119036476739446
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 3,
+        "method": "sco_reset_ucb",
+        "endpoint_mean_pct": 3.181108521240265,
+        "endpoint_ci_low_pct": 2.541847634079051,
+        "endpoint_ci_high_pct": 3.8203694084014796
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 3,
+        "method": "ps_forced_reset_ucb",
+        "endpoint_mean_pct": 1.3677333421506102,
+        "endpoint_ci_low_pct": 0.8045190002642286,
+        "endpoint_ci_high_pct": 1.9309476840369917
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 3,
+        "method": "inflight_sco_ucb",
+        "endpoint_mean_pct": -36.22511426115107,
+        "endpoint_ci_low_pct": -36.788353558505314,
+        "endpoint_ci_high_pct": -35.661874963796826
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 5,
+        "method": "cumulative_ucb_cv",
+        "endpoint_mean_pct": 7.130159022615942,
+        "endpoint_ci_low_pct": 6.169407502979028,
+        "endpoint_ci_high_pct": 8.090910542252857
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 5,
+        "method": "sco_reset_ucb",
+        "endpoint_mean_pct": 3.3941518437244707,
+        "endpoint_ci_low_pct": 2.6423285436108803,
+        "endpoint_ci_high_pct": 4.145975143838061
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 5,
+        "method": "ps_forced_reset_ucb",
+        "endpoint_mean_pct": -0.34363814433431283,
+        "endpoint_ci_low_pct": -0.8688943817608529,
+        "endpoint_ci_high_pct": 0.1816180930922272
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 5,
+        "method": "inflight_sco_ucb",
+        "endpoint_mean_pct": -39.3905063663404,
+        "endpoint_ci_low_pct": -39.95741845195113,
+        "endpoint_ci_high_pct": -38.823594280729665
+      }
+    ]
+  },
+  "outputs": {
+    "pdf": {
+      "path": "fig_capacity_delay_trajectory_4x3_v36.pdf",
+      "bytes": 108797,
+      "sha256": "7F632BA1629F615CA5935569A5481661A8CD4FCB891E1644717561C3E29B1D36"
+    },
+    "svg": {
+      "path": "fig_capacity_delay_trajectory_4x3_v36.svg",
+      "bytes": 294813,
+      "sha256": "7ECA3722020CD1DFBCD868FF1F4F6B3C248179EECC545C70E81B0D085F6FEA7B"
+    },
+    "png": {
+      "path": "fig_capacity_delay_trajectory_4x3_v36.png",
+      "bytes": 329339,
+      "sha256": "C94D9244D6F8722D3638EE6199C2EC0C8C34C2C4903DD888857B9D1E8C489249"
+    },
+    "grayscale_png": {
+      "path": "qa/fig_capacity_delay_trajectory_4x3_v36_grayscale.png",
+      "bytes": 140765,
+      "sha256": "FC90281314C64AD6D7D12D0C7082A4B2D2021C83E7067F0BC16E062EEF297F37"
+    }
+  },
+  "claim_audit": {
+    "nonzero_delay_cells": [
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 1,
+        "paired_pa_sco_reduction_vs_sco_mean_pct": 73.09082404591275
+      },
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 3,
+        "paired_pa_sco_reduction_vs_sco_mean_pct": 91.95111116771879
+      },
+      {
+        "capacity_ratio": 0.1,
+        "delay_slots": 5,
+        "paired_pa_sco_reduction_vs_sco_mean_pct": 95.47880958320467
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 1,
+        "paired_pa_sco_reduction_vs_sco_mean_pct": 58.149014866389415
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 3,
+        "paired_pa_sco_reduction_vs_sco_mean_pct": 79.22218344868404
+      },
+      {
+        "capacity_ratio": 0.2,
+        "delay_slots": 5,
+        "paired_pa_sco_reduction_vs_sco_mean_pct": 84.57270571722613
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 1,
+        "paired_pa_sco_reduction_vs_sco_mean_pct": 24.589826649189646
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 3,
+        "paired_pa_sco_reduction_vs_sco_mean_pct": 38.19120513592235
+      },
+      {
+        "capacity_ratio": 0.4,
+        "delay_slots": 5,
+        "paired_pa_sco_reduction_vs_sco_mean_pct": 41.37844158605733
+      }
+    ],
+    "quoted_cell_mean_reduction_min_pct": 24.589826649189646,
+    "quoted_cell_mean_reduction_max_pct": 95.47880958320467
+  },
+  "protocol": {
+    "formal_seeds": [
+      20261000,
+      20261001,
+      20261002,
+      20261003,
+      20261004,
+      20261005,
+      20261006,
+      20261007,
+      20261008,
+      20261009,
+      20261010,
+      20261011
+    ],
+    "paired_batches_per_seed": 4,
+    "K": 20,
+    "capacities": [
+      2,
+      4,
+      8
+    ],
+    "capacity_ratios": [
+      0.1,
+      0.2,
+      0.4
+    ],
+    "delays": [
+      0,
+      1,
+      3,
+      5
+    ],
+    "success_probability": 0.9,
+    "H": 800,
+    "change_t": 400,
+    "post_change_slots": 400,
+    "n0": 8,
+    "block_length": 64,
+    "frozen_inflight_beta": 16.0,
+    "methods": [
+      "cumulative_ucb_cv",
+      "sco_reset_ucb",
+      "ps_forced_reset_ucb",
+      "inflight_sco_ucb"
+    ],
+    "reference": "delay-unaware, immediate-reset true-model Whittle run over the same delayed channel; it is a matched reference, not a global optimum",
+    "pairing": "same latent problem, observation-indexed CV bank, and attempt-indexed channel uniforms within each formal seed"
+  },
+  "sources": {
+    "frozen_endpoint_csv": {
+      "path": "artifact/sco-uav-telemetry/results/frozen/tmc_inflight_formal_raw.csv",
+      "bytes": 71383,
+      "sha256": "FB8C236740BB0EC8F615E69D64FD8F43BBBFBEF5D9FC4589C3E530736B3F27F4"
+    },
+    "raw_trajectory_csv": {
+      "path": "figs_tmc_v36_capacity_delay/tmc_capacity_delay_trajectory_raw_v36.csv",
+      "bytes": 2266224,
+      "sha256": "B560D6F0A68CFC68549A6197B7936DEF28120E9F8FC625C324BFFE8695699434"
+    },
+    "summary_csv": {
+      "path": "figs_tmc_v36_capacity_delay/tmc_capacity_delay_trajectory_summary_v36.csv",
+      "bytes": 178246,
+      "sha256": "012F6FE5FDB481C127342A06CFFE0D1EECCA8D82E90A6340CD97DEB294CFAED9"
+    }
+  }
+}

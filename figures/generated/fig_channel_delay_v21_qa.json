@@ -1,0 +1,934 @@
+{
+  "schema_version": 1,
+  "renderer": "make_channel_delay.py",
+  "renderer_sha256": "41F0891CE72A3FA234963B3BFD4C7F1594D22AAC25BC4F94029FF7B09DF1092E",
+  "output_directory": "generated",
+  "design_contract": {
+    "target": "IEEE TMC single- and full-width figures",
+    "canvas_width_in": {
+      "single": 3.48,
+      "full": 7.2
+    },
+    "minimum_font_pt": 7.0,
+    "data_policy": "existing formal artifacts only; no invented observations or experiments",
+    "palette_policy": "SCO deep blue; PA-SCO orange; learning light blue; forced/RM-ACK/conditions neutral gray; stale boundary dark-gray marker and dashed zero line",
+    "palette_mapping": {
+      "SCO": "#0072B2",
+      "PA-SCO": "#E69F00",
+      "learning": "#56B4E9",
+      "other_comparators": [
+        "#666666",
+        "#A6A6A6"
+      ],
+      "condition_signatures": [
+        "#222222",
+        "#A6A6A6",
+        "#666666"
+      ]
+    },
+    "layout_policy": "Fig. 6 lightly harmonized; random-delay condition definition split from performance/mechanism evidence",
+    "manuscript_policy": "renderer writes only figs_tmc_v21 and does not modify TeX, v20, or earlier assets"
+  },
+  "figures": [
+    {
+      "stem": "fig_channel_pipeline_evidence_v21",
+      "canvas": {
+        "width_in": 7.2,
+        "height_in": 5.3,
+        "target_width_in": 7.2
+      },
+      "sources": [
+        {
+          "path": "results/frozen/tmc_channel_stress_summary.csv",
+          "bytes": 15565,
+          "sha256": "F8E253C78ABE26BCF3EF48C0EB55B069A364897D90775F9B5EBB16FBAAA2737C"
+        },
+        {
+          "path": "results/frozen/tmc_inflight_formal_raw.csv",
+          "bytes": 71383,
+          "sha256": "FB8C236740BB0EC8F615E69D64FD8F43BBBFBEF5D9FC4589C3E530736B3F27F4"
+        }
+      ],
+      "panel_map": {
+        "a": {
+          "question": "How do delivery, delay, and capacity affect absolute excess cost?",
+          "point_count": 27,
+          "dimensions": "9 unique regimes x 3 methods; supplied summary intervals"
+        },
+        "b": {
+          "question": "Does PA-SCO improve on both SCO and forced reset?",
+          "point_count": 12,
+          "dimensions": "6 unique settings x 2 paired comparators; 12 seeds",
+          "exact_identity": "PA-SCO equals SCO at d=0"
+        },
+        "c": {
+          "question": "Does the repair suppress duplicate service?",
+          "point_count": 18,
+          "dimensions": "6 unique settings x 3 methods; 12 seeds"
+        }
+      },
+      "transformations": [
+        "Retained the scientifically coherent three-panel Fig. 6 structure but shortened headings and aligned the lower evidence axes.",
+        "Removed six exact cross-family duplicate summary rows by showing each physical regime once.",
+        "Panel (b) computes seed-paired 100*(reference_cost-PA_cost)/reference_cost for SCO and forced-reset references.",
+        "Panel (c) converts redundant-attempt fractions to percentage points and computes normal 95% seed-level intervals.",
+        "The duplicated d=1,N=4 capacity-family raw block is omitted; the delay-family record is used once.",
+        "The weak r=0.11 association panel is intentionally not reproduced; its manuscript caveat remains separate."
+      ],
+      "plotted_values": {
+        "panel_a": {
+          "Delivery: $p=1.0$": {
+            "cumulative_ucb_cv": [
+              9.53773388085792,
+              8.58364171188621,
+              10.491826049829628
+            ],
+            "sco_reset_ucb": [
+              4.5410905621821955,
+              4.001039225543132,
+              5.081141898821259
+            ],
+            "ps_forced_reset_ucb": [
+              6.14629602348009,
+              5.598342233840709,
+              6.694249813119471
+            ]
+          },
+          "Delivery: $p=.9$  [delay anchor]": {
+            "cumulative_ucb_cv": [
+              10.09074955524549,
+              9.079214952424246,
+              11.102284158066732
+            ],
+            "sco_reset_ucb": [
+              4.977092123331817,
+              4.300476378218649,
+              5.653707868444984
+            ],
+            "ps_forced_reset_ucb": [
+              6.623269124182479,
+              6.009673094791841,
+              7.236865153573117
+            ]
+          },
+          "Delivery: $p=.8$": {
+            "cumulative_ucb_cv": [
+              11.284972605594156,
+              9.969894946025562,
+              12.60005026516275
+            ],
+            "sco_reset_ucb": [
+              6.4287760066975395,
+              5.285139932416246,
+              7.572412080978833
+            ],
+            "ps_forced_reset_ucb": [
+              8.438036862962221,
+              7.295671740880078,
+              9.580401985044364
+            ]
+          },
+          "Delivery: $p=.7$": {
+            "cumulative_ucb_cv": [
+              11.063092683580424,
+              9.635398284973583,
+              12.490787082187264
+            ],
+            "sco_reset_ucb": [
+              6.513959970663347,
+              5.254355274396484,
+              7.77356466693021
+            ],
+            "ps_forced_reset_ucb": [
+              8.422807260767604,
+              7.081758409695985,
+              9.763856111839221
+            ]
+          },
+          "Delay: $d=1$  [capacity anchor]": {
+            "cumulative_ucb_cv": [
+              12.082897679569927,
+              10.855294943280928,
+              13.310500415858925
+            ],
+            "sco_reset_ucb": [
+              6.908490140724311,
+              6.003164972811965,
+              7.813815308636657
+            ],
+            "ps_forced_reset_ucb": [
+              5.828058800605515,
+              4.864708076484945,
+              6.791409524726085
+            ]
+          },
+          "Delay: $d=3$": {
+            "cumulative_ucb_cv": [
+              13.420974374047601,
+              12.296652286840489,
+              14.545296461254713
+            ],
+            "sco_reset_ucb": [
+              8.15372113413054,
+              7.404581728575822,
+              8.902860539685259
+            ],
+            "ps_forced_reset_ucb": [
+              2.8548308778856,
+              1.8445363850800933,
+              3.8651253706911066
+            ]
+          },
+          "Delay: $d=5$": {
+            "cumulative_ucb_cv": [
+              14.337392862569352,
+              12.735949044274538,
+              15.938836680864167
+            ],
+            "sco_reset_ucb": [
+              9.771051294337063,
+              8.461430764012364,
+              11.080671824661762
+            ],
+            "ps_forced_reset_ucb": [
+              0.6992719592328821,
+              -0.6782291393041063,
+              2.0767730577698704
+            ]
+          },
+          "Capacity: $N/K=.4$": {
+            "cumulative_ucb_cv": [
+              6.729786285892085,
+              6.0646881878355945,
+              7.394884383948575
+            ],
+            "sco_reset_ucb": [
+              3.004495335010589,
+              2.5896418360672633,
+              3.4193488339539146
+            ],
+            "ps_forced_reset_ucb": [
+              3.08176171887712,
+              2.7290602923369667,
+              3.434463145417273
+            ]
+          },
+          "Capacity: $N/K=.1$": {
+            "cumulative_ucb_cv": [
+              16.10492550342129,
+              14.325330063049474,
+              17.884520943793103
+            ],
+            "sco_reset_ucb": [
+              11.22568081389587,
+              9.727631915753154,
+              12.723729712038587
+            ],
+            "ps_forced_reset_ucb": [
+              7.944701175583112,
+              6.252635918883376,
+              9.636766432282847
+            ]
+          }
+        },
+        "panel_b": {
+          "Delay: $d=0$": {
+            "pa_gain_vs_sco_pct": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "pa_gain_vs_forced_pct": [
+              1.5581649065311118,
+              1.2488067479520202,
+              1.8675230651102035
+            ]
+          },
+          "Delay: $d=1$": {
+            "pa_gain_vs_sco_pct": [
+              58.149014866389415,
+              57.983282503721114,
+              58.314747229057716
+            ],
+            "pa_gain_vs_forced_pct": [
+              57.72395043351374,
+              57.534092857270274,
+              57.91380800975721
+            ]
+          },
+          "Delay: $d=3$": {
+            "pa_gain_vs_sco_pct": [
+              79.22218344868404,
+              79.02652968393707,
+              79.417837213431
+            ],
+            "pa_gain_vs_forced_pct": [
+              78.14073693705906,
+              77.88690115888912,
+              78.394572715229
+            ]
+          },
+          "Delay: $d=5$": {
+            "pa_gain_vs_sco_pct": [
+              84.57270571722613,
+              84.41404205365014,
+              84.73136938080212
+            ],
+            "pa_gain_vs_forced_pct": [
+              83.18111565163711,
+              82.92499790912512,
+              83.4372333941491
+            ]
+          },
+          "Capacity: $N/K=.1$": {
+            "pa_gain_vs_sco_pct": [
+              73.09082404591273,
+              72.86123818211082,
+              73.32040990971463
+            ],
+            "pa_gain_vs_forced_pct": [
+              72.29122133552124,
+              72.11674772047849,
+              72.465694950564
+            ]
+          },
+          "Capacity: $N/K=.4$": {
+            "pa_gain_vs_sco_pct": [
+              24.589826649189646,
+              24.346666710724286,
+              24.832986587655007
+            ],
+            "pa_gain_vs_forced_pct": [
+              24.64440277227564,
+              24.444140797610693,
+              24.844664746940587
+            ]
+          }
+        },
+        "panel_c": {
+          "Delay: $d=0$": {
+            "sco_reset_ucb": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "inflight_sco_ucb": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ps_forced_reset_ucb": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "Delay: $d=1$": {
+            "sco_reset_ucb": [
+              52.208333333333336,
+              52.147451786890386,
+              52.269214879776285
+            ],
+            "inflight_sco_ucb": [
+              0.2779947916666667,
+              0.2435244852044343,
+              0.3124650981288991
+            ],
+            "ps_forced_reset_ucb": [
+              51.190755208333336,
+              51.11042352750184,
+              51.271086889164835
+            ]
+          },
+          "Delay: $d=3$": {
+            "sco_reset_ucb": [
+              75.27604166666667,
+              75.25255039837563,
+              75.29953293495771
+            ],
+            "inflight_sco_ucb": [
+              10.986979166666666,
+              10.576165087714546,
+              11.397793245618786
+            ],
+            "ps_forced_reset_ucb": [
+              74.22395833333333,
+              74.19011861467973,
+              74.25779805198692
+            ]
+          },
+          "Delay: $d=5$": {
+            "sco_reset_ucb": [
+              83.27864583333333,
+              83.24930444143978,
+              83.30798722522688
+            ],
+            "inflight_sco_ucb": [
+              44.030598958333336,
+              43.46934274525218,
+              44.591855171414494
+            ],
+            "ps_forced_reset_ucb": [
+              82.25911458333333,
+              82.23110501293016,
+              82.2871241537365
+            ]
+          },
+          "Capacity: $N/K=.1$": {
+            "sco_reset_ucb": [
+              51.69921875,
+              51.63783838447472,
+              51.76059911552528
+            ],
+            "inflight_sco_ucb": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "ps_forced_reset_ucb": [
+              50.416666666666664,
+              50.30057938610715,
+              50.532753947226176
+            ]
+          },
+          "Capacity: $N/K=.4$": {
+            "sco_reset_ucb": [
+              53.233072916666664,
+              53.03439598213369,
+              53.43174985119964
+            ],
+            "inflight_sco_ucb": [
+              5.6435546875,
+              5.451229284350315,
+              5.835880090649685
+            ],
+            "ps_forced_reset_ucb": [
+              52.853515625,
+              52.67729960910443,
+              53.02973164089557
+            ]
+          }
+        }
+      },
+      "render_qa": {
+        "minimum_font_pt": 7.0,
+        "text_artist_count": 42,
+        "text_overflow_count": 0,
+        "overflow_text": [],
+        "significant_text_overlap_count": 0,
+        "overlap_threshold_fraction": 0.1,
+        "fixed_target_width": "pass",
+        "minimum_font_at_least_7pt": "pass",
+        "no_text_outside_canvas": "pass",
+        "pdf_svg_png_exported": "pass",
+        "png_dpi": 300,
+        "vector_text_preserved_in_svg": "pass"
+      },
+      "outputs": {
+        "pdf": {
+          "path": "generated/fig_channel_pipeline_evidence_v21.pdf",
+          "bytes": 62819,
+          "sha256": "D718B036315D75148E2D87FCBC2FC5E6A6925D5FA9B374863ADBB77B8527EF57"
+        },
+        "svg": {
+          "path": "generated/fig_channel_pipeline_evidence_v21.svg",
+          "bytes": 70504,
+          "sha256": "5ECB74F20BE9B17FB1A7634552EDE9D1BCC9AA717567851FC924166B96241295"
+        },
+        "png": {
+          "path": "generated/fig_channel_pipeline_evidence_v21.png",
+          "bytes": 216486,
+          "sha256": "1035691A4D50D441F640A730B62ACA7AA05BD67A48743621163654235C9CCB7B"
+        }
+      }
+    },
+    {
+      "stem": "fig_random_delay_profiles_v21",
+      "canvas": {
+        "width_in": 3.48,
+        "height_in": 3.25,
+        "target_width_in": 3.48
+      },
+      "sources": [
+        {
+          "path": "results/frozen/tmc_random_delay_formal_paired_raw.csv",
+          "bytes": 26982,
+          "sha256": "D0589C40B9AC673CC60C05D73A4B1E498D0428F1A89E182681EC243C4801B934"
+        },
+        {
+          "path": "results/frozen/tmc_random_delay_formal_paired_summary.csv",
+          "bytes": 7063,
+          "sha256": "EEB9F94A3271A8F426828A21422786A773F05B6D2352985A9AF3165E1EEBAD2B"
+        },
+        {
+          "path": "results/frozen/tmc_he_rm_formal_addendum_paired_summary.csv",
+          "bytes": 2424,
+          "sha256": "868226A350866598252C0B795AA77FA7C368F34CD174D0B6A53C9BE68DBD480F"
+        },
+        {
+          "path": "results/frozen/tmc_he_rm_formal_addendum_summary.csv",
+          "bytes": 4335,
+          "sha256": "FC109816887119E573CFE29D1048FC840734C266520925073094129A42E1D831"
+        }
+      ],
+      "panel_map": {
+        "single": {
+          "question": "Do comparable-mean delay profiles have distinct upper-tail signatures?",
+          "point_count": 21,
+          "dimensions": "7 profiles x mean/p95/p99; normal 95% intervals over 12 formal seeds",
+          "role": "random-delay condition definition, separated from method outcomes"
+        }
+      },
+      "transformations": [
+        "Reproduces the v19 all-seed RTT mean, p95, and p99 summaries without changing values.",
+        "Places the condition-definition evidence in a standalone single-column figure.",
+        "Light horizontal spans connect each profile mean to p99 but do not encode uncertainty.",
+        "The glyphs summarize per-seed RTT statistics; they are not packet-level empirical CDFs."
+      ],
+      "plotted_values": {
+        "tail_signatures": {
+          "fixed": {
+            "round_trip_mean": [
+              4.0,
+              4.0,
+              4.0
+            ],
+            "round_trip_p95": [
+              4.0,
+              4.0,
+              4.0
+            ],
+            "round_trip_p99": [
+              4.0,
+              4.0,
+              4.0
+            ]
+          },
+          "light_iid": {
+            "round_trip_mean": [
+              4.001149958745875,
+              3.9988747186576585,
+              4.003425198834092
+            ],
+            "round_trip_p95": [
+              6.0,
+              6.0,
+              6.0
+            ],
+            "round_trip_p99": [
+              6.0,
+              6.0,
+              6.0
+            ]
+          },
+          "markov_burst": {
+            "round_trip_mean": [
+              4.010242625825083,
+              3.9986744908317413,
+              4.021810760818425
+            ],
+            "round_trip_p95": [
+              7.0,
+              7.0,
+              7.0
+            ],
+            "round_trip_p99": [
+              12.0,
+              12.0,
+              12.0
+            ]
+          },
+          "feedback_heavy": {
+            "round_trip_mean": [
+              3.997589212046204,
+              3.991650609903778,
+              4.00352781418863
+            ],
+            "round_trip_p95": [
+              13.0,
+              13.0,
+              13.0
+            ],
+            "round_trip_p99": [
+              13.0,
+              13.0,
+              13.0
+            ]
+          },
+          "forward_heavy": {
+            "round_trip_mean": [
+              4.001250515676568,
+              3.996961319219677,
+              4.005539712133459
+            ],
+            "round_trip_p95": [
+              13.0,
+              13.0,
+              13.0
+            ],
+            "round_trip_p99": [
+              13.0,
+              13.0,
+              13.0
+            ]
+          },
+          "heavy_iid": {
+            "round_trip_mean": [
+              3.9988397277227725,
+              3.9911468684323195,
+              4.006532587013226
+            ],
+            "round_trip_p95": [
+              12.0,
+              12.0,
+              12.0
+            ],
+            "round_trip_p99": [
+              17.833333333333332,
+              14.919850222281573,
+              20.746816444385093
+            ]
+          },
+          "lognormal": {
+            "round_trip_mean": [
+              4.669520936468647,
+              4.657833834343697,
+              4.681208038593597
+            ],
+            "round_trip_p95": [
+              14.0,
+              14.0,
+              14.0
+            ],
+            "round_trip_p99": [
+              33.416666666666664,
+              33.12531835556149,
+              33.70801497777184
+            ]
+          }
+        }
+      },
+      "render_qa": {
+        "minimum_font_pt": 7.0,
+        "text_artist_count": 16,
+        "text_overflow_count": 0,
+        "overflow_text": [],
+        "significant_text_overlap_count": 0,
+        "overlap_threshold_fraction": 0.1,
+        "fixed_target_width": "pass",
+        "minimum_font_at_least_7pt": "pass",
+        "no_text_outside_canvas": "pass",
+        "pdf_svg_png_exported": "pass",
+        "png_dpi": 300,
+        "vector_text_preserved_in_svg": "pass"
+      },
+      "outputs": {
+        "pdf": {
+          "path": "generated/fig_random_delay_profiles_v21.pdf",
+          "bytes": 49336,
+          "sha256": "9E0D768D10EF0E38A04572258E67211E235661F033E50451D70BD5030293D8AD"
+        },
+        "svg": {
+          "path": "generated/fig_random_delay_profiles_v21.svg",
+          "bytes": 26073,
+          "sha256": "5E2B4EE77D7EFA9CF1144FF8E1686B49F199A871B3BDA725E8A4597987B5197D"
+        },
+        "png": {
+          "path": "generated/fig_random_delay_profiles_v21.png",
+          "bytes": 63585,
+          "sha256": "B06BC6819CECAB63E568ABC5B748F1DEE8FFE85E9FE09B1E27529A463F26DC09"
+        }
+      }
+    },
+    {
+      "stem": "fig_random_delay_performance_mechanism_v21",
+      "canvas": {
+        "width_in": 7.2,
+        "height_in": 3.28,
+        "target_width_in": 7.2
+      },
+      "sources": [
+        {
+          "path": "results/frozen/tmc_random_delay_formal_paired_raw.csv",
+          "bytes": 26982,
+          "sha256": "D0589C40B9AC673CC60C05D73A4B1E498D0428F1A89E182681EC243C4801B934"
+        },
+        {
+          "path": "results/frozen/tmc_random_delay_formal_paired_summary.csv",
+          "bytes": 7063,
+          "sha256": "EEB9F94A3271A8F426828A21422786A773F05B6D2352985A9AF3165E1EEBAD2B"
+        },
+        {
+          "path": "results/frozen/tmc_he_rm_formal_addendum_paired_summary.csv",
+          "bytes": 2424,
+          "sha256": "868226A350866598252C0B795AA77FA7C368F34CD174D0B6A53C9BE68DBD480F"
+        },
+        {
+          "path": "results/frozen/tmc_he_rm_formal_addendum_summary.csv",
+          "bytes": 4335,
+          "sha256": "FC109816887119E573CFE29D1048FC840734C266520925073094129A42E1D831"
+        }
+      ],
+      "panel_map": {
+        "a": {
+          "question": "Does PA-SCO improve on both SCO and retrospective RM-ACK?",
+          "point_count": 14,
+          "dimensions": "7 profiles x 2 paired comparators; supplied 95% intervals"
+        },
+        "b": {
+          "question": "What duplicate/idle trade-off remains, and can stale arrivals increase?",
+          "point_count": 21,
+          "dimensions": "7 profiles x PA duplicate / RM-ACK idle / paired stale change"
+        }
+      },
+      "transformations": [
+        "Reproduces the v19 paired gain and mechanism values without changing inputs or inferential boundaries.",
+        "Separates outcome/mechanism evidence from the delay-condition signature figure.",
+        "PA duplicate and RM-ACK idle fractions are expressed as percentage points.",
+        "RM-ACK idle endpoints use the monotone transform 100*(1-capacity utilization), with interval endpoints reversed.",
+        "Stale change is the seed-paired 100*(PA stale rate-SCO stale rate) difference with a normal 95% interval.",
+        "Positive stale-change values remain visible as a limitation; no causal mediation claim is made."
+      ],
+      "plotted_values": {
+        "performance": {
+          "fixed": {
+            "pa_gain_vs_sco_pct": [
+              87.76097991350458,
+              87.5469490999034,
+              87.97501072710577
+            ],
+            "pa_gain_vs_rm_ack_pct": [
+              9.8082628368811,
+              7.961278697159833,
+              11.655246976602369
+            ]
+          },
+          "light_iid": {
+            "pa_gain_vs_sco_pct": [
+              84.01402291761615,
+              83.70884858956134,
+              84.31919724567095
+            ],
+            "pa_gain_vs_rm_ack_pct": [
+              25.46937348050675,
+              23.832973942588072,
+              27.105773018425428
+            ]
+          },
+          "markov_burst": {
+            "pa_gain_vs_sco_pct": [
+              76.20871172321405,
+              75.70673541926041,
+              76.71068802716769
+            ],
+            "pa_gain_vs_rm_ack_pct": [
+              62.69491999097721,
+              60.98934594193132,
+              64.4004940400231
+            ]
+          },
+          "feedback_heavy": {
+            "pa_gain_vs_sco_pct": [
+              80.53492778833345,
+              80.2854390898103,
+              80.7844164868566
+            ],
+            "pa_gain_vs_rm_ack_pct": [
+              53.59646048630436,
+              52.30772119367472,
+              54.885199778933995
+            ]
+          },
+          "forward_heavy": {
+            "pa_gain_vs_sco_pct": [
+              77.04098256146135,
+              76.69715360066652,
+              77.38481152225617
+            ],
+            "pa_gain_vs_rm_ack_pct": [
+              65.38104554768002,
+              64.32781122837034,
+              66.4342798669897
+            ]
+          },
+          "heavy_iid": {
+            "pa_gain_vs_sco_pct": [
+              62.708358237215684,
+              62.26942062462582,
+              63.147295849805545
+            ],
+            "pa_gain_vs_rm_ack_pct": [
+              73.75231324821054,
+              72.7403020058171,
+              74.76432449060398
+            ]
+          },
+          "lognormal": {
+            "pa_gain_vs_sco_pct": [
+              69.44075243099967,
+              68.98601461097999,
+              69.89549025101934
+            ],
+            "pa_gain_vs_rm_ack_pct": [
+              93.30674959343054,
+              92.61252926282505,
+              94.00096992403603
+            ]
+          }
+        },
+        "mechanism": {
+          "fixed": {
+            "pa_duplicate_share_pct": [
+              26.720703124999996,
+              26.05548564664512,
+              27.38592060335487
+            ],
+            "rm_ack_idle_share_pct": [
+              0.0039062499999964473,
+              -0.003750000000013465,
+              0.011562499999995257
+            ],
+            "paired_stale_change_pa_minus_sco_points": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "light_iid": {
+            "pa_duplicate_share_pct": [
+              33.264322916666664,
+              32.82916260281987,
+              33.69948323051346
+            ],
+            "rm_ack_idle_share_pct": [
+              8.445963541666634,
+              8.372904267648718,
+              8.51902281568455
+            ],
+            "paired_stale_change_pa_minus_sco_points": [
+              -9.960055652744808,
+              -10.155397034687196,
+              -9.76471427080242
+            ]
+          },
+          "markov_burst": {
+            "pa_duplicate_share_pct": [
+              33.440755208333336,
+              33.193910023321955,
+              33.68760039334472
+            ],
+            "rm_ack_idle_share_pct": [
+              14.618489583333327,
+              14.049137839875069,
+              15.187841326791585
+            ],
+            "paired_stale_change_pa_minus_sco_points": [
+              -3.738055075572443,
+              -3.882578069618787,
+              -3.5935320815260994
+            ]
+          },
+          "feedback_heavy": {
+            "pa_duplicate_share_pct": [
+              30.593750000000004,
+              29.91515580137244,
+              31.272344198627565
+            ],
+            "rm_ack_idle_share_pct": [
+              12.17317708333333,
+              11.608401875133268,
+              12.737952291533395
+            ],
+            "paired_stale_change_pa_minus_sco_points": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "forward_heavy": {
+            "pa_duplicate_share_pct": [
+              30.694661458333332,
+              30.181616676659278,
+              31.207706240007386
+            ],
+            "rm_ack_idle_share_pct": [
+              12.100911458333341,
+              11.659696346595428,
+              12.542126570071254
+            ],
+            "paired_stale_change_pa_minus_sco_points": [
+              0.04290591022772644,
+              -0.06917552471888598,
+              0.15498734517433888
+            ]
+          },
+          "heavy_iid": {
+            "pa_duplicate_share_pct": [
+              38.68424479166667,
+              38.049436185215875,
+              39.31905339811747
+            ],
+            "rm_ack_idle_share_pct": [
+              25.460937499999993,
+              24.9390107906447,
+              25.982864209355284
+            ],
+            "paired_stale_change_pa_minus_sco_points": [
+              1.0400732763758074,
+              0.9927840535163507,
+              1.0873624992352642
+            ]
+          },
+          "lognormal": {
+            "pa_duplicate_share_pct": [
+              44.511067708333336,
+              43.97645940950973,
+              45.045676007156935
+            ],
+            "rm_ack_idle_share_pct": [
+              32.89127604166667,
+              31.987570281772946,
+              33.7949818015604
+            ],
+            "paired_stale_change_pa_minus_sco_points": [
+              -3.3543981006787003,
+              -3.509030950449258,
+              -3.1997652509081425
+            ]
+          }
+        }
+      },
+      "render_qa": {
+        "minimum_font_pt": 7.0,
+        "text_artist_count": 25,
+        "text_overflow_count": 0,
+        "overflow_text": [],
+        "significant_text_overlap_count": 0,
+        "overlap_threshold_fraction": 0.1,
+        "fixed_target_width": "pass",
+        "minimum_font_at_least_7pt": "pass",
+        "no_text_outside_canvas": "pass",
+        "pdf_svg_png_exported": "pass",
+        "png_dpi": 300,
+        "vector_text_preserved_in_svg": "pass"
+      },
+      "outputs": {
+        "pdf": {
+          "path": "generated/fig_random_delay_performance_mechanism_v21.pdf",
+          "bytes": 55097,
+          "sha256": "A4BC6EC549715879EF507208B3D3A6642F263A11BD58CD0FF9D032A17DB68D9D"
+        },
+        "svg": {
+          "path": "generated/fig_random_delay_performance_mechanism_v21.svg",
+          "bytes": 40429,
+          "sha256": "1A60D783ADE8E9637ED73B8318C2C92EBEB7BC9BB76BC633E103BEF208C9D298"
+        },
+        "png": {
+          "path": "generated/fig_random_delay_performance_mechanism_v21.png",
+          "bytes": 106965,
+          "sha256": "D4A61E3DB02030F40C9D2703634F7EA24CB9A13A0EC00667AF4F301A878C2FC0"
+        }
+      }
+    }
+  ]
+}

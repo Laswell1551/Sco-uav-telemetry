@@ -1,0 +1,39 @@
+{
+  "status": "pass",
+  "checks": {
+    "he_addendum": {
+      "raw_rows": 84,
+      "profiles": 7,
+      "all_pa_vs_he_ci_positive": true,
+      "all_he_duplicate_rates_zero": true
+    },
+    "ca_n4": {
+      "raw_rows": 270,
+      "seeds": 30,
+      "dimensions": 3,
+      "reference_label": "ca_index_not_global_oracle"
+    },
+    "ca_n1": {
+      "raw_rows": 270,
+      "seeds": 30,
+      "dimensions": 3
+    },
+    "multiaxis": {
+      "raw_rows": 252,
+      "seeds": 12,
+      "dimensions": 3,
+      "methods": 7
+    }
+  },
+  "sha256": {
+    "tmc_he_rm_formal_addendum_raw.csv": "baf9c45cd3814801ef1e3e84244d29e689346affab9e43d551f7506e04a18acc",
+    "tmc_he_rm_formal_addendum_summary.csv": "fc109816887119e573cfe29d1048fc840734c266520925073094129a42e1d831",
+    "tmc_he_rm_formal_addendum_paired_summary.csv": "868226a350866598252c0b795aa77fa7c368f34cd174d0b6a53c9be68dbd480f",
+    "tmc_ca_mismatch_formal_v2_n4_raw.csv": "b85d118ac1d0ddc3d411a9b65bf95830f13faa1ab2c5371efa5400bea960fef6",
+    "tmc_ca_mismatch_formal_v2_n4_summary.csv": "a0c2cacafc0f10333b1c9a2411a732bb8d7b90f2ae544f578718825c5debbdfa",
+    "tmc_ca_mismatch_formal_v2_n1_raw.csv": "ac182a8122a35b77832235a47b1a18e0b78d369434169996b109aa032551f89f",
+    "tmc_ca_mismatch_formal_v2_n1_summary.csv": "787a52bb11c10e768b07817a9266de6d5b1863b9b608699d660ea8c657e92b51",
+    "tmc_multiaxis_formal_raw.csv": "46362f7d032c4f3a13f90e3dac64f848ccc51f6418d0a44ac244a3ffa007ecdb",
+    "tmc_multiaxis_formal_summary.csv": "8a576ebbbccb10c7a56cc9a81f929d9222b55ad6f9eb4d26cb87bc3e74877bd6"
+  }
+}

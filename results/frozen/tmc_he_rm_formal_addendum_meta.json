@@ -1,0 +1,60 @@
+{
+  "mode": "formal_retrospective_addendum",
+  "evidence_status": "retrospective",
+  "seeds": [
+    20266000,
+    20266001,
+    20266002,
+    20266003,
+    20266004,
+    20266005,
+    20266006,
+    20266007,
+    20266008,
+    20266009,
+    20266010,
+    20266011
+  ],
+  "B": 4,
+  "K": 20,
+  "H": 800,
+  "change_t": 400,
+  "n0": 8,
+  "block_length": 64,
+  "capacity": 4,
+  "success_probability": 0.9,
+  "profiles": [
+    {
+      "name": "fixed",
+      "description": "forward=2 and feedback=2 slots"
+    },
+    {
+      "name": "light_iid",
+      "description": "iid 1/3-slot links with equal probability"
+    },
+    {
+      "name": "heavy_iid",
+      "description": "iid 1/11-slot links with probabilities .9/.1"
+    },
+    {
+      "name": "lognormal",
+      "description": "mean-calibrated discretized log-normal links"
+    },
+    {
+      "name": "markov_burst",
+      "description": "correlated 1/6-slot Markov links"
+    },
+    {
+      "name": "forward_heavy",
+      "description": "heavy-tailed forward and fixed feedback"
+    },
+    {
+      "name": "feedback_heavy",
+      "description": "fixed forward and heavy-tailed feedback"
+    }
+  ],
+  "baseline_label": "He-style RM-ACK (matched multi-stream adaptation)",
+  "source_scope": "single-source optimal waiting under unknown two-way delay; the implemented multi-stream capacity-constrained adaptation is not claimed by the source paper",
+  "pairing": "same frozen seeds, latent problems, observation banks, success uniforms, and attempt-indexed delays as the prior formal run",
+  "claim_boundary": "retrospective external-baseline addendum; negative transfer does not refute the source theorem"
+}

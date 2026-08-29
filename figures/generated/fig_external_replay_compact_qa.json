@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "figure": "fig_external_replay_compact",
+  "renderer": "make_external.py",
+  "design_contract": {
+    "target": "IEEE TMC two-column figure",
+    "core_claim": "External replay replication with dataset-specific uncertainty and an explicit matched DTS-minus-SCO boundary",
+    "panel_map": {
+      "a": "UZH-FPV forest plus 30-episode paired effect strip",
+      "b": "M3ED Falcon forest plus 30-episode paired effect strip"
+    },
+    "removed_from_main_figure": "6GL assignment sensitivity",
+    "width_in": 7.2,
+    "minimum_font_pt": 7.0,
+    "no_fabrication": true
+  },
+  "sources": [
+    {
+      "path": "results/frozen/uzh_trace_replay_v1.json",
+      "bytes": 88508,
+      "sha256": "635ce20332fde06844f6d897a506f24a4e58b83d3b6d55a5562c6fe59176960e"
+    },
+    {
+      "path": "results/frozen/m3ed_trace_replay_v1.json",
+      "bytes": 93292,
+      "sha256": "b1401e1dd8f0a7978528a720d2f05784a75b0b8c4da219c19ede446e96fd825d"
+    },
+    {
+      "path": "results/frozen/tmc_v16_trace_baseline_expansion.json",
+      "bytes": 135638,
+      "sha256": "587ea244b40e928f1d6789a9ef6287e4c9fae45aa434978672d762480e916e64"
+    }
+  ],
+  "data_contract": {
+    "method_order": [
+      "cumulative_ce",
+      "cumulative_ucb_cv",
+      "sw_ce_32",
+      "sw_ucb_cv_64",
+      "dts_whittle_cv",
+      "de_cd_whittle_cv",
+      "sco_reset_ce",
+      "sco_reset_ucb",
+      "forced_reset_ucb",
+      "aoi"
+    ],
+    "forest_point_count": 20,
+    "paired_episode_point_count": 60,
+    "matched_episodes_per_dataset": 30,
+    "primary_methods_use_frozen_replay_summary": [
+      "cumulative_ce",
+      "cumulative_ucb_cv",
+      "sw_ce_32",
+      "sw_ucb_cv_64",
+      "sco_reset_ce",
+      "sco_reset_ucb",
+      "forced_reset_ucb",
+      "aoi"
+    ],
+    "retrospective_methods_use_v16_addendum": [
+      "dts_whittle_cv",
+      "de_cd_whittle_cv"
+    ],
+    "paired_ci_source": "tmc_v16_trace_baseline_expansion.json:summary_mean_ci95.paired_method_minus_sco.dts_whittle_cv.mean_ci95",
+    "data_and_ci_unchanged": true
+  },
+  "datasets": {
+    "uzh_fpv": {
+      "forest": [
+        {
+          "method": "cumulative_ce",
+          "mean": 17.526521748880803,
+          "low": 16.382571764064668,
+          "high": 18.715672320067373,
+          "source": "frozen_primary_replay"
+        },
+        {
+          "method": "cumulative_ucb_cv",
+          "mean": 17.312056568606412,
+          "low": 16.254150567506635,
+          "high": 18.403463799330158,
+          "source": "frozen_primary_replay"
+        },
+        {
+          "method": "sw_ce_32",
+          "mean": 17.60975814528956,
+          "low": 16.59040338826674,
+          "high": 18.666456600010942,
+          "source": "frozen_primary_replay"
+        },
+        {
+          "method": "sw_ucb_cv_64",
+          "mean": 17.324808802888676,
+          "low": 16.237850888336585,
+          "high": 18.45773846007322,
+          "source": "frozen_primary_replay"
+        },
+        {
+          "method": "dts_whittle_cv",
+          "mean": 16.84431905601725,
+          "low": 15.805524316037637,
+          "high": 17.90054891062095,
+          "source": "retrospective_v16_addendum"
+        },
+        {
+          "method": "de_cd_whittle_cv",
+          "mean": 80.64861539908631,
+          "low": 73.88662685651603,
+          "high": 87.92341576780944,
+          "source": "retrospective_v16_addendum"
+        },
+        {
+          "method": "sco_reset_ce",
+          "mean": 17.879152815078633,
+          "low": 16.570519683271044,
+          "high": 19.255392603395364,
+          "source": "frozen_primary_replay"
+        },
+        {
+          "method": "sco_reset_ucb",
+          "mean": 16.736022898839707,
+          "low": 15.504057642873457,
+          "high": 17.962259931454856,
+          "source": "frozen_primary_replay"
+        },
+        {
+          "method": "forced_reset_ucb",
+          "mean": 18.404617854681785,
+          "low": 17.300538478703693,
+          "high": 19.539774894271645,
+          "source": "frozen_primary_replay"
+        },
+        {
+          "method": "aoi",
+          "mean": 40.616596538936356,
+          "low": 38.06599719410148,
+          "high": 43.270407014408114,
+          "source": "frozen_primary_replay"
+        }
+      ],
+      "paired_episode_effects": [
+        0.3592368713295926,
+        -1.1474480391720832,
+        -1.7464769651276164,
+        -0.5651861615754825,
+        1.5610215597478678,
+        0.8505251895006403,
+        0.7493586873326343,
+        -0.6034288159038503,
+        0.7041149293494335,
+        -0.4685749122967948,
+        1.0349796470796129,
+        0.6079844463698443,
+        -0.33761385741371086,
+        -0.8090443237908964,
+        -0.8302389159251735,
+        0.039497360903983036,
+        0.49804184974486887,
+        -1.4981012453786349,
+        1.2170077700107704,
+        -0.19446099844466858,
+        -0.09442584692747147,
+        0.9911086706766667,
+        1.6005010132830826,
+        0.020126694211230145,
+        1.6992168660035603,
+        2.512234256791057,
+        -2.8510409433012427,
+        -1.199366030011653,
+        1.156570748120945,
+        -0.007234789860024904
+      ],
+      "paired_summary_mean_ci95": {
+        "mean": 0.10829615717754955,
+        "low": -0.31434174333778303,
+        "high": 0.5176641685135417
+      }
+    },
+    "m3ed_falcon": {
+      "forest": [
+        {
+          "method": "cumulative_ce",
+          "mean": 9.630838528149079,
+          "low": 9.240052160140241,
+          "high": 10.0271691604236,
+          "source": "frozen_primary_replay"
+        },
+        {
+          "method": "cumulative_ucb_cv",
+          "mean": 8.44910647358784,
+          "low": 8.061103719483699,
+          "high": 8.839622585291504,
+          "source": "frozen_primary_replay"
+        },
+        {
+          "method": "sw_ce_32",
+          "mean": 9.158393698268851,
+          "low": 8.74904666430852,
+          "high": 9.598985092245758,
+          "source": "frozen_primary_replay"
+        },
+        {
+          "method": "sw_ucb_cv_64",
+          "mean": 8.582058356607803,
+          "low": 8.215756165059755,
+          "high": 8.924412776044775,
+          "source": "frozen_primary_replay"
+        },
+        {
+          "method": "dts_whittle_cv",
+          "mean": 8.180656473389087,
+          "low": 7.866825499023703,
+          "high": 8.503587974176106,
+          "source": "retrospective_v16_addendum"
+        },
+        {
+          "method": "de_cd_whittle_cv",
+          "mean": 53.205381682121825,
+          "low": 48.20231922692011,
+          "high": 58.910634067414584,
+          "source": "retrospective_v16_addendum"
+        },
+        {
+          "method": "sco_reset_ce",
+          "mean": 8.397769415005573,
+          "low": 8.033743089146697,
+          "high": 8.756061066379129,
+          "source": "frozen_primary_replay"
+        },
+        {
+          "method": "sco_reset_ucb",
+          "mean": 7.13936896306679,
+          "low": 6.820688319489031,
+          "high": 7.454559146494309,
+          "source": "frozen_primary_replay"
+        },
+        {
+          "method": "forced_reset_ucb",
+          "mean": 8.89016765541137,
+          "low": 8.562596067971969,
+          "high": 9.21741752284159,
+          "source": "frozen_primary_replay"
+        },
+        {
+          "method": "aoi",
+          "mean": 33.10052312146562,
+          "low": 31.174402531285086,
+          "high": 34.986138275684894,
+          "source": "frozen_primary_replay"
+        }
+      ],
+      "paired_episode_effects": [
+        0.6325634530679469,
+        2.3600071491479024,
+        1.3232085169006425,
+        0.6477264028073249,
+        1.0720710086493002,
+        0.9733562536515139,
+        1.6225213823328088,
+        1.437832259864713,
+        0.8574085316115143,
+        1.592799564022763,
+        1.2080814669460649,
+        0.9589565497107433,
+        0.5520908287239834,
+        1.5826927673663107,
+        0.47033198822754585,
+        2.2590835275739796,
+        2.029799568808798,
+        1.8016402364584794,
+        0.5648008023244397,
+        0.3428497494701208,
+        0.4632975929465424,
+        1.6310686957964329,
+        0.25163595776147574,
+        1.7723160764480097,
+        -0.4558560362728521,
+        1.1366946720614113,
+        0.466625454104852,
+        -0.11019733237542795,
+        1.4945970126498676,
+        0.2986212088816895
+      ],
+      "paired_summary_mean_ci95": {
+        "mean": 1.0412875103222965,
+        "low": 0.7947482999698655,
+        "high": 1.287720472118702
+      }
+    }
+  },
+  "render_qa": {
+    "canvas_width_in": 7.2,
+    "canvas_height_in": 4.35,
+    "minimum_font_pt": 7.0,
+    "visible_text_count": 64,
+    "text_overflow_count": 0,
+    "overflow_text": [],
+    "outputs": {
+      "pdf": {
+        "path": "generated/fig_external_replay_compact.pdf",
+        "bytes": 55994,
+        "sha256": "f9d756342d8ff78053d80073d449772514fa6dfc3e6f83bd795ec211f9e3c873"
+      },
+      "svg": {
+        "path": "generated/fig_external_replay_compact.svg",
+        "bytes": 68110,
+        "sha256": "7b01ddd47fffce60436336d2479c752bfa0e744453b29ca28c1ab7bc5b90be74"
+      },
+      "png": {
+        "path": "generated/fig_external_replay_compact.png",
+        "bytes": 193907,
+        "sha256": "1044845f05c21d0474c87d993264b6f5f19187e329096b9b37ca51530a3bfc6a"
+      }
+    }
+  },
+  "checks": {
+    "fixed_7_2_in_width": true,
+    "minimum_font_at_least_7pt": true,
+    "zero_text_overflow": true,
+    "thirty_matched_episodes_each": true,
+    "uzh_interval_crosses_zero": true,
+    "m3ed_interval_is_positive": true,
+    "pdf_svg_png_exported": true
+  }
+}

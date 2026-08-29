@@ -1,0 +1,80 @@
+{
+  "mode": "pilot_not_for_manuscript",
+  "reason_for_extension": "the first pilot selected the largest candidate beta=4",
+  "seeds": [
+    20262000,
+    20262001,
+    20262002,
+    20262003,
+    20262004,
+    20262005
+  ],
+  "extra_candidate_betas": [
+    8.0,
+    16.0,
+    32.0,
+    64.0,
+    1000000.0
+  ],
+  "all_candidate_betas": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0,
+    16.0,
+    32.0,
+    64.0,
+    1000000.0
+  ],
+  "selection_rule": "minimum mean post-change excess across all pilot seeds and delays",
+  "selected_beta": 16.0,
+  "ranked_mean_post_excess": [
+    {
+      "beta": 16.0,
+      "mean_post_excess_pct": -62.38843481766575
+    },
+    {
+      "beta": 32.0,
+      "mean_post_excess_pct": -62.27982551906967
+    },
+    {
+      "beta": 64.0,
+      "mean_post_excess_pct": -61.91414830528395
+    },
+    {
+      "beta": 8.0,
+      "mean_post_excess_pct": -61.64528518745874
+    },
+    {
+      "beta": 1000000.0,
+      "mean_post_excess_pct": -61.16028508026201
+    },
+    {
+      "beta": 4.0,
+      "mean_post_excess_pct": -59.13544263254763
+    },
+    {
+      "beta": 2.0,
+      "mean_post_excess_pct": -53.510948176551665
+    },
+    {
+      "beta": 1.0,
+      "mean_post_excess_pct": -40.092856970943835
+    },
+    {
+      "beta": 0.5,
+      "mean_post_excess_pct": -23.551644027554104
+    },
+    {
+      "beta": 0.25,
+      "mean_post_excess_pct": -9.261583718307735
+    },
+    {
+      "beta": 0.0,
+      "mean_post_excess_pct": 10.964954369820054
+    }
+  ]
+}

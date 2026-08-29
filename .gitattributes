@@ -1,0 +1,18 @@
+* text=auto
+.gitattributes text eol=lf
+.gitignore text eol=lf
+LICENSE text eol=lf
+*.cff text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.svg text eol=lf
+*.pdf binary
+*.png binary
+
+# Preserve frozen artifacts byte-for-byte so MANIFEST.sha256 remains valid
+# across clones on platforms with different line-ending defaults.
+results/frozen/* -text

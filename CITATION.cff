@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "Please cite the associated SCO paper and this software artifact."
+title: "SCO and PA-SCO: Reproducible UAV Telemetry Control under Model Drift and Two-Way Delay"
+type: software
+version: 0.1.0-rc3
+date-released: 2026-08-29
+authors:
+  - given-names: Jiaqi
+    family-names: Lin
+    affiliation: Beijing University of Posts and Telecommunications
+  - given-names: Shi
+    family-names: Yan
+    affiliation: Beijing University of Posts and Telecommunications
+  - given-names: Mugen
+    family-names: Peng
+    affiliation: Beijing University of Posts and Telecommunications
+license: MIT
+repository-code: "https://github.com/Laswell1551/Sco-uav-telemetry"
+keywords:
+  - Whittle index
+  - UAV telemetry
+  - restless bandits
+  - nonstationary control
+  - delayed feedback
+abstract: >-
+  Reproduction code and frozen numerical artifacts for SCO and PA-SCO,
+  self-exploring Whittle control under model drift and two-way delay.
+preferred-citation:
+  type: unpublished
+  title: "Self-Exploring Whittle Control for Unmanned Aerial Vehicle Telemetry with Model Drift and Two-Way Delay"
+  authors:
+    - given-names: Jiaqi
+      family-names: Lin
+    - given-names: Shi
+      family-names: Yan
+    - given-names: Mugen
+      family-names: Peng
+  year: 2026

@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "row_counts": {
+    "raw": 420,
+    "summary": 35,
+    "paired_raw": 84,
+    "paired_summary": 7
+  },
+  "seed_disjointness": "PASS",
+  "frozen_beta": 16.0,
+  "paired_formula_checks": 252,
+  "delay_bank_consistency_checks": 504,
+  "paired_summary_checks": 168,
+  "heavy_iid_spot_reproduction_checks": 6,
+  "hashes": {
+    "tmc_random_delay_formal_raw.csv": "F3EAE2F07125DD2E146003A23C9C8C6E162258DA23EC63005C1E5112DC0DB40F",
+    "tmc_random_delay_formal_summary.csv": "45A4C195ED031B6B5B41E62914CA5F556C66296AB701D63E7C9D00E793F09D70",
+    "tmc_random_delay_formal_paired_raw.csv": "D0589C40B9AC673CC60C05D73A4B1E498D0428F1A89E182681EC243C4801B934",
+    "tmc_random_delay_formal_paired_summary.csv": "EEB9F94A3271A8F426828A21422786A773F05B6D2352985A9AF3165E1EEBAD2B",
+    "tmc_random_delay_formal_meta.json": "8DD830EC8469AF2B1405E5BF7C5330FD1DB75C775362FFD77A61151B88EF40A9"
+  }
+}

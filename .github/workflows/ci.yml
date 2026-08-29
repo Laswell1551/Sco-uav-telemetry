@@ -1,0 +1,52 @@
+name: artifact-ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements/dev.txt
+      - name: Check dependency consistency
+        run: python -m pip check
+      - name: Verify frozen artifact
+        run: python -B scripts/reproduce.py verify-frozen
+      - name: Run targeted regression suite
+        run: python -B scripts/reproduce.py smoke
+
+  presentation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements/dev.txt
+      - name: Render figures and tables
+        run: |
+          python -B scripts/reproduce.py figures
+          python -B scripts/reproduce.py tables
+      - uses: actions/upload-artifact@v4
+        with:
+          name: paper-figures-and-tables
+          path: |
+            figures/generated/
+            artifacts/tables/

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "row_counts": {
+    "raw": 336,
+    "summary": 28,
+    "paired_raw": 84,
+    "paired_summary": 7
+  },
+  "frozen_beta": 16.0,
+  "zero_delay_exact_pairs": 12,
+  "v5_regression_rows": 168,
+  "v5_action_metric_comparisons": 672,
+  "ratio_aggregation_boundary": {
+    "v5": "mean of per-batch policy/oracle ratios",
+    "formal": "ratio of cross-batch mean costs",
+    "max_abs_post_percentage_point_difference": 0.9909945818405994,
+    "max_abs_total_percentage_point_difference": 0.6976518746395906
+  },
+  "hashes": {
+    "tmc_inflight_formal_raw.csv": "FB8C236740BB0EC8F615E69D64FD8F43BBBFBEF5D9FC4589C3E530736B3F27F4",
+    "tmc_inflight_formal_summary.csv": "943BA56380654362411E24BE4545FE56F1A0F077A887CE291DA5F738EB0084EF",
+    "tmc_inflight_formal_paired_raw.csv": "E50DD78450F5D85C228129A9FDC372F9F471ED5A6074D77A73ED9063B7E0A129",
+    "tmc_inflight_formal_paired_summary.csv": "419606A1734F1B44878B5EA66DE9483FD12A85A0BB36D8B513CAD7F2192C870F",
+    "tmc_inflight_formal_meta.json": "D869F585B3F10C4506BF3C21C069917BFED93B5470BE6959E815347373F7A8C3"
+  }
+}

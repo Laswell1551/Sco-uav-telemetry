@@ -1,0 +1,2953 @@
+﻿{
+  "protocol": {
+    "dataset": "M3ED Falcon public pose ground truth",
+    "seeds": [
+      420001,
+      420002,
+      420003,
+      420004,
+      420005,
+      420006,
+      420007,
+      420008,
+      420009,
+      420010,
+      420011,
+      420012,
+      420013,
+      420014,
+      420015,
+      420016,
+      420017,
+      420018,
+      420019,
+      420020,
+      420021,
+      420022,
+      420023,
+      420024,
+      420025,
+      420026,
+      420027,
+      420028,
+      420029,
+      420030
+    ],
+    "K": 12,
+    "N": 3,
+    "length": 640,
+    "n0": 8,
+    "H": 632,
+    "methods": [
+      "oracle",
+      "cumulative_ce",
+      "cumulative_ucb_cv",
+      "sw_ce_32",
+      "sw_ucb_cv_64",
+      "sco_reset_ce",
+      "sco_reset_ucb",
+      "forced_reset_ucb",
+      "aoi",
+      "round_robin"
+    ]
+  },
+  "summary_mean_ci95": {
+    "oracle": {
+      "excess_pct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rank_loss": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_gap": [
+        7.933333333333334,
+        7.8,
+        8.066666666666666
+      ],
+      "alarms_per_10k_arm_slots": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "cumulative_ce": {
+      "excess_pct": [
+        9.630838528149079,
+        9.240052160140241,
+        10.0271691604236
+      ],
+      "rank_loss": [
+        11.567198804416737,
+        10.810369838538627,
+        12.357032355406627
+      ],
+      "max_gap": [
+        7.233333333333333,
+        7.066666666666666,
+        7.4
+      ],
+      "alarms_per_10k_arm_slots": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "cumulative_ucb_cv": {
+      "excess_pct": [
+        8.44910647358784,
+        8.061103719483699,
+        8.839622585291504
+      ],
+      "rank_loss": [
+        10.008340374892299,
+        9.336188000685219,
+        10.713007510660802
+      ],
+      "max_gap": [
+        7.366666666666666,
+        7.166666666666667,
+        7.566666666666666
+      ],
+      "alarms_per_10k_arm_slots": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "sw_ce_32": {
+      "excess_pct": [
+        9.158393698268851,
+        8.74904666430852,
+        9.598985092245758
+      ],
+      "rank_loss": [
+        11.331934763720893,
+        10.453320758007717,
+        12.295662183543488
+      ],
+      "max_gap": [
+        7.433333333333334,
+        7.233333333333333,
+        7.633333333333334
+      ],
+      "alarms_per_10k_arm_slots": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "sw_ucb_cv_64": {
+      "excess_pct": [
+        8.582058356607803,
+        8.215756165059755,
+        8.924412776044775
+      ],
+      "rank_loss": [
+        10.296224704233891,
+        9.6371214371899,
+        10.983312305196423
+      ],
+      "max_gap": [
+        7.5,
+        7.266666666666667,
+        7.733333333333333
+      ],
+      "alarms_per_10k_arm_slots": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "sco_reset_ce": {
+      "excess_pct": [
+        8.397769415005573,
+        8.033743089146697,
+        8.756061066379129
+      ],
+      "rank_loss": [
+        10.725974880605577,
+        9.864716768005884,
+        11.610591942685588
+      ],
+      "max_gap": [
+        7.7,
+        7.5,
+        7.9
+      ],
+      "alarms_per_10k_arm_slots": [
+        97.57383966244726,
+        94.40928270042194,
+        100.73839662447259
+      ]
+    },
+    "sco_reset_ucb": {
+      "excess_pct": [
+        7.13936896306679,
+        6.820688319489031,
+        7.454559146494309
+      ],
+      "rank_loss": [
+        9.037638227776442,
+        8.317142814991092,
+        9.799278666758276
+      ],
+      "max_gap": [
+        7.966666666666667,
+        7.766666666666667,
+        8.166666666666666
+      ],
+      "alarms_per_10k_arm_slots": [
+        99.24402250351619,
+        96.38713080168776,
+        102.05696202531644
+      ]
+    },
+    "forced_reset_ucb": {
+      "excess_pct": [
+        8.89016765541137,
+        8.562596067971969,
+        9.21741752284159
+      ],
+      "rank_loss": [
+        10.382787949009431,
+        9.673129827634162,
+        11.132845641365597
+      ],
+      "max_gap": [
+        8.333333333333334,
+        8.133333333333333,
+        8.533333333333333
+      ],
+      "alarms_per_10k_arm_slots": [
+        99.68354430379745,
+        96.73874824191282,
+        102.45253164556962
+      ]
+    },
+    "aoi": {
+      "excess_pct": [
+        33.10052312146562,
+        31.174402531285086,
+        34.986138275684894
+      ],
+      "rank_loss": [
+        33.78969919182577,
+        32.49989609665664,
+        34.962507761525
+      ],
+      "max_gap": [
+        3.0,
+        3.0,
+        3.0
+      ],
+      "alarms_per_10k_arm_slots": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "round_robin": {
+      "excess_pct": [
+        33.10052312146562,
+        31.195494178685337,
+        35.02274751884015
+      ],
+      "rank_loss": [
+        33.78969919182577,
+        32.48731230863977,
+        34.976016039875844
+      ],
+      "max_gap": [
+        3.0,
+        3.0,
+        3.0
+      ],
+      "alarms_per_10k_arm_slots": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "paired_natural_minus_forced_excess_pct": [
+    -1.7507986923445777,
+    -1.96841296289814,
+    -1.531365515784408
+  ],
+  "episodes": [
+    {
+      "seed": 420001,
+      "sequences": [
+        "falcon_forest_into_forest_2",
+        "falcon_forest_road_forest",
+        "falcon_outdoor_day_penno_trees",
+        "falcon_forest_into_forest_1",
+        "falcon_indoor_flight_1",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_outdoor_day_fast_flight_2",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_forest_into_forest_4",
+        "falcon_forest_road_2",
+        "falcon_indoor_flight_2",
+        "falcon_outdoor_night_penno_parking_2"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 38.2636025761101,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 42.25295277552882,
+          "rank_loss": 13.150841543279933,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 10.425966011651688
+        },
+        "cumulative_ucb_cv": {
+          "cost": 41.90373444955704,
+          "rank_loss": 11.855489578608653,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.513301488552628
+        },
+        "sw_ce_32": {
+          "cost": 41.8983600309635,
+          "rank_loss": 12.305234991303728,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.499255715986244
+        },
+        "sw_ucb_cv_64": {
+          "cost": 41.821692538991265,
+          "rank_loss": 12.152841026547325,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.298889083441031
+        },
+        "sco_reset_ce": {
+          "cost": 41.85310109136827,
+          "rank_loss": 12.751594159601794,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 92.29957805907173,
+          "excess_pct": 9.380973754675349
+        },
+        "sco_reset_ucb": {
+          "cost": 41.143352948713186,
+          "rank_loss": 10.290863826492508,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 101.5295358649789,
+          "excess_pct": 7.5260826966697
+        },
+        "forced_reset_ucb": {
+          "cost": 41.87431574921392,
+          "rank_loss": 12.152102028734973,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 98.89240506329114,
+          "excess_pct": 9.436417195484271
+        },
+        "aoi": {
+          "cost": 50.35031320423551,
+          "rank_loss": 35.25217784007095,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 31.588010052330382
+        },
+        "round_robin": {
+          "cost": 50.35031320423551,
+          "rank_loss": 35.25217784007095,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 31.588010052330382
+        }
+      }
+    },
+    {
+      "seed": 420002,
+      "sequences": [
+        "falcon_forest_into_forest_1",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_outdoor_day_fast_flight_2",
+        "falcon_forest_into_forest_2",
+        "falcon_forest_into_forest_4",
+        "falcon_outdoor_day_penno_parking_1",
+        "falcon_outdoor_night_high_beams",
+        "falcon_indoor_flight_1",
+        "falcon_forest_road_2",
+        "falcon_indoor_flight_2",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_outdoor_day_penno_trees"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 32.059647411068774,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 35.218467062034534,
+          "rank_loss": 10.778483782883383,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.85294569981814
+        },
+        "cumulative_ucb_cv": {
+          "cost": 35.16785546676553,
+          "rank_loss": 10.221034235205627,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.695078725736806
+        },
+        "sw_ce_32": {
+          "cost": 35.29264046370287,
+          "rank_loss": 10.768367822300217,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 10.084306328078597
+        },
+        "sw_ucb_cv_64": {
+          "cost": 35.157047629812205,
+          "rank_loss": 10.425712251791715,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.661367073157635
+        },
+        "sco_reset_ce": {
+          "cost": 34.91040934873175,
+          "rank_loss": 9.715380739807683,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 105.48523206751055,
+          "excess_pct": 8.892056425669637
+        },
+        "sco_reset_ucb": {
+          "cost": 34.46600808417345,
+          "rank_loss": 8.5339307574959,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 105.48523206751055,
+          "excess_pct": 7.505886269584705
+        },
+        "forced_reset_ucb": {
+          "cost": 35.19977333641543,
+          "rank_loss": 10.442113198605753,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 106.80379746835443,
+          "excess_pct": 9.794636494543951
+        },
+        "aoi": {
+          "cost": 43.80976805449005,
+          "rank_loss": 35.1040599739288,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.65081057430619
+        },
+        "round_robin": {
+          "cost": 43.80976805449005,
+          "rank_loss": 35.1040599739288,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.65081057430619
+        }
+      }
+    },
+    {
+      "seed": 420003,
+      "sequences": [
+        "falcon_indoor_flight_2",
+        "falcon_outdoor_day_penno_parking_1",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_forest_into_forest_1",
+        "falcon_outdoor_day_fast_flight_2",
+        "falcon_indoor_flight_1",
+        "falcon_forest_into_forest_4",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_outdoor_night_penno_parking_2",
+        "falcon_outdoor_day_penno_trees",
+        "falcon_outdoor_night_high_beams",
+        "falcon_forest_into_forest_2"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 33.355471461086005,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 36.64281935058336,
+          "rank_loss": 11.235451828002445,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.85549820014544
+        },
+        "cumulative_ucb_cv": {
+          "cost": 36.12608971970646,
+          "rank_loss": 9.461273542358889,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.306338172592698
+        },
+        "sw_ce_32": {
+          "cost": 36.48038748125829,
+          "rank_loss": 11.319237988815306,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.368526011745782
+        },
+        "sw_ucb_cv_64": {
+          "cost": 36.18640456482,
+          "rank_loss": 10.16762181019432,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.48716261449547
+        },
+        "sco_reset_ce": {
+          "cost": 35.95109916313371,
+          "rank_loss": 9.45250740167936,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 90.98101265822785,
+          "excess_pct": 7.781714928166683
+        },
+        "sco_reset_ucb": {
+          "cost": 35.65669816582594,
+          "rank_loss": 8.415358781523988,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 92.29957805907173,
+          "excess_pct": 6.899098120752534
+        },
+        "forced_reset_ucb": {
+          "cost": 36.072584767333666,
+          "rank_loss": 9.000011577668245,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 89.66244725738396,
+          "excess_pct": 8.145929849672683
+        },
+        "aoi": {
+          "cost": 44.637013778566065,
+          "rank_loss": 35.076395627590976,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 33.8221641707017
+        },
+        "round_robin": {
+          "cost": 44.637013778566065,
+          "rank_loss": 35.076395627590976,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 33.8221641707017
+        }
+      }
+    },
+    {
+      "seed": 420004,
+      "sequences": [
+        "falcon_forest_road_2",
+        "falcon_forest_into_forest_2",
+        "falcon_outdoor_day_penno_trees",
+        "falcon_forest_road_forest",
+        "falcon_indoor_flight_2",
+        "falcon_indoor_flight_3",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_outdoor_day_fast_flight_2",
+        "falcon_forest_road_1",
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_outdoor_day_fast_flight_1",
+        "falcon_outdoor_day_penno_parking_1"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 40.56012025028216,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 43.72906762285048,
+          "rank_loss": 12.155213754693854,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.812963455270516
+        },
+        "cumulative_ucb_cv": {
+          "cost": 43.168825461210524,
+          "rank_loss": 10.53236397423391,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 6.431699893469167
+        },
+        "sw_ce_32": {
+          "cost": 43.59190242793711,
+          "rank_loss": 11.850702114917901,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.474785969437203
+        },
+        "sw_ucb_cv_64": {
+          "cost": 42.82445846972836,
+          "rank_loss": 9.472227888456263,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 5.582671366538783
+        },
+        "sco_reset_ce": {
+          "cost": 43.976645306459076,
+          "rank_loss": 13.266677905112642,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 96.25527426160338,
+          "excess_pct": 8.423360273822533
+        },
+        "sco_reset_ucb": {
+          "cost": 43.00906854814915,
+          "rank_loss": 9.796078880826407,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 102.84810126582279,
+          "excess_pct": 6.0378230704332125
+        },
+        "forced_reset_ucb": {
+          "cost": 44.07590883912237,
+          "rank_loss": 11.585094328557613,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 104.16666666666667,
+          "excess_pct": 8.668092123853487
+        },
+        "aoi": {
+          "cost": 51.217747090357165,
+          "rank_loss": 32.81446386300065,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 26.276122393894674
+        },
+        "round_robin": {
+          "cost": 51.217747090357165,
+          "rank_loss": 32.81446386300065,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 26.276122393894674
+        }
+      }
+    },
+    {
+      "seed": 420005,
+      "sequences": [
+        "falcon_outdoor_day_penno_parking_1",
+        "falcon_outdoor_night_high_beams",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_forest_road_forest",
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_outdoor_night_penno_parking_2",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_outdoor_day_fast_flight_1",
+        "falcon_forest_into_forest_2",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_forest_road_1",
+        "falcon_indoor_flight_3"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 31.97408924572106,
+          "rank_loss": 0.0,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 34.61532127800742,
+          "rank_loss": 9.367266397793474,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.260538750575442
+        },
+        "cumulative_ucb_cv": {
+          "cost": 34.311469533323695,
+          "rank_loss": 8.28266920635582,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.31023257500738
+        },
+        "sw_ce_32": {
+          "cost": 34.64820387487544,
+          "rank_loss": 9.38947207070088,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.363380137597654
+        },
+        "sw_ucb_cv_64": {
+          "cost": 34.58408017608303,
+          "rank_loss": 9.069808828614443,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.162831192169918
+        },
+        "sco_reset_ce": {
+          "cost": 34.73810488313687,
+          "rank_loss": 9.844378987129453,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 92.29957805907173,
+          "excess_pct": 8.64454845351288
+        },
+        "sco_reset_ucb": {
+          "cost": 34.00667557059965,
+          "rank_loss": 7.341827322929281,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 100.21097046413502,
+          "excess_pct": 6.356979581992617
+        },
+        "forced_reset_ucb": {
+          "cost": 34.847273127477095,
+          "rank_loss": 9.927707196300354,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 100.21097046413502,
+          "excess_pct": 8.98597567447692
+        },
+        "aoi": {
+          "cost": 42.7999643664456,
+          "rank_loss": 33.30167842904328,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 33.85827517252369
+        },
+        "round_robin": {
+          "cost": 42.7999643664456,
+          "rank_loss": 33.30167842904328,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 33.85827517252369
+        }
+      }
+    },
+    {
+      "seed": 420006,
+      "sequences": [
+        "falcon_indoor_flight_2",
+        "falcon_forest_road_forest",
+        "falcon_outdoor_day_penno_trees",
+        "falcon_forest_into_forest_4",
+        "falcon_indoor_flight_3",
+        "falcon_forest_road_1",
+        "falcon_outdoor_day_penno_parking_1",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_forest_road_2",
+        "falcon_indoor_flight_1"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 38.999447981933905,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 42.39442583858883,
+          "rank_loss": 11.795944732145824,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.705194643338587
+        },
+        "cumulative_ucb_cv": {
+          "cost": 42.171127334770624,
+          "rank_loss": 11.030357126321437,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.13262627282818
+        },
+        "sw_ce_32": {
+          "cost": 42.52287556579732,
+          "rank_loss": 12.13905652817955,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.034557580137047
+        },
+        "sw_ucb_cv_64": {
+          "cost": 42.31369890651423,
+          "rank_loss": 11.922964099400367,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.4981995799418
+        },
+        "sco_reset_ce": {
+          "cost": 42.447779384352316,
+          "rank_loss": 12.157808447056928,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 109.44092827004219,
+          "excess_pct": 8.842000543227723
+        },
+        "sco_reset_ucb": {
+          "cost": 42.021695866885636,
+          "rank_loss": 11.303426026825802,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 102.84810126582279,
+          "excess_pct": 7.749463239458554
+        },
+        "forced_reset_ucb": {
+          "cost": 42.47698994054442,
+          "rank_loss": 12.485517654225648,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 110.75949367088607,
+          "excess_pct": 8.916900465415445
+        },
+        "aoi": {
+          "cost": 50.71436821284537,
+          "rank_loss": 36.17673240428217,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 30.03868217913823
+        },
+        "round_robin": {
+          "cost": 50.71436821284537,
+          "rank_loss": 36.17673240428217,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 30.03868217913823
+        }
+      }
+    },
+    {
+      "seed": 420007,
+      "sequences": [
+        "falcon_outdoor_day_penno_trees",
+        "falcon_outdoor_day_fast_flight_2",
+        "falcon_forest_into_forest_1",
+        "falcon_outdoor_night_high_beams",
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_forest_road_2",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_outdoor_day_fast_flight_1",
+        "falcon_outdoor_night_penno_parking_2",
+        "falcon_indoor_flight_2",
+        "falcon_forest_into_forest_2",
+        "falcon_indoor_flight_3"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 36.25876837577657,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 39.093418383796525,
+          "rank_loss": 9.858792741121926,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.817833133884666
+        },
+        "cumulative_ucb_cv": {
+          "cost": 38.588810146155254,
+          "rank_loss": 7.95926286491073,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 6.426147039057506
+        },
+        "sw_ce_32": {
+          "cost": 38.95319567524742,
+          "rank_loss": 9.57874679892695,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.4311054130314025
+        },
+        "sw_ucb_cv_64": {
+          "cost": 38.87803344330878,
+          "rank_loss": 9.926989893257796,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.223811466475705
+        },
+        "sco_reset_ce": {
+          "cost": 38.82943524100424,
+          "rank_loss": 9.176545305190071,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 98.89240506329114,
+          "excess_pct": 7.089779880513158
+        },
+        "sco_reset_ucb": {
+          "cost": 38.4054178366845,
+          "rank_loss": 7.972355376029743,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 100.21097046413502,
+          "excess_pct": 5.920359562852795
+        },
+        "forced_reset_ucb": {
+          "cost": 39.14434532696156,
+          "rank_loss": 9.56617685659887,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 101.5295358649789,
+          "excess_pct": 7.958287279037202
+        },
+        "aoi": {
+          "cost": 48.47114124878528,
+          "rank_loss": 37.250128027252934,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 33.68115746911977
+        },
+        "round_robin": {
+          "cost": 48.47114124878528,
+          "rank_loss": 37.250128027252934,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 33.68115746911977
+        }
+      }
+    },
+    {
+      "seed": 420008,
+      "sequences": [
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_indoor_flight_2",
+        "falcon_outdoor_day_fast_flight_2",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_forest_into_forest_2",
+        "falcon_forest_into_forest_4",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_outdoor_night_penno_parking_2",
+        "falcon_forest_into_forest_1",
+        "falcon_forest_road_1",
+        "falcon_forest_road_2",
+        "falcon_indoor_flight_1"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 30.635447526393477,
+          "rank_loss": 0.0,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 33.78717452418974,
+          "rank_loss": 9.471948791114478,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 10.2878438288879
+        },
+        "cumulative_ucb_cv": {
+          "cost": 33.34468755458485,
+          "rank_loss": 8.23840511036681,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.843481153187893
+        },
+        "sw_ce_32": {
+          "cost": 33.50962645627367,
+          "rank_loss": 9.08539883248219,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.381873489538517
+        },
+        "sw_ucb_cv_64": {
+          "cost": 33.28378514061089,
+          "rank_loss": 7.9835646289505355,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.644683946385246
+        },
+        "sco_reset_ce": {
+          "cost": 33.3224008161092,
+          "rank_loss": 8.652743413388366,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 94.9367088607595,
+          "excess_pct": 8.770732947187486
+        },
+        "sco_reset_ucb": {
+          "cost": 32.818791625422875,
+          "rank_loss": 6.956904162716346,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 88.34388185654008,
+          "excess_pct": 7.126855571959156
+        },
+        "forced_reset_ucb": {
+          "cost": 33.183516338232955,
+          "rank_loss": 7.669289304519894,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 85.70675105485232,
+          "excess_pct": 8.317387267296251
+        },
+        "aoi": {
+          "cost": 41.35732779585103,
+          "rank_loss": 33.26945801945204,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 34.998281843998804
+        },
+        "round_robin": {
+          "cost": 41.35732779585103,
+          "rank_loss": 33.26945801945204,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 34.998281843998804
+        }
+      }
+    },
+    {
+      "seed": 420009,
+      "sequences": [
+        "falcon_outdoor_day_penno_parking_1",
+        "falcon_forest_road_1",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_forest_into_forest_4",
+        "falcon_indoor_flight_2",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_outdoor_day_fast_flight_2",
+        "falcon_forest_into_forest_1",
+        "falcon_forest_road_forest",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_indoor_flight_3"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 30.511750439120107,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 33.35828763462474,
+          "rank_loss": 9.717291110272509,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.32931462317872
+        },
+        "cumulative_ucb_cv": {
+          "cost": 33.00188936709662,
+          "rank_loss": 8.400285994356453,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.161245723823907
+        },
+        "sw_ce_32": {
+          "cost": 33.06300244614914,
+          "rank_loss": 9.08327693504066,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.361539309649025
+        },
+        "sw_ucb_cv_64": {
+          "cost": 33.20650074831297,
+          "rank_loss": 8.68235878070554,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.831844356388796
+        },
+        "sco_reset_ce": {
+          "cost": 32.95005090044605,
+          "rank_loss": 8.7888019795852,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 87.0253164556962,
+          "excess_pct": 7.991348992549829
+        },
+        "sco_reset_ucb": {
+          "cost": 32.61602856825152,
+          "rank_loss": 6.971746481859533,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 90.98101265822785,
+          "excess_pct": 6.896615562355457
+        },
+        "forced_reset_ucb": {
+          "cost": 33.33942743339552,
+          "rank_loss": 8.966992884935445,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 83.06962025316456,
+          "excess_pct": 9.267501711897719
+        },
+        "aoi": {
+          "cost": 42.90831398338965,
+          "rank_loss": 38.253131644145775,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 40.62881796639075
+        },
+        "round_robin": {
+          "cost": 42.90831398338965,
+          "rank_loss": 38.253131644145775,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 40.62881796639075
+        }
+      }
+    },
+    {
+      "seed": 420010,
+      "sequences": [
+        "falcon_outdoor_day_fast_flight_2",
+        "falcon_forest_road_1",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_indoor_flight_1",
+        "falcon_forest_into_forest_2",
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_outdoor_day_fast_flight_1",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_indoor_flight_2",
+        "falcon_outdoor_day_penno_trees",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_forest_into_forest_1"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 34.67085213479251,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 38.534251961098974,
+          "rank_loss": 12.576591842767137,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 11.143077220272612
+        },
+        "cumulative_ucb_cv": {
+          "cost": 37.78022833044447,
+          "rank_loss": 10.472289235952466,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.96827162933118
+        },
+        "sw_ce_32": {
+          "cost": 38.22241738053376,
+          "rank_loss": 12.097215418632251,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 10.243662982189083
+        },
+        "sw_ucb_cv_64": {
+          "cost": 37.593349786688236,
+          "rank_loss": 9.92183413483004,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.42926398386088
+        },
+        "sco_reset_ce": {
+          "cost": 38.10036658215635,
+          "rank_loss": 12.410008169526126,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 93.61814345991561,
+          "excess_pct": 9.891635873357396
+        },
+        "sco_reset_ucb": {
+          "cost": 37.41264558315193,
+          "rank_loss": 9.32178750049808,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 104.16666666666667,
+          "excess_pct": 7.908064785082103
+        },
+        "forced_reset_ucb": {
+          "cost": 38.229128625887995,
+          "rank_loss": 12.332800565871251,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 98.89240506329114,
+          "excess_pct": 10.2630200067241
+        },
+        "aoi": {
+          "cost": 45.91635111927568,
+          "rank_loss": 30.480979269192435,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 32.435023346882815
+        },
+        "round_robin": {
+          "cost": 45.91635111927568,
+          "rank_loss": 30.480979269192435,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 32.435023346882815
+        }
+      }
+    },
+    {
+      "seed": 420011,
+      "sequences": [
+        "falcon_forest_road_2",
+        "falcon_outdoor_night_high_beams",
+        "falcon_forest_into_forest_1",
+        "falcon_forest_into_forest_2",
+        "falcon_indoor_flight_3",
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_outdoor_night_penno_parking_2",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_indoor_flight_2",
+        "falcon_outdoor_day_penno_parking_1",
+        "falcon_outdoor_day_fast_flight_2",
+        "falcon_outdoor_day_penno_cars"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 30.161163331789304,
+          "rank_loss": 0.0,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 32.863585121015426,
+          "rank_loss": 8.724785779045087,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.959938844195104
+        },
+        "cumulative_ucb_cv": {
+          "cost": 32.355018977451,
+          "rank_loss": 6.635104353408949,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.273776616399319
+        },
+        "sw_ce_32": {
+          "cost": 32.438201946517964,
+          "rank_loss": 7.575210212609187,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.549571578788217
+        },
+        "sw_ucb_cv_64": {
+          "cost": 32.43543973899799,
+          "rank_loss": 7.172222967326944,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.540413419039593
+        },
+        "sco_reset_ce": {
+          "cost": 32.36126049100613,
+          "rank_loss": 7.092382091820777,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 100.21097046413502,
+          "excess_pct": 7.294470491786242
+        },
+        "sco_reset_ucb": {
+          "cost": 32.05788562260008,
+          "rank_loss": 6.430556820538748,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 98.89240506329114,
+          "excess_pct": 6.288624447093749
+        },
+        "forced_reset_ucb": {
+          "cost": 32.88688692004247,
+          "rank_loss": 8.633175940704222,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 97.57383966244726,
+          "excess_pct": 9.037196471066844
+        },
+        "aoi": {
+          "cost": 42.535769660643794,
+          "rank_loss": 36.537151046552744,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 41.02827928991679
+        },
+        "round_robin": {
+          "cost": 42.535769660643794,
+          "rank_loss": 36.537151046552744,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 41.02827928991679
+        }
+      }
+    },
+    {
+      "seed": 420012,
+      "sequences": [
+        "falcon_outdoor_day_fast_flight_2",
+        "falcon_forest_road_forest",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_indoor_flight_1",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_indoor_flight_2",
+        "falcon_forest_road_1",
+        "falcon_forest_into_forest_4",
+        "falcon_outdoor_day_fast_flight_1",
+        "falcon_forest_into_forest_2",
+        "falcon_outdoor_day_penno_trees",
+        "falcon_forest_road_2"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 40.23670013051966,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 43.65954364549054,
+          "rank_loss": 11.60696974201016,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.506769948499437
+        },
+        "cumulative_ucb_cv": {
+          "cost": 43.194733003365705,
+          "rank_loss": 10.136238278380139,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.351579188280333
+        },
+        "sw_ce_32": {
+          "cost": 43.4463728422583,
+          "rank_loss": 11.738903474114075,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.976977986085143
+        },
+        "sw_ucb_cv_64": {
+          "cost": 43.10147128323047,
+          "rank_loss": 10.447051794432562,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.119796462975536
+        },
+        "sco_reset_ce": {
+          "cost": 43.122595720156674,
+          "rank_loss": 10.964057376184032,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 108.12236286919831,
+          "excess_pct": 7.172296883879037
+        },
+        "sco_reset_ucb": {
+          "cost": 42.66081888700746,
+          "rank_loss": 9.326303203807457,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 109.44092827004219,
+          "excess_pct": 6.024646028686376
+        },
+        "forced_reset_ucb": {
+          "cost": 43.516324763128374,
+          "rank_loss": 11.24855193598282,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 109.44092827004219,
+          "excess_pct": 8.150829024175144
+        },
+        "aoi": {
+          "cost": 52.1613428601004,
+          "rank_loss": 29.830774202542102,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 29.636234310715402
+        },
+        "round_robin": {
+          "cost": 52.1613428601004,
+          "rank_loss": 29.830774202542102,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 29.636234310715402
+        }
+      }
+    },
+    {
+      "seed": 420013,
+      "sequences": [
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_outdoor_day_fast_flight_1",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_outdoor_night_penno_parking_2",
+        "falcon_outdoor_day_fast_flight_2",
+        "falcon_indoor_flight_1",
+        "falcon_outdoor_day_penno_parking_1",
+        "falcon_forest_into_forest_2",
+        "falcon_forest_into_forest_4",
+        "falcon_forest_into_forest_1"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 32.586980700805874,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 36.05153398223783,
+          "rank_loss": 11.972748853372353,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 10.631709986394267
+        },
+        "cumulative_ucb_cv": {
+          "cost": 35.39053348726128,
+          "rank_loss": 9.278903654453092,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.603291026548131
+        },
+        "sw_ce_32": {
+          "cost": 35.74648871476566,
+          "rank_loss": 10.900075335061967,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.695614463237611
+        },
+        "sw_ucb_cv_64": {
+          "cost": 35.69545242016279,
+          "rank_loss": 10.089440553391128,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.538998865519455
+        },
+        "sco_reset_ce": {
+          "cost": 35.72257079022922,
+          "rank_loss": 11.302998041325885,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 84.38818565400844,
+          "excess_pct": 9.62221728429662
+        },
+        "sco_reset_ucb": {
+          "cost": 35.04825157455133,
+          "rank_loss": 8.242941406941963,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 89.66244725738396,
+          "excess_pct": 7.552927030409373
+        },
+        "forced_reset_ucb": {
+          "cost": 35.606462552554966,
+          "rank_loss": 9.343022147294509,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 93.61814345991561,
+          "excess_pct": 9.265914751268811
+        },
+        "aoi": {
+          "cost": 43.65892644630586,
+          "rank_loss": 32.26285233525659,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 33.97659282139686
+        },
+        "round_robin": {
+          "cost": 43.65892644630586,
+          "rank_loss": 32.26285233525659,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 33.97659282139686
+        }
+      }
+    },
+    {
+      "seed": 420014,
+      "sequences": [
+        "falcon_outdoor_day_fast_flight_1",
+        "falcon_forest_into_forest_1",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_outdoor_night_high_beams",
+        "falcon_indoor_flight_2",
+        "falcon_forest_into_forest_2",
+        "falcon_forest_road_forest",
+        "falcon_outdoor_night_penno_parking_2",
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_forest_into_forest_4",
+        "falcon_outdoor_day_penno_trees"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 30.851194211994063,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 34.0501217896957,
+          "rank_loss": 11.089704440903501,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 10.368893844822335
+        },
+        "cumulative_ucb_cv": {
+          "cost": 33.65629859084773,
+          "rank_loss": 9.497113032462474,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.092368870969425
+        },
+        "sw_ce_32": {
+          "cost": 34.21762694168244,
+          "rank_loss": 11.52114630995628,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 10.911839284262136
+        },
+        "sw_ucb_cv_64": {
+          "cost": 33.94604807809088,
+          "rank_loss": 10.613450224304527,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 10.031552894939889
+        },
+        "sco_reset_ce": {
+          "cost": 33.827347661210695,
+          "rank_loss": 10.418398117259187,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 87.0253164556962,
+          "excess_pct": 9.646801445564757
+        },
+        "sco_reset_ucb": {
+          "cost": 33.45168551680133,
+          "rank_loss": 8.698593453614583,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 88.34388185654008,
+          "excess_pct": 8.429143089042125
+        },
+        "forced_reset_ucb": {
+          "cost": 34.161569107412944,
+          "rank_loss": 10.562067598728204,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 96.25527426160338,
+          "excess_pct": 10.730135347992142
+        },
+        "aoi": {
+          "cost": 39.94573806066378,
+          "rank_loss": 24.455030748078933,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 29.47874168557798
+        },
+        "round_robin": {
+          "cost": 39.94573806066378,
+          "rank_loss": 24.455030748078933,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 29.47874168557798
+        }
+      }
+    },
+    {
+      "seed": 420015,
+      "sequences": [
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_forest_road_forest",
+        "falcon_outdoor_day_penno_trees",
+        "falcon_indoor_flight_2",
+        "falcon_forest_road_2",
+        "falcon_indoor_flight_3",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_forest_into_forest_2",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_outdoor_day_fast_flight_1",
+        "falcon_outdoor_night_penno_parking_2"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 38.66281559097199,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 42.452531842719,
+          "rank_loss": 13.700585094251618,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.801966550599417
+        },
+        "cumulative_ucb_cv": {
+          "cost": 41.824513466511036,
+          "rank_loss": 11.592449015675722,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.17761931512646
+        },
+        "sw_ce_32": {
+          "cost": 42.393155307967454,
+          "rank_loss": 13.742292016133755,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.648391251325528
+        },
+        "sw_ucb_cv_64": {
+          "cost": 42.21597802688749,
+          "rank_loss": 12.375204677215443,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.190128503587802
+        },
+        "sco_reset_ce": {
+          "cost": 42.239524703896436,
+          "rank_loss": 13.949368668155966,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 106.80379746835443,
+          "excess_pct": 9.251031147766774
+        },
+        "sco_reset_ucb": {
+          "cost": 41.29074409182424,
+          "rank_loss": 10.223847789683816,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 112.07805907172995,
+          "excess_pct": 6.797043776257938
+        },
+        "forced_reset_ucb": {
+          "cost": 41.84606641879335,
+          "rank_loss": 11.480399138274143,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 112.07805907172995,
+          "excess_pct": 8.23336526107703
+        },
+        "aoi": {
+          "cost": 50.3063807146848,
+          "rank_loss": 35.86653107041023,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 30.11566784709714
+        },
+        "round_robin": {
+          "cost": 50.3063807146848,
+          "rank_loss": 35.86653107041023,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 30.11566784709714
+        }
+      }
+    },
+    {
+      "seed": 420016,
+      "sequences": [
+        "falcon_outdoor_night_high_beams",
+        "falcon_indoor_flight_2",
+        "falcon_forest_into_forest_4",
+        "falcon_indoor_flight_3",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_forest_road_2",
+        "falcon_forest_road_1",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_outdoor_day_penno_trees",
+        "falcon_forest_road_forest",
+        "falcon_outdoor_day_fast_flight_1"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 33.884577261797205,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 36.66603335259841,
+          "rank_loss": 9.602437544012115,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.208619718969112
+        },
+        "cumulative_ucb_cv": {
+          "cost": 36.49155160470399,
+          "rank_loss": 9.083398125343066,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.693690031204836
+        },
+        "sw_ce_32": {
+          "cost": 36.85834278976951,
+          "rank_loss": 10.596924924116271,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.77616239682306
+        },
+        "sw_ucb_cv_64": {
+          "cost": 36.41020351476172,
+          "rank_loss": 8.914453176191865,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.453615942885028
+        },
+        "sco_reset_ce": {
+          "cost": 36.197220931357315,
+          "rank_loss": 8.581538998707272,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 109.44092827004219,
+          "excess_pct": 6.825062776177737
+        },
+        "sco_reset_ucb": {
+          "cost": 35.82811178153069,
+          "rank_loss": 7.123963768812714,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 102.84810126582279,
+          "excess_pct": 5.735749644203758
+        },
+        "forced_reset_ucb": {
+          "cost": 36.1913940196115,
+          "rank_loss": 8.344215837463581,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 105.48523206751055,
+          "excess_pct": 6.807866422506881
+        },
+        "aoi": {
+          "cost": 46.3560410846781,
+          "rank_loss": 36.13671199748305,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.80572351994991
+        },
+        "round_robin": {
+          "cost": 46.3560410846781,
+          "rank_loss": 36.13671199748305,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.80572351994991
+        }
+      }
+    },
+    {
+      "seed": 420017,
+      "sequences": [
+        "falcon_outdoor_day_fast_flight_2",
+        "falcon_outdoor_day_fast_flight_1",
+        "falcon_outdoor_night_high_beams",
+        "falcon_forest_into_forest_2",
+        "falcon_outdoor_day_penno_trees",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_forest_road_2",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_forest_into_forest_1",
+        "falcon_indoor_flight_3",
+        "falcon_outdoor_night_penno_parking_2"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 38.44252113641587,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 41.88160122202092,
+          "rank_loss": 13.415326920298645,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.946031591948
+        },
+        "cumulative_ucb_cv": {
+          "cost": 41.42725926914406,
+          "rank_loss": 10.71356381468484,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.764158136602561
+        },
+        "sw_ce_32": {
+          "cost": 41.86560681200373,
+          "rank_loss": 13.478615777278867,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.904425553778882
+        },
+        "sw_ucb_cv_64": {
+          "cost": 41.567526102686756,
+          "rank_loss": 10.730755259289342,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.129032316016938
+        },
+        "sco_reset_ce": {
+          "cost": 41.40031404792407,
+          "rank_loss": 11.845540277097665,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 84.38818565400844,
+          "excess_pct": 7.694065904294556
+        },
+        "sco_reset_ucb": {
+          "cost": 40.89140263424562,
+          "rank_loss": 9.85996589509575,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 88.34388185654008,
+          "excess_pct": 6.370241663234655
+        },
+        "forced_reset_ucb": {
+          "cost": 41.37859864613541,
+          "rank_loss": 10.06360047819225,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 97.57383966244726,
+          "excess_pct": 7.637577929139128
+        },
+        "aoi": {
+          "cost": 48.85807086939274,
+          "rank_loss": 33.22249584149991,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 27.093825860215027
+        },
+        "round_robin": {
+          "cost": 48.85807086939274,
+          "rank_loss": 33.22249584149991,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 27.093825860215027
+        }
+      }
+    },
+    {
+      "seed": 420018,
+      "sequences": [
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_forest_road_forest",
+        "falcon_outdoor_day_penno_parking_1",
+        "falcon_forest_into_forest_1",
+        "falcon_indoor_flight_2",
+        "falcon_forest_into_forest_2",
+        "falcon_outdoor_night_penno_parking_2",
+        "falcon_outdoor_day_fast_flight_2",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_indoor_flight_3",
+        "falcon_forest_road_2",
+        "falcon_outdoor_night_penno_parking_1"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 32.15496294656587,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 35.11785451143404,
+          "rank_loss": 9.954437895786418,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.214414489582268
+        },
+        "cumulative_ucb_cv": {
+          "cost": 34.955744395196554,
+          "rank_loss": 9.197390162895534,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.710261782247851
+        },
+        "sw_ce_32": {
+          "cost": 34.67201307675518,
+          "rank_loss": 8.538021824839916,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.8278744540059675
+        },
+        "sw_ucb_cv_64": {
+          "cost": 34.948782876691986,
+          "rank_loss": 9.209774479028091,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.688611878573148
+        },
+        "sco_reset_ce": {
+          "cost": 34.50837161756564,
+          "rank_loss": 8.763972464879828,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 83.06962025316456,
+          "excess_pct": 7.31895936223157
+        },
+        "sco_reset_ucb": {
+          "cost": 33.9165665479888,
+          "rank_loss": 6.4888078238724045,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 84.38818565400844,
+          "excess_pct": 5.478481204753094
+        },
+        "forced_reset_ucb": {
+          "cost": 34.60083753268783,
+          "rank_loss": 8.153426553659525,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 87.0253164556962,
+          "excess_pct": 7.606522794588311
+        },
+        "aoi": {
+          "cost": 44.6242971739546,
+          "rank_loss": 38.41626579149277,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 38.77887916745508
+        },
+        "round_robin": {
+          "cost": 44.6242971739546,
+          "rank_loss": 38.41626579149277,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 38.77887916745508
+        }
+      }
+    },
+    {
+      "seed": 420019,
+      "sequences": [
+        "falcon_forest_into_forest_2",
+        "falcon_forest_road_1",
+        "falcon_indoor_flight_1",
+        "falcon_outdoor_day_fast_flight_1",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_forest_road_2",
+        "falcon_indoor_flight_2",
+        "falcon_forest_into_forest_1",
+        "falcon_outdoor_night_high_beams",
+        "falcon_outdoor_day_penno_trees"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 34.2936963871235,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 37.43759670649942,
+          "rank_loss": 11.935891274383998,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.167574949886092
+        },
+        "cumulative_ucb_cv": {
+          "cost": 36.97255443040917,
+          "rank_loss": 9.811032241477244,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.811517350143449
+        },
+        "sw_ce_32": {
+          "cost": 37.427012998253055,
+          "rank_loss": 11.075154216475005,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.136712985847883
+        },
+        "sw_ucb_cv_64": {
+          "cost": 37.18746919425288,
+          "rank_loss": 10.593656226531724,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.438206177785856
+        },
+        "sco_reset_ce": {
+          "cost": 37.42231352042955,
+          "rank_loss": 11.501119808569996,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 110.75949367088607,
+          "excess_pct": 9.12300936588677
+        },
+        "sco_reset_ucb": {
+          "cost": 37.144864931993396,
+          "rank_loss": 10.72749152941813,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 108.12236286919831,
+          "excess_pct": 8.313972669159252
+        },
+        "forced_reset_ucb": {
+          "cost": 37.5403524483829,
+          "rank_loss": 10.765051571902973,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 108.12236286919831,
+          "excess_pct": 9.46720943875401
+        },
+        "aoi": {
+          "cost": 45.612530359728744,
+          "rank_loss": 35.0457273729463,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 33.005581681347174
+        },
+        "round_robin": {
+          "cost": 45.612530359728744,
+          "rank_loss": 35.0457273729463,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 33.005581681347174
+        }
+      }
+    },
+    {
+      "seed": 420020,
+      "sequences": [
+        "falcon_outdoor_day_penno_trees",
+        "falcon_forest_into_forest_1",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_indoor_flight_1",
+        "falcon_outdoor_night_high_beams",
+        "falcon_forest_into_forest_2",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_outdoor_day_fast_flight_2",
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_forest_road_1",
+        "falcon_outdoor_night_penno_parking_2"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 38.182016672465274,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 42.068001186762665,
+          "rank_loss": 13.647073465942249,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 10.177525581302627
+        },
+        "cumulative_ucb_cv": {
+          "cost": 41.652105765397984,
+          "rank_loss": 12.597162668529386,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.088281330711222
+        },
+        "sw_ce_32": {
+          "cost": 41.952506067881146,
+          "rank_loss": 13.22215739622552,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.875039937675512
+        },
+        "sw_ucb_cv_64": {
+          "cost": 41.544323627824475,
+          "rank_loss": 11.891763058959366,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.805996247400705
+        },
+        "sco_reset_ce": {
+          "cost": 41.873737551200584,
+          "rank_loss": 14.045985448910812,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 102.84810126582279,
+          "excess_pct": 9.668742514057872
+        },
+        "sco_reset_ucb": {
+          "cost": 41.27711414348702,
+          "rank_loss": 10.895355122585157,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 108.12236286919831,
+          "excess_pct": 8.106165521774965
+        },
+        "forced_reset_ucb": {
+          "cost": 41.462512341888974,
+          "rank_loss": 11.705083523329334,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 104.16666666666667,
+          "excess_pct": 8.591729707638551
+        },
+        "aoi": {
+          "cost": 48.311112548519766,
+          "rank_loss": 32.32320501257074,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 26.52844652744344
+        },
+        "round_robin": {
+          "cost": 48.311112548519766,
+          "rank_loss": 32.32320501257074,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 26.52844652744344
+        }
+      }
+    },
+    {
+      "seed": 420021,
+      "sequences": [
+        "falcon_outdoor_day_fast_flight_1",
+        "falcon_forest_into_forest_2",
+        "falcon_outdoor_night_high_beams",
+        "falcon_indoor_flight_2",
+        "falcon_forest_road_1",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_forest_into_forest_1",
+        "falcon_indoor_flight_3",
+        "falcon_forest_into_forest_4",
+        "falcon_outdoor_day_penno_parking_1",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_outdoor_day_penno_trees"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 32.33977036814161,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 36.20181961575877,
+          "rank_loss": 13.187206071196591,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 11.942104732511428
+        },
+        "cumulative_ucb_cv": {
+          "cost": 35.748908928890266,
+          "rank_loss": 11.539794888220783,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 10.541628842569196
+        },
+        "sw_ce_32": {
+          "cost": 35.65976770620596,
+          "rank_loss": 11.074856442509178,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 10.265989214737692
+        },
+        "sw_ucb_cv_64": {
+          "cost": 35.482394923565,
+          "rank_loss": 10.899133783863626,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.717522788965871
+        },
+        "sco_reset_ce": {
+          "cost": 35.25491533606492,
+          "rank_loss": 10.068133205926387,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 98.89240506329114,
+          "excess_pct": 9.01411770936711
+        },
+        "sco_reset_ucb": {
+          "cost": 34.83774275642523,
+          "rank_loss": 8.62292221908357,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 104.16666666666667,
+          "excess_pct": 7.724150047597167
+        },
+        "forced_reset_ucb": {
+          "cost": 35.54505979733625,
+          "rank_loss": 10.39204759517982,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 102.84810126582279,
+          "excess_pct": 9.911293100436547
+        },
+        "aoi": {
+          "cost": 44.3926004533089,
+          "rank_loss": 37.75534843209756,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 37.26937435845468
+        },
+        "round_robin": {
+          "cost": 44.3926004533089,
+          "rank_loss": 37.75534843209756,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 37.26937435845468
+        }
+      }
+    },
+    {
+      "seed": 420022,
+      "sequences": [
+        "falcon_outdoor_day_penno_parking_1",
+        "falcon_forest_into_forest_2",
+        "falcon_forest_into_forest_1",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_outdoor_night_high_beams",
+        "falcon_outdoor_day_fast_flight_1",
+        "falcon_forest_road_2",
+        "falcon_outdoor_night_penno_parking_2",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_outdoor_day_penno_trees",
+        "falcon_forest_road_1",
+        "falcon_indoor_flight_2"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 43.43915324561828,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 48.43898337532354,
+          "rank_loss": 17.39203869817552,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 11.509962225632453
+        },
+        "cumulative_ucb_cv": {
+          "cost": 47.781057443696675,
+          "rank_loss": 13.76931895454242,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.995370244737378
+        },
+        "sw_ce_32": {
+          "cost": 48.8110128274032,
+          "rank_loss": 19.472679611609486,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 12.366400310362359
+        },
+        "sw_ucb_cv_64": {
+          "cost": 47.70090991848952,
+          "rank_loss": 14.03784220837908,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.810864978822131
+        },
+        "sco_reset_ce": {
+          "cost": 47.49098918668517,
+          "rank_loss": 15.180368058222367,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 112.07805907172995,
+          "excess_pct": 9.327612622089031
+        },
+        "sco_reset_ucb": {
+          "cost": 47.063516862338204,
+          "rank_loss": 13.440723057004769,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 106.80379746835443,
+          "excess_pct": 8.343541128038723
+        },
+        "forced_reset_ucb": {
+          "cost": 47.73055315484437,
+          "rank_loss": 14.632808941038403,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 108.12236286919831,
+          "excess_pct": 9.879105803377897
+        },
+        "aoi": {
+          "cost": 54.10827171487039,
+          "rank_loss": 32.72769214270191,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 24.561064551432786
+        },
+        "round_robin": {
+          "cost": 54.10827171487039,
+          "rank_loss": 32.72769214270191,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 24.561064551432786
+        }
+      }
+    },
+    {
+      "seed": 420023,
+      "sequences": [
+        "falcon_forest_into_forest_2",
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_outdoor_night_penno_parking_2",
+        "falcon_outdoor_day_penno_trees",
+        "falcon_forest_road_2",
+        "falcon_outdoor_night_high_beams",
+        "falcon_indoor_flight_1",
+        "falcon_forest_into_forest_1",
+        "falcon_outdoor_day_fast_flight_2",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_outdoor_day_penno_parking_1",
+        "falcon_outdoor_day_penno_plaza"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 38.40838059950296,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 42.199709917233115,
+          "rank_loss": 13.032655727724887,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.871099115746663
+        },
+        "cumulative_ucb_cv": {
+          "cost": 41.846777021235475,
+          "rank_loss": 11.723502448346503,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.952203576573092
+        },
+        "sw_ce_32": {
+          "cost": 41.82036756690736,
+          "rank_loss": 12.66269421629617,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.883443962353743
+        },
+        "sw_ucb_cv_64": {
+          "cost": 41.84927306377882,
+          "rank_loss": 12.401912109650725,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.958702269057351
+        },
+        "sco_reset_ce": {
+          "cost": 41.41182411817582,
+          "rank_loss": 11.608323359317561,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 96.25527426160338,
+          "excess_pct": 7.819760874562176
+        },
+        "sco_reset_ucb": {
+          "cost": 41.27598326495458,
+          "rank_loss": 10.69868546900518,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 97.57383966244726,
+          "excess_pct": 7.466085840361436
+        },
+        "forced_reset_ucb": {
+          "cost": 41.70816462930424,
+          "rank_loss": 11.476713177531925,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 100.21097046413502,
+          "excess_pct": 8.591312568497056
+        },
+        "aoi": {
+          "cost": 49.92668346870052,
+          "rank_loss": 33.27066971168835,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 29.989035438131985
+        },
+        "round_robin": {
+          "cost": 49.92668346870052,
+          "rank_loss": 33.27066971168835,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 29.989035438131985
+        }
+      }
+    },
+    {
+      "seed": 420024,
+      "sequences": [
+        "falcon_forest_road_2",
+        "falcon_forest_road_1",
+        "falcon_forest_into_forest_2",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_indoor_flight_1",
+        "falcon_forest_into_forest_1",
+        "falcon_outdoor_night_high_beams",
+        "falcon_outdoor_day_penno_parking_1",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_indoor_flight_2",
+        "falcon_outdoor_day_fast_flight_1",
+        "falcon_outdoor_night_penno_parking_1"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 25.76788939197726,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 28.37680617267532,
+          "rank_loss": 8.366948747367648,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 10.124681695934079
+        },
+        "cumulative_ucb_cv": {
+          "cost": 28.23817286784906,
+          "rank_loss": 7.6432177394459355,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.586673701886173
+        },
+        "sw_ce_32": {
+          "cost": 28.091608060644894,
+          "rank_loss": 7.758640578048557,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.017885141152139
+        },
+        "sw_ucb_cv_64": {
+          "cost": 28.1780688385525,
+          "rank_loss": 7.792361938198944,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.353422043660453
+        },
+        "sco_reset_ce": {
+          "cost": 27.82913855639078,
+          "rank_loss": 7.360788893186435,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 79.11392405063292,
+          "excess_pct": 7.999293745242797
+        },
+        "sco_reset_ucb": {
+          "cost": 27.55566900702023,
+          "rank_loss": 6.0404364296870865,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 83.06962025316456,
+          "excess_pct": 6.9380133849828995
+        },
+        "forced_reset_ucb": {
+          "cost": 27.80377035362731,
+          "rank_loss": 6.492316094213836,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 84.38818565400844,
+          "excess_pct": 7.9008448487205785
+        },
+        "aoi": {
+          "cost": 36.34007720102778,
+          "rank_loss": 28.663788533815755,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 41.02853612970776
+        },
+        "round_robin": {
+          "cost": 36.34007720102778,
+          "rank_loss": 28.663788533815755,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 41.02853612970776
+        }
+      }
+    },
+    {
+      "seed": 420025,
+      "sequences": [
+        "falcon_forest_into_forest_1",
+        "falcon_outdoor_night_penno_parking_2",
+        "falcon_outdoor_day_penno_trees",
+        "falcon_outdoor_day_penno_parking_1",
+        "falcon_forest_road_forest",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_forest_road_1",
+        "falcon_outdoor_day_fast_flight_2",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_outdoor_night_high_beams",
+        "falcon_forest_into_forest_2"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 41.15738619443585,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 46.00578553246763,
+          "rank_loss": 15.725662738673538,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 11.78014394579614
+        },
+        "cumulative_ucb_cv": {
+          "cost": 45.38135099116418,
+          "rank_loss": 14.376882255968837,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 10.262956876740104
+        },
+        "sw_ce_32": {
+          "cost": 45.91072089126319,
+          "rank_loss": 17.142393372960413,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 11.549165620896385
+        },
+        "sw_ucb_cv_64": {
+          "cost": 45.38491234806843,
+          "rank_loss": 14.914306876020635,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 10.27160989685032
+        },
+        "sco_reset_ce": {
+          "cost": 45.40216977256099,
+          "rank_loss": 16.200824676896442,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 98.89240506329114,
+          "excess_pct": 10.313540218691042
+        },
+        "sco_reset_ucb": {
+          "cost": 44.788472911580385,
+          "rank_loss": 13.699615508406275,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 100.21097046413502,
+          "excess_pct": 8.822442465103443
+        },
+        "forced_reset_ucb": {
+          "cost": 45.249498149088716,
+          "rank_loss": 13.919202815441539,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 92.29957805907173,
+          "excess_pct": 9.942594350673527
+        },
+        "aoi": {
+          "cost": 49.60794461553061,
+          "rank_loss": 26.048049173903905,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 20.532301009526233
+        },
+        "round_robin": {
+          "cost": 49.60794461553061,
+          "rank_loss": 26.048049173903905,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 20.532301009526233
+        }
+      }
+    },
+    {
+      "seed": 420026,
+      "sequences": [
+        "falcon_indoor_flight_2",
+        "falcon_outdoor_night_penno_parking_2",
+        "falcon_forest_road_1",
+        "falcon_forest_into_forest_1",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_outdoor_day_fast_flight_1",
+        "falcon_indoor_flight_1",
+        "falcon_outdoor_day_penno_trees",
+        "falcon_outdoor_day_penno_parking_1",
+        "falcon_outdoor_night_high_beams",
+        "falcon_indoor_flight_3",
+        "falcon_outdoor_day_penno_parking_2"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 27.696744265005275,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 30.600446294798576,
+          "rank_loss": 9.841551667617757,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 10.483911040266625
+        },
+        "cumulative_ucb_cv": {
+          "cost": 30.431906407910866,
+          "rank_loss": 8.800662869282528,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.875392272590888
+        },
+        "sw_ce_32": {
+          "cost": 30.423014320759396,
+          "rank_loss": 9.560959143949063,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.843287101432896
+        },
+        "sw_ucb_cv_64": {
+          "cost": 30.129482646635196,
+          "rank_loss": 7.938717490714179,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.783481402554871
+        },
+        "sco_reset_ce": {
+          "cost": 29.991071247961475,
+          "rank_loss": 7.867831298979338,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 101.5295358649789,
+          "excess_pct": 8.283742525850135
+        },
+        "sco_reset_ucb": {
+          "cost": 29.873926566241096,
+          "rank_loss": 7.232167890026477,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 98.89240506329114,
+          "excess_pct": 7.860787825472615
+        },
+        "forced_reset_ucb": {
+          "cost": 30.35353315585222,
+          "rank_loss": 8.709896604002363,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 100.21097046413502,
+          "excess_pct": 9.592423085639656
+        },
+        "aoi": {
+          "cost": 37.445269237522176,
+          "rank_loss": 28.745509288813214,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 35.19736789003798
+        },
+        "round_robin": {
+          "cost": 37.445269237522176,
+          "rank_loss": 28.745509288813214,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 35.19736789003798
+        }
+      }
+    },
+    {
+      "seed": 420027,
+      "sequences": [
+        "falcon_outdoor_day_fast_flight_2",
+        "falcon_forest_road_1",
+        "falcon_forest_into_forest_4",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_outdoor_day_penno_trees",
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_indoor_flight_2",
+        "falcon_indoor_flight_1",
+        "falcon_forest_into_forest_1",
+        "falcon_forest_road_forest",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_forest_into_forest_2"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 35.385200345277006,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 38.7221423405649,
+          "rank_loss": 10.809015933734733,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.430332350042182
+        },
+        "cumulative_ucb_cv": {
+          "cost": 38.07912476816063,
+          "rank_loss": 8.842110122362662,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.613138816785581
+        },
+        "sw_ce_32": {
+          "cost": 38.586657913418684,
+          "rank_loss": 10.62497673595413,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.047447907325434
+        },
+        "sw_ucb_cv_64": {
+          "cost": 38.24516902112975,
+          "rank_loss": 9.389217128012275,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.082386556939403
+        },
+        "sco_reset_ce": {
+          "cost": 38.03925643136221,
+          "rank_loss": 9.268910832004273,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 97.57383966244726,
+          "excess_pct": 7.500469292777234
+        },
+        "sco_reset_ucb": {
+          "cost": 37.893111092557156,
+          "rank_loss": 8.528213552288953,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 100.21097046413502,
+          "excess_pct": 7.08745668474049
+        },
+        "forced_reset_ucb": {
+          "cost": 38.60276249153927,
+          "rank_loss": 10.427487777270802,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 101.5295358649789,
+          "excess_pct": 9.09296009310776
+        },
+        "aoi": {
+          "cost": 48.4251839722733,
+          "rank_loss": 36.39886604446872,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.85151843074641
+        },
+        "round_robin": {
+          "cost": 48.4251839722733,
+          "rank_loss": 36.39886604446872,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.85151843074641
+        }
+      }
+    },
+    {
+      "seed": 420028,
+      "sequences": [
+        "falcon_outdoor_night_penno_parking_2",
+        "falcon_outdoor_night_high_beams",
+        "falcon_forest_road_forest",
+        "falcon_forest_into_forest_4",
+        "falcon_indoor_flight_3",
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_outdoor_day_fast_flight_1",
+        "falcon_forest_road_1",
+        "falcon_outdoor_day_penno_trees",
+        "falcon_forest_road_2",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_indoor_flight_2"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 34.424537930068055,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 37.30486316304272,
+          "rank_loss": 10.665031148283248,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.367070137080468
+        },
+        "cumulative_ucb_cv": {
+          "cost": 37.02362942953364,
+          "rank_loss": 8.889487702408577,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.550112959382416
+        },
+        "sw_ce_32": {
+          "cost": 37.404842394157846,
+          "rank_loss": 10.888525413323562,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.65750026955816
+        },
+        "sw_ucb_cv_64": {
+          "cost": 36.98778574450725,
+          "rank_loss": 9.10544650635982,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.445990472395936
+        },
+        "sco_reset_ce": {
+          "cost": 36.93812691105618,
+          "rank_loss": 9.32062563368455,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 102.84810126582279,
+          "excess_pct": 7.301736296633443
+        },
+        "sco_reset_ucb": {
+          "cost": 36.71871074400129,
+          "rank_loss": 8.560598084117933,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 112.07805907172995,
+          "excess_pct": 6.664353254628286
+        },
+        "forced_reset_ucb": {
+          "cost": 37.03484974225044,
+          "rank_loss": 8.53395717273528,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 108.12236286919831,
+          "excess_pct": 7.582706897867775
+        },
+        "aoi": {
+          "cost": 46.60477128987985,
+          "rank_loss": 35.80647457416139,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 35.38241641632316
+        },
+        "round_robin": {
+          "cost": 46.60477128987985,
+          "rank_loss": 35.80647457416139,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 35.38241641632316
+        }
+      }
+    },
+    {
+      "seed": 420029,
+      "sequences": [
+        "falcon_outdoor_night_high_beams",
+        "falcon_outdoor_day_penno_parking_1",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_forest_road_2",
+        "falcon_indoor_flight_2",
+        "falcon_forest_road_forest",
+        "falcon_outdoor_night_penno_parking_1",
+        "falcon_indoor_flight_1",
+        "falcon_forest_into_forest_4",
+        "falcon_indoor_flight_3",
+        "falcon_forest_into_forest_2"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 28.981955214049368,
+          "rank_loss": 0.0,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 31.460672910373987,
+          "rank_loss": 7.923747648092466,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.552624134630605
+        },
+        "cumulative_ucb_cv": {
+          "cost": 31.042843298171896,
+          "rank_loss": 6.71897257531583,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 7.110935300609
+        },
+        "sw_ce_32": {
+          "cost": 30.983023898612558,
+          "rank_loss": 7.033466323979044,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 6.904533078545194
+        },
+        "sw_ucb_cv_64": {
+          "cost": 31.30210048280946,
+          "rank_loss": 7.3943883481849495,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.005482209962755
+        },
+        "sco_reset_ce": {
+          "cost": 30.763217786580558,
+          "rank_loss": 6.257016962742271,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 94.9367088607595,
+          "excess_pct": 6.146109050874871
+        },
+        "sco_reset_ucb": {
+          "cost": 30.748862605934065,
+          "rank_loss": 6.294912883302721,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 93.61814345991561,
+          "excess_pct": 6.0965776078080625
+        },
+        "forced_reset_ucb": {
+          "cost": 31.503177596205475,
+          "rank_loss": 7.6484276038639,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 105.48523206751055,
+          "excess_pct": 8.69928327311027
+        },
+        "aoi": {
+          "cost": 41.899686339210184,
+          "rank_loss": 37.68075283908012,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 44.57163441788352
+        },
+        "round_robin": {
+          "cost": 41.899686339210184,
+          "rank_loss": 37.68075283908012,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 44.57163441788352
+        }
+      }
+    },
+    {
+      "seed": 420030,
+      "sequences": [
+        "falcon_forest_into_forest_2",
+        "falcon_forest_into_forest_4",
+        "falcon_outdoor_day_penno_cars",
+        "falcon_forest_road_1",
+        "falcon_forest_road_2",
+        "falcon_indoor_flight_3",
+        "falcon_indoor_flight_2",
+        "falcon_outdoor_day_penno_trees",
+        "falcon_outdoor_night_penno_parking_2",
+        "falcon_outdoor_day_penno_plaza",
+        "falcon_outdoor_day_penno_parking_2",
+        "falcon_forest_road_forest"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 42.805542816313846,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 46.824386317930035,
+          "rank_loss": 14.314318217554696,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.388605393609328
+        },
+        "cumulative_ucb_cv": {
+          "cost": 46.499582096930304,
+          "rank_loss": 12.950475474893631,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.629815293940402
+        },
+        "sw_ce_32": {
+          "cost": 46.51702116862118,
+          "rank_loss": 13.733640084886675,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 8.670555512481037
+        },
+        "sw_ucb_cv_64": {
+          "cost": 46.775847106992856,
+          "rank_loss": 13.249718978213144,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 9.275210707445725
+        },
+        "sco_reset_ce": {
+          "cost": 46.61604552218761,
+          "rank_loss": 13.964615696218608,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 106.80379746835443,
+          "excess_pct": 8.901890865454764
+        },
+        "sco_reset_ucb": {
+          "cost": 46.29566583265274,
+          "rank_loss": 13.088765808801945,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 101.5295358649789,
+          "excess_pct": 8.153437117514484
+        },
+        "forced_reset_ucb": {
+          "cost": 47.18455430860143,
+          "rank_loss": 14.824380367455392,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 96.25527426160338,
+          "excess_pct": 10.230010424301117
+        },
+        "aoi": {
+          "cost": 54.45170126532046,
+          "rank_loss": 35.51787449724874,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 27.20712712132243
+        },
+        "round_robin": {
+          "cost": 54.45170126532046,
+          "rank_loss": 35.51787449724874,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 27.20712712132243
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Reference environment used to validate this release candidate.
+numpy==1.26.4
+scipy==1.13.1
+sympy==1.14.0
+matplotlib==3.9.2
+h5py==3.11.0
+pytest==7.4.4

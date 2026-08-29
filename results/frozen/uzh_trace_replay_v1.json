@@ -1,0 +1,2953 @@
+﻿{
+  "protocol": {
+    "dataset": "UZH-FPV public Leica ground truth",
+    "seeds": [
+      410001,
+      410002,
+      410003,
+      410004,
+      410005,
+      410006,
+      410007,
+      410008,
+      410009,
+      410010,
+      410011,
+      410012,
+      410013,
+      410014,
+      410015,
+      410016,
+      410017,
+      410018,
+      410019,
+      410020,
+      410021,
+      410022,
+      410023,
+      410024,
+      410025,
+      410026,
+      410027,
+      410028,
+      410029,
+      410030
+    ],
+    "K": 12,
+    "N": 3,
+    "length": 640,
+    "n0": 8,
+    "H": 632,
+    "methods": [
+      "oracle",
+      "cumulative_ce",
+      "cumulative_ucb_cv",
+      "sw_ce_32",
+      "sw_ucb_cv_64",
+      "sco_reset_ce",
+      "sco_reset_ucb",
+      "forced_reset_ucb",
+      "aoi",
+      "round_robin"
+    ]
+  },
+  "summary_mean_ci95": {
+    "oracle": {
+      "excess_pct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rank_loss": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_gap": [
+        7.7,
+        7.5,
+        7.9
+      ],
+      "alarms_per_10k_arm_slots": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "cumulative_ce": {
+      "excess_pct": [
+        17.526521748880803,
+        16.382571764064668,
+        18.715672320067373
+      ],
+      "rank_loss": [
+        13.589483570810858,
+        12.049012747588925,
+        15.197702662934576
+      ],
+      "max_gap": [
+        6.2,
+        5.966666666666667,
+        6.466666666666667
+      ],
+      "alarms_per_10k_arm_slots": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "cumulative_ucb_cv": {
+      "excess_pct": [
+        17.312056568606412,
+        16.254150567506635,
+        18.403463799330158
+      ],
+      "rank_loss": [
+        13.221639071625821,
+        11.755432229707585,
+        14.793925882229189
+      ],
+      "max_gap": [
+        6.4,
+        6.2,
+        6.6
+      ],
+      "alarms_per_10k_arm_slots": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "sw_ce_32": {
+      "excess_pct": [
+        17.60975814528956,
+        16.59040338826674,
+        18.666456600010942
+      ],
+      "rank_loss": [
+        13.628614255552117,
+        12.159656066659045,
+        15.171530323302969
+      ],
+      "max_gap": [
+        6.566666666666666,
+        6.3,
+        6.833333333333333
+      ],
+      "alarms_per_10k_arm_slots": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "sw_ucb_cv_64": {
+      "excess_pct": [
+        17.324808802888676,
+        16.237850888336585,
+        18.45773846007322
+      ],
+      "rank_loss": [
+        13.27931573474779,
+        11.800112869647021,
+        14.844134533274362
+      ],
+      "max_gap": [
+        6.5,
+        6.266666666666667,
+        6.733333333333333
+      ],
+      "alarms_per_10k_arm_slots": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "sco_reset_ce": {
+      "excess_pct": [
+        17.879152815078633,
+        16.570519683271044,
+        19.255392603395364
+      ],
+      "rank_loss": [
+        14.133521999733805,
+        12.400472427605433,
+        15.925351157915333
+      ],
+      "max_gap": [
+        6.8,
+        6.6,
+        7.0
+      ],
+      "alarms_per_10k_arm_slots": [
+        107.28727144866386,
+        103.77109704641352,
+        110.84739803094232
+      ]
+    },
+    "sco_reset_ucb": {
+      "excess_pct": [
+        16.736022898839707,
+        15.504057642873457,
+        17.962259931454856
+      ],
+      "rank_loss": [
+        13.069888376597582,
+        11.478492925833798,
+        14.758307059280318
+      ],
+      "max_gap": [
+        7.066666666666666,
+        6.9,
+        7.233333333333333
+      ],
+      "alarms_per_10k_arm_slots": [
+        110.84739803094234,
+        107.6388888888889,
+        114.09985935302393
+      ]
+    },
+    "forced_reset_ucb": {
+      "excess_pct": [
+        18.404617854681785,
+        17.300538478703693,
+        19.539774894271645
+      ],
+      "rank_loss": [
+        13.965406677510922,
+        12.408477916749346,
+        15.567899471798173
+      ],
+      "max_gap": [
+        7.133333333333334,
+        6.9,
+        7.366666666666666
+      ],
+      "alarms_per_10k_arm_slots": [
+        110.97925457102673,
+        107.682841068917,
+        114.23171589310829
+      ]
+    },
+    "aoi": {
+      "excess_pct": [
+        40.616596538936356,
+        38.06599719410148,
+        43.270407014408114
+      ],
+      "rank_loss": [
+        27.050982704184875,
+        26.371608070004324,
+        27.71542373847861
+      ],
+      "max_gap": [
+        3.0,
+        3.0,
+        3.0
+      ],
+      "alarms_per_10k_arm_slots": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "round_robin": {
+      "excess_pct": [
+        40.616596538936356,
+        38.06543495362807,
+        43.293616084817124
+      ],
+      "rank_loss": [
+        27.050982704184875,
+        26.375912194567302,
+        27.722475740748575
+      ],
+      "max_gap": [
+        3.0,
+        3.0,
+        3.0
+      ],
+      "alarms_per_10k_arm_slots": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "paired_natural_minus_forced_excess_pct": [
+    -1.6685949558420803,
+    -2.0818396259222993,
+    -1.2630865532232265
+  ],
+  "episodes": [
+    {
+      "seed": 410001,
+      "sequences": [
+        "indoor_45_9",
+        "indoor_forward_6",
+        "indoor_45_14",
+        "outdoor_forward_3",
+        "outdoor_forward_5",
+        "indoor_45_13",
+        "outdoor_45_1",
+        "indoor_45_12",
+        "indoor_forward_9",
+        "outdoor_forward_1",
+        "indoor_forward_7",
+        "indoor_forward_3"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 22.22528394575601,
+          "rank_loss": 0.0,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 25.507558438108937,
+          "rank_loss": 10.912368123272225,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 14.76820048897367
+        },
+        "cumulative_ucb_cv": {
+          "cost": 25.550049696142644,
+          "rank_loss": 10.494947160538613,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 14.959384809216392
+        },
+        "sw_ce_32": {
+          "cost": 25.789190951651356,
+          "rank_loss": 11.594365134646399,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.035372212087683
+        },
+        "sw_ucb_cv_64": {
+          "cost": 25.605775876600802,
+          "rank_loss": 10.707095585041449,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.210118075860656
+        },
+        "sco_reset_ce": {
+          "cost": 25.784626737957684,
+          "rank_loss": 11.400422099230084,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 114.71518987341773,
+          "excess_pct": 16.01483607988432
+        },
+        "sco_reset_ucb": {
+          "cost": 25.449785502238093,
+          "rank_loss": 10.449343222858735,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 110.75949367088607,
+          "excess_pct": 14.508258091783844
+        },
+        "forced_reset_ucb": {
+          "cost": 26.319714795245748,
+          "rank_loss": 12.380031150553753,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 112.07805907172995,
+          "excess_pct": 18.422400629313817
+        },
+        "aoi": {
+          "cost": 31.629974429783054,
+          "rank_loss": 27.035622087775366,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 42.31527708253597
+        },
+        "round_robin": {
+          "cost": 31.629974429783054,
+          "rank_loss": 27.035622087775366,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 42.31527708253597
+        }
+      }
+    },
+    {
+      "seed": 410002,
+      "sequences": [
+        "indoor_forward_6",
+        "indoor_forward_9",
+        "indoor_forward_10",
+        "indoor_forward_3",
+        "indoor_forward_5",
+        "indoor_45_12",
+        "indoor_45_2",
+        "indoor_45_9",
+        "outdoor_forward_3",
+        "outdoor_forward_1",
+        "indoor_45_4",
+        "indoor_45_14"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 21.02105817229411,
+          "rank_loss": 0.0,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 24.310836843854098,
+          "rank_loss": 10.688202148681944,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.649919450277405
+        },
+        "cumulative_ucb_cv": {
+          "cost": 24.449814472798135,
+          "rank_loss": 10.795954050239772,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.311054716660966
+        },
+        "sw_ce_32": {
+          "cost": 24.45196730155969,
+          "rank_loss": 11.081587595221665,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.32129601252681
+        },
+        "sw_ucb_cv_64": {
+          "cost": 24.68796461223055,
+          "rank_loss": 11.635141889519373,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 17.443966949149335
+        },
+        "sco_reset_ce": {
+          "cost": 24.339815094670413,
+          "rank_loss": 11.004250817055343,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 101.5295358649789,
+          "excess_pct": 15.787772885526973
+        },
+        "sco_reset_ucb": {
+          "cost": 24.382113178256002,
+          "rank_loss": 10.654385311160274,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 104.16666666666667,
+          "excess_pct": 15.988990556107119
+        },
+        "forced_reset_ucb": {
+          "cost": 24.710150011104382,
+          "rank_loss": 11.356669332898932,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 106.80379746835443,
+          "excess_pct": 17.549505874411775
+        },
+        "aoi": {
+          "cost": 30.87982666150802,
+          "rank_loss": 28.29870370026628,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 46.8994872113899
+        },
+        "round_robin": {
+          "cost": 30.87982666150802,
+          "rank_loss": 28.29870370026628,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 46.8994872113899
+        }
+      }
+    },
+    {
+      "seed": 410003,
+      "sequences": [
+        "indoor_45_2",
+        "indoor_forward_6",
+        "indoor_45_9",
+        "indoor_45_12",
+        "indoor_45_13",
+        "indoor_forward_9",
+        "indoor_forward_3",
+        "indoor_forward_7",
+        "indoor_forward_10",
+        "outdoor_forward_1",
+        "indoor_45_14",
+        "indoor_45_4"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 27.19972209317121,
+          "rank_loss": 0.0,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 33.53144339974018,
+          "rank_loss": 20.298081412743347,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 23.278624998005483
+        },
+        "cumulative_ucb_cv": {
+          "cost": 33.45736035882609,
+          "rank_loss": 20.148342285512854,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 23.006258094180776
+        },
+        "sw_ce_32": {
+          "cost": 33.23847896978258,
+          "rank_loss": 19.09556103632211,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 22.201538883103012
+        },
+        "sw_ucb_cv_64": {
+          "cost": 33.7857955389685,
+          "rank_loss": 21.227184516693672,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 24.21375271128523
+        },
+        "sco_reset_ce": {
+          "cost": 34.27278200387574,
+          "rank_loss": 22.899568996273363,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 97.57383966244726,
+          "excess_pct": 26.004162419292864
+        },
+        "sco_reset_ucb": {
+          "cost": 33.74289536340722,
+          "rank_loss": 21.758177722000212,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 93.61814345991561,
+          "excess_pct": 24.05602986612405
+        },
+        "forced_reset_ucb": {
+          "cost": 33.82931616576916,
+          "rank_loss": 21.6205387226178,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 92.29957805907173,
+          "excess_pct": 24.37375665048569
+        },
+        "aoi": {
+          "cost": 35.9504622339526,
+          "rank_loss": 26.56454767006204,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 32.17216746114608
+        },
+        "round_robin": {
+          "cost": 35.9504622339526,
+          "rank_loss": 26.56454767006204,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 32.17216746114608
+        }
+      }
+    },
+    {
+      "seed": 410004,
+      "sequences": [
+        "outdoor_forward_5",
+        "indoor_forward_6",
+        "indoor_45_12",
+        "outdoor_forward_3",
+        "outdoor_45_1",
+        "indoor_forward_7",
+        "indoor_forward_3",
+        "indoor_45_9",
+        "indoor_forward_9",
+        "indoor_forward_10",
+        "indoor_45_2",
+        "outdoor_forward_1"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 23.95229123853814,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 27.734328460314472,
+          "rank_loss": 12.408279090159276,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.789876568013694
+        },
+        "cumulative_ucb_cv": {
+          "cost": 27.938084249874123,
+          "rank_loss": 12.621697082600761,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.64055004860254
+        },
+        "sw_ce_32": {
+          "cost": 27.894031396006746,
+          "rank_loss": 12.798772616492338,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.456630884341152
+        },
+        "sw_ucb_cv_64": {
+          "cost": 27.77612045855008,
+          "rank_loss": 12.228443297403006,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.964356737027185
+        },
+        "sco_reset_ce": {
+          "cost": 28.016504873314883,
+          "rank_loss": 13.516708386422161,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 116.03375527426161,
+          "excess_pct": 16.967953480114705
+        },
+        "sco_reset_ucb": {
+          "cost": 27.89557290691236,
+          "rank_loss": 13.248248550346664,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 109.44092827004219,
+          "excess_pct": 16.463066639861413
+        },
+        "forced_reset_ucb": {
+          "cost": 27.908552202985412,
+          "rank_loss": 12.749063741512483,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 110.75949367088607,
+          "excess_pct": 16.51725475883421
+        },
+        "aoi": {
+          "cost": 33.007354179928164,
+          "rank_loss": 25.960912228441902,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 37.80457932484072
+        },
+        "round_robin": {
+          "cost": 33.007354179928164,
+          "rank_loss": 25.960912228441902,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 37.80457932484072
+        }
+      }
+    },
+    {
+      "seed": 410005,
+      "sequences": [
+        "outdoor_forward_3",
+        "indoor_forward_6",
+        "indoor_forward_5",
+        "indoor_forward_10",
+        "indoor_45_4",
+        "indoor_45_13",
+        "indoor_45_2",
+        "indoor_45_9",
+        "outdoor_45_1",
+        "indoor_45_14",
+        "indoor_45_12",
+        "indoor_forward_9"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 21.14067958889167,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 24.717516647331724,
+          "rank_loss": 11.97630483237706,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.919215124567224
+        },
+        "cumulative_ucb_cv": {
+          "cost": 24.869046253503143,
+          "rank_loss": 11.947912071400768,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 17.635983029469582
+        },
+        "sw_ce_32": {
+          "cost": 24.470804391803327,
+          "rank_loss": 10.923825463461045,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.752212642499286
+        },
+        "sw_ucb_cv_64": {
+          "cost": 24.849060280938705,
+          "rank_loss": 11.960530421563178,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 17.541445044158355
+        },
+        "sco_reset_ce": {
+          "cost": 24.708630273407515,
+          "rank_loss": 11.500097478564273,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 94.9367088607595,
+          "excess_pct": 16.877180648396095
+        },
+        "sco_reset_ucb": {
+          "cost": 24.246667520978708,
+          "rank_loss": 9.86995462094205,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 97.57383966244726,
+          "excess_pct": 14.69199662682119
+        },
+        "forced_reset_ucb": {
+          "cost": 24.808476774503117,
+          "rank_loss": 11.257176995237337,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 102.84810126582279,
+          "excess_pct": 17.349476255903728
+        },
+        "aoi": {
+          "cost": 30.908475681078585,
+          "rank_loss": 28.27132583273973,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 46.20379421160796
+        },
+        "round_robin": {
+          "cost": 30.908475681078585,
+          "rank_loss": 28.27132583273973,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 46.20379421160796
+        }
+      }
+    },
+    {
+      "seed": 410006,
+      "sequences": [
+        "outdoor_forward_3",
+        "indoor_45_4",
+        "indoor_forward_5",
+        "indoor_forward_9",
+        "indoor_45_12",
+        "indoor_45_13",
+        "indoor_45_14",
+        "indoor_forward_6",
+        "indoor_forward_7",
+        "indoor_forward_3",
+        "outdoor_45_1",
+        "indoor_forward_10"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 18.00623055016083,
+          "rank_loss": 0.0,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 20.089297869790826,
+          "rank_loss": 7.343525870765867,
+          "max_gap": 5,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 11.56859184839989
+        },
+        "cumulative_ucb_cv": {
+          "cost": 20.06859400382311,
+          "rank_loss": 7.255553377706419,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 11.453610170752038
+        },
+        "sw_ce_32": {
+          "cost": 20.32541830084998,
+          "rank_loss": 7.938372565480061,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 12.87991811627911
+        },
+        "sw_ucb_cv_64": {
+          "cost": 20.13658807789658,
+          "rank_loss": 7.311095712584398,
+          "max_gap": 5,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 11.831224318721855
+        },
+        "sco_reset_ce": {
+          "cost": 20.092367673544132,
+          "rank_loss": 7.196847448937046,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 109.44092827004219,
+          "excess_pct": 11.585640412477494
+        },
+        "sco_reset_ucb": {
+          "cost": 19.982569086510967,
+          "rank_loss": 6.609844312180835,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 112.07805907172995,
+          "excess_pct": 10.975859332937876
+        },
+        "forced_reset_ucb": {
+          "cost": 20.363059146690638,
+          "rank_loss": 7.647226664015601,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 105.48523206751055,
+          "excess_pct": 13.088961567854396
+        },
+        "aoi": {
+          "cost": 26.50390914358516,
+          "rank_loss": 23.81167108815524,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 47.19299005836861
+        },
+        "round_robin": {
+          "cost": 26.50390914358516,
+          "rank_loss": 23.81167108815524,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 47.19299005836861
+        }
+      }
+    },
+    {
+      "seed": 410007,
+      "sequences": [
+        "indoor_forward_7",
+        "outdoor_forward_3",
+        "indoor_forward_5",
+        "indoor_forward_9",
+        "indoor_forward_3",
+        "indoor_45_12",
+        "indoor_45_2",
+        "indoor_45_4",
+        "indoor_45_13",
+        "indoor_forward_10",
+        "indoor_45_9",
+        "outdoor_forward_1"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 25.63655796689544,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 29.987887870911397,
+          "rank_loss": 13.933707869144635,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.973144014242635
+        },
+        "cumulative_ucb_cv": {
+          "cost": 29.850417680976328,
+          "rank_loss": 13.062843242285828,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.43691684165345
+        },
+        "sw_ce_32": {
+          "cost": 29.925604967798737,
+          "rank_loss": 14.029983418885733,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.730198361424932
+        },
+        "sw_ucb_cv_64": {
+          "cost": 29.779954312638836,
+          "rank_loss": 12.9501582700616,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.162061814592164
+        },
+        "sco_reset_ce": {
+          "cost": 29.829983513414902,
+          "rank_loss": 13.692638762865736,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 114.71518987341773,
+          "excess_pct": 16.35720970004804
+        },
+        "sco_reset_ucb": {
+          "cost": 29.40896711477112,
+          "rank_loss": 12.080151770683944,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 113.39662447257383,
+          "excess_pct": 14.714959600844235
+        },
+        "forced_reset_ucb": {
+          "cost": 29.682992020888044,
+          "rank_loss": 13.100671583605859,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 114.71518987341773,
+          "excess_pct": 15.783842976181806
+        },
+        "aoi": {
+          "cost": 34.972544070148,
+          "rank_loss": 28.38146929325362,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.41669102111189
+        },
+        "round_robin": {
+          "cost": 34.972544070148,
+          "rank_loss": 28.38146929325362,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.41669102111189
+        }
+      }
+    },
+    {
+      "seed": 410008,
+      "sequences": [
+        "indoor_45_14",
+        "outdoor_forward_1",
+        "indoor_45_12",
+        "indoor_45_13",
+        "indoor_forward_3",
+        "indoor_45_2",
+        "indoor_forward_7",
+        "indoor_forward_10",
+        "indoor_45_4",
+        "indoor_forward_9",
+        "outdoor_forward_5",
+        "indoor_forward_6"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 33.08430744021575,
+          "rank_loss": 0.0,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 40.4875528104279,
+          "rank_loss": 24.515746438068973,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 22.376909003127878
+        },
+        "cumulative_ucb_cv": {
+          "cost": 40.12818260812021,
+          "rank_loss": 23.120542989253877,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 21.290683447531535
+        },
+        "sw_ce_32": {
+          "cost": 40.31655243168267,
+          "rank_loss": 24.29178405557416,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 21.860046502517207
+        },
+        "sw_ucb_cv_64": {
+          "cost": 40.61190552977688,
+          "rank_loss": 24.610655938167064,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 22.752775173437435
+        },
+        "sco_reset_ce": {
+          "cost": 40.99705081281485,
+          "rank_loss": 26.65037020119627,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 90.98101265822785,
+          "excess_pct": 23.916907999049506
+        },
+        "sco_reset_ucb": {
+          "cost": 40.24614214885121,
+          "rank_loss": 23.92914471291137,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 101.5295358649789,
+          "excess_pct": 21.647225717440488
+        },
+        "forced_reset_ucb": {
+          "cost": 40.669193992615185,
+          "rank_loss": 24.975614126501647,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 102.84810126582279,
+          "excess_pct": 22.925934194347363
+        },
+        "aoi": {
+          "cost": 41.46069490258942,
+          "rank_loss": 25.960699291339775,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 25.31830982864014
+        },
+        "round_robin": {
+          "cost": 41.46069490258942,
+          "rank_loss": 25.960699291339775,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 25.31830982864014
+        }
+      }
+    },
+    {
+      "seed": 410009,
+      "sequences": [
+        "indoor_forward_3",
+        "indoor_45_13",
+        "outdoor_forward_5",
+        "indoor_forward_7",
+        "outdoor_forward_1",
+        "outdoor_45_1",
+        "indoor_forward_6",
+        "outdoor_forward_3",
+        "indoor_45_14",
+        "indoor_45_12",
+        "indoor_45_9",
+        "indoor_45_2"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 25.589805514644883,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 31.898306766467424,
+          "rank_loss": 19.563547186121717,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 24.65240014509773
+        },
+        "cumulative_ucb_cv": {
+          "cost": 31.534026861414677,
+          "rank_loss": 18.547579661780073,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 23.228864882806377
+        },
+        "sw_ce_32": {
+          "cost": 31.61828347155042,
+          "rank_loss": 18.879061893728696,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 23.55812338415577
+        },
+        "sw_ucb_cv_64": {
+          "cost": 31.386517193079218,
+          "rank_loss": 18.010739783207782,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 22.652425690054233
+        },
+        "sco_reset_ce": {
+          "cost": 31.942662573961616,
+          "rank_loss": 19.947206896928755,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 96.25527426160338,
+          "excess_pct": 24.825734043508206
+        },
+        "sco_reset_ucb": {
+          "cost": 31.06340354068194,
+          "rank_loss": 17.50938372674033,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 108.12236286919831,
+          "excess_pct": 21.389760164079984
+        },
+        "forced_reset_ucb": {
+          "cost": 31.668293653907593,
+          "rank_loss": 18.768535405085256,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 100.21097046413502,
+          "excess_pct": 23.753553483569977
+        },
+        "aoi": {
+          "cost": 35.86411657481074,
+          "rank_loss": 30.639779906831965,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 40.15001620190481
+        },
+        "round_robin": {
+          "cost": 35.86411657481074,
+          "rank_loss": 30.639779906831965,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 40.15001620190481
+        }
+      }
+    },
+    {
+      "seed": 410010,
+      "sequences": [
+        "outdoor_forward_3",
+        "indoor_forward_5",
+        "indoor_45_12",
+        "outdoor_45_1",
+        "indoor_45_9",
+        "indoor_45_13",
+        "indoor_forward_9",
+        "indoor_forward_6",
+        "indoor_45_2",
+        "indoor_forward_7",
+        "indoor_45_14",
+        "indoor_forward_3"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 26.28495706105565,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 32.418316086659246,
+          "rank_loss": 19.316113154076604,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 23.334103271908745
+        },
+        "cumulative_ucb_cv": {
+          "cost": 32.14158859845716,
+          "rank_loss": 18.344968046494262,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 22.281305325314072
+        },
+        "sw_ce_32": {
+          "cost": 32.253164003259336,
+          "rank_loss": 18.76318220650654,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 22.705789202320247
+        },
+        "sw_ucb_cv_64": {
+          "cost": 32.35919628612776,
+          "rank_loss": 18.624986399261978,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 23.10918450793984
+        },
+        "sco_reset_ce": {
+          "cost": 32.610510745523136,
+          "rank_loss": 19.726703509441073,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 108.12236286919831,
+          "excess_pct": 24.065299668453942
+        },
+        "sco_reset_ucb": {
+          "cost": 32.17765830500567,
+          "rank_loss": 18.48244247781096,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 118.67088607594937,
+          "excess_pct": 22.418530988132268
+        },
+        "forced_reset_ucb": {
+          "cost": 32.768151074389536,
+          "rank_loss": 20.655795789185003,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 117.35232067510549,
+          "excess_pct": 24.66503558774886
+        },
+        "aoi": {
+          "cost": 35.94646424665941,
+          "rank_loss": 27.696166330811288,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.75679272810552
+        },
+        "round_robin": {
+          "cost": 35.94646424665941,
+          "rank_loss": 27.696166330811288,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.75679272810552
+        }
+      }
+    },
+    {
+      "seed": 410011,
+      "sequences": [
+        "indoor_45_14",
+        "indoor_45_4",
+        "indoor_forward_5",
+        "outdoor_forward_5",
+        "indoor_45_2",
+        "indoor_forward_7",
+        "indoor_forward_9",
+        "indoor_forward_10",
+        "indoor_forward_3",
+        "outdoor_forward_3",
+        "outdoor_45_1",
+        "indoor_45_13"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 17.565719019869242,
+          "rank_loss": 0.0,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 19.817774068193163,
+          "rank_loss": 7.150726488457993,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 12.8207393376641
+        },
+        "cumulative_ucb_cv": {
+          "cost": 19.68981046040163,
+          "rank_loss": 6.817095180642046,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 12.092254453858398
+        },
+        "sw_ce_32": {
+          "cost": 19.743998555744078,
+          "rank_loss": 6.759280150374728,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 12.40074222644061
+        },
+        "sw_ucb_cv_64": {
+          "cost": 19.78377985107891,
+          "rank_loss": 7.0215932699884505,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 12.627213430322648
+        },
+        "sco_reset_ce": {
+          "cost": 19.709125007566872,
+          "rank_loss": 6.999269458062217,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 101.5295358649789,
+          "excess_pct": 12.202210369374257
+        },
+        "sco_reset_ucb": {
+          "cost": 19.493249589546124,
+          "rank_loss": 6.191332584467725,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 104.16666666666667,
+          "excess_pct": 10.973251749595804
+        },
+        "forced_reset_ucb": {
+          "cost": 20.048547145623523,
+          "rank_loss": 7.991969203173291,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 106.80379746835443,
+          "excess_pct": 14.134508942935176
+        },
+        "aoi": {
+          "cost": 27.82116994933114,
+          "rank_loss": 28.910756971024806,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 58.38332560062911
+        },
+        "round_robin": {
+          "cost": 27.82116994933114,
+          "rank_loss": 28.910756971024806,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 58.38332560062911
+        }
+      }
+    },
+    {
+      "seed": 410012,
+      "sequences": [
+        "indoor_45_4",
+        "outdoor_forward_1",
+        "indoor_forward_3",
+        "outdoor_45_1",
+        "indoor_forward_10",
+        "indoor_45_12",
+        "indoor_45_13",
+        "indoor_45_14",
+        "indoor_45_2",
+        "outdoor_forward_3",
+        "indoor_forward_5",
+        "indoor_forward_9"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 28.049367059000943,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 33.77385225013764,
+          "rank_loss": 18.719342131796974,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 20.408607363921693
+        },
+        "cumulative_ucb_cv": {
+          "cost": 33.591685444484945,
+          "rank_loss": 17.59087128582624,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 19.75915668195263
+        },
+        "sw_ce_32": {
+          "cost": 34.07981940723393,
+          "rank_loss": 19.810008975032137,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 21.49942398182505
+        },
+        "sw_ucb_cv_64": {
+          "cost": 33.501878344757145,
+          "rank_loss": 17.155548632875313,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 19.43898154381529
+        },
+        "sco_reset_ce": {
+          "cost": 34.144294187617284,
+          "rank_loss": 19.761172777080397,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 121.30801687763713,
+          "excess_pct": 21.729285783154605
+        },
+        "sco_reset_ucb": {
+          "cost": 33.55592489408413,
+          "rank_loss": 17.827853738441718,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 113.39662447257383,
+          "excess_pct": 19.631665211911265
+        },
+        "forced_reset_ucb": {
+          "cost": 33.84826701467159,
+          "rank_loss": 18.5421407391938,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 129.2194092827004,
+          "excess_pct": 20.67390662852695
+        },
+        "aoi": {
+          "cost": 37.58448387565506,
+          "rank_loss": 28.017841262877976,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 33.99405340091028
+        },
+        "round_robin": {
+          "cost": 37.58448387565506,
+          "rank_loss": 28.017841262877976,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 33.99405340091028
+        }
+      }
+    },
+    {
+      "seed": 410013,
+      "sequences": [
+        "indoor_forward_3",
+        "outdoor_forward_3",
+        "indoor_45_4",
+        "indoor_45_13",
+        "indoor_forward_10",
+        "indoor_45_14",
+        "outdoor_forward_1",
+        "indoor_45_9",
+        "outdoor_forward_5",
+        "indoor_45_12",
+        "indoor_forward_7",
+        "outdoor_45_1"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 25.405216090385547,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 29.547755138100662,
+          "rank_loss": 14.015570197635377,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.30586031221688
+        },
+        "cumulative_ucb_cv": {
+          "cost": 29.259905932773776,
+          "rank_loss": 12.388468701451549,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.172828401357364
+        },
+        "sw_ce_32": {
+          "cost": 29.717605720421368,
+          "rank_loss": 13.999969152271246,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.974426096961317
+        },
+        "sw_ucb_cv_64": {
+          "cost": 29.20923766654198,
+          "rank_loss": 13.098433807271649,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 14.973387994900955
+        },
+        "sco_reset_ce": {
+          "cost": 29.603664757298024,
+          "rank_loss": 14.136654630247703,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 109.44092827004219,
+          "excess_pct": 16.525931729828326
+        },
+        "sco_reset_ucb": {
+          "cost": 29.40101166970167,
+          "rank_loss": 13.170163885417784,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 110.75949367088607,
+          "excess_pct": 15.728248738763174
+        },
+        "forced_reset_ucb": {
+          "cost": 29.986924574637623,
+          "rank_loss": 14.768012380211252,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 109.44092827004219,
+          "excess_pct": 18.03451884822187
+        },
+        "aoi": {
+          "cost": 35.267041385596286,
+          "rank_loss": 29.674369818080564,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 38.8181122338215
+        },
+        "round_robin": {
+          "cost": 35.267041385596286,
+          "rank_loss": 29.674369818080564,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 38.8181122338215
+        }
+      }
+    },
+    {
+      "seed": 410014,
+      "sequences": [
+        "indoor_forward_5",
+        "indoor_forward_7",
+        "indoor_45_12",
+        "indoor_forward_3",
+        "outdoor_45_1",
+        "outdoor_forward_1",
+        "indoor_45_2",
+        "indoor_forward_10",
+        "outdoor_forward_3",
+        "indoor_forward_6",
+        "indoor_45_9",
+        "indoor_45_14"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 25.9910519298479,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 30.85116928407554,
+          "rank_loss": 15.227165008751776,
+          "max_gap": 5,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 18.69919450488391
+        },
+        "cumulative_ucb_cv": {
+          "cost": 31.015514392377572,
+          "rank_loss": 15.993243277400511,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 19.331508690341327
+        },
+        "sw_ce_32": {
+          "cost": 30.843596954813016,
+          "rank_loss": 15.418560660149444,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 18.67006013478236
+        },
+        "sw_ucb_cv_64": {
+          "cost": 30.849237768359792,
+          "rank_loss": 15.389505355358942,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 18.69176304069784
+        },
+        "sco_reset_ce": {
+          "cost": 30.89962449674549,
+          "rank_loss": 15.609607077600689,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 105.48523206751055,
+          "excess_pct": 18.885624868690385
+        },
+        "sco_reset_ucb": {
+          "cost": 30.58381786177628,
+          "rank_loss": 14.928796618934387,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 110.75949367088607,
+          "excess_pct": 17.670565794430537
+        },
+        "forced_reset_ucb": {
+          "cost": 30.961321054691936,
+          "rank_loss": 15.307749494234331,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 102.84810126582279,
+          "excess_pct": 19.123001016885443
+        },
+        "aoi": {
+          "cost": 35.47981152478552,
+          "rank_loss": 28.6855207129867,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.507793607386894
+        },
+        "round_robin": {
+          "cost": 35.47981152478552,
+          "rank_loss": 28.6855207129867,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.507793607386894
+        }
+      }
+    },
+    {
+      "seed": 410015,
+      "sequences": [
+        "outdoor_forward_5",
+        "indoor_forward_9",
+        "indoor_forward_10",
+        "indoor_45_4",
+        "indoor_forward_7",
+        "indoor_45_12",
+        "indoor_45_2",
+        "outdoor_45_1",
+        "indoor_45_9",
+        "indoor_forward_3",
+        "outdoor_forward_1",
+        "outdoor_forward_3"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 20.336964822356194,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 23.49914763035171,
+          "rank_loss": 10.925971464194431,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.548941720739794
+        },
+        "cumulative_ucb_cv": {
+          "cost": 23.757553809825083,
+          "rank_loss": 10.701863503204711,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.819564853201086
+        },
+        "sw_ce_32": {
+          "cost": 23.491614259205463,
+          "rank_loss": 10.25714186189583,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.511898970201287
+        },
+        "sw_ucb_cv_64": {
+          "cost": 23.53163118068532,
+          "rank_loss": 10.477293882780573,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.708668359485323
+        },
+        "sco_reset_ce": {
+          "cost": 23.301749281173336,
+          "rank_loss": 10.065187602715351,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 110.75949367088607,
+          "excess_pct": 14.578303521270719
+        },
+        "sco_reset_ucb": {
+          "cost": 23.56632577267509,
+          "rank_loss": 10.346071230722357,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 117.35232067510549,
+          "excess_pct": 15.879267031867483
+        },
+        "forced_reset_ucb": {
+          "cost": 23.857476956173883,
+          "rank_loss": 11.148920413087716,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 114.71518987341773,
+          "excess_pct": 17.31090241129605
+        },
+        "aoi": {
+          "cost": 29.114394973523442,
+          "rank_loss": 25.340548489080803,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 43.159980989485305
+        },
+        "round_robin": {
+          "cost": 29.114394973523442,
+          "rank_loss": 25.340548489080803,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 43.159980989485305
+        }
+      }
+    },
+    {
+      "seed": 410016,
+      "sequences": [
+        "outdoor_45_1",
+        "indoor_45_13",
+        "indoor_45_4",
+        "outdoor_forward_3",
+        "indoor_forward_5",
+        "indoor_forward_3",
+        "indoor_45_9",
+        "indoor_45_12",
+        "indoor_forward_6",
+        "indoor_45_2",
+        "outdoor_forward_1",
+        "indoor_45_14"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 25.187982503504042,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 28.687755331827013,
+          "rank_loss": 11.610043738352893,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 13.894613543725054
+        },
+        "cumulative_ucb_cv": {
+          "cost": 28.791363730593602,
+          "rank_loss": 11.848006838137845,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 14.305954145347988
+        },
+        "sw_ce_32": {
+          "cost": 29.006397700241404,
+          "rank_loss": 12.792938126506822,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.159670673132153
+        },
+        "sw_ucb_cv_64": {
+          "cost": 29.15066164973945,
+          "rank_loss": 12.740260313781198,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.732419798545362
+        },
+        "sco_reset_ce": {
+          "cost": 29.365123143473138,
+          "rank_loss": 14.45072832091044,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 110.75949367088607,
+          "excess_pct": 16.58386351264136
+        },
+        "sco_reset_ucb": {
+          "cost": 28.860380175284057,
+          "rank_loss": 11.773662277652715,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 109.44092827004219,
+          "excess_pct": 14.579959594894621
+        },
+        "forced_reset_ucb": {
+          "cost": 29.619337905399266,
+          "rank_loss": 14.140725540488885,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 110.75949367088607,
+          "excess_pct": 17.593133555967633
+        },
+        "aoi": {
+          "cost": 33.962643639024115,
+          "rank_loss": 25.32179432609729,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 34.83669696173317
+        },
+        "round_robin": {
+          "cost": 33.962643639024115,
+          "rank_loss": 25.32179432609729,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 34.83669696173317
+        }
+      }
+    },
+    {
+      "seed": 410017,
+      "sequences": [
+        "indoor_forward_9",
+        "indoor_45_4",
+        "indoor_45_14",
+        "outdoor_forward_1",
+        "outdoor_45_1",
+        "indoor_45_13",
+        "indoor_forward_5",
+        "outdoor_forward_3",
+        "indoor_45_12",
+        "indoor_forward_7",
+        "indoor_45_2",
+        "indoor_forward_10"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 19.389119789437487,
+          "rank_loss": 0.0,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 22.16897552381021,
+          "rank_loss": 9.012043583044953,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 14.337194078748695
+        },
+        "cumulative_ucb_cv": {
+          "cost": 22.285130357014978,
+          "rank_loss": 8.92095175613851,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 14.936266313415292
+        },
+        "sw_ce_32": {
+          "cost": 22.10148856012442,
+          "rank_loss": 8.834451667520812,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 13.989127924025402
+        },
+        "sw_ucb_cv_64": {
+          "cost": 22.11329730823376,
+          "rank_loss": 8.56540040029559,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 14.050031916767614
+        },
+        "sco_reset_ce": {
+          "cost": 21.95145217791611,
+          "rank_loss": 8.507532793445186,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 116.03375527426161,
+          "excess_pct": 13.21531052623901
+        },
+        "sco_reset_ucb": {
+          "cost": 21.877493189188947,
+          "rank_loss": 7.764092621773881,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 114.71518987341773,
+          "excess_pct": 12.833864697184637
+        },
+        "forced_reset_ucb": {
+          "cost": 22.084284600176638,
+          "rank_loss": 8.5717487567839,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 110.75949367088607,
+          "excess_pct": 13.90039795518403
+        },
+        "aoi": {
+          "cost": 29.599135680786432,
+          "rank_loss": 29.177593708217426,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 52.65848064392795
+        },
+        "round_robin": {
+          "cost": 29.599135680786432,
+          "rank_loss": 29.177593708217426,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 52.65848064392795
+        }
+      }
+    },
+    {
+      "seed": 410018,
+      "sequences": [
+        "indoor_forward_10",
+        "indoor_forward_3",
+        "outdoor_45_1",
+        "outdoor_forward_5",
+        "indoor_45_13",
+        "indoor_forward_6",
+        "outdoor_forward_3",
+        "indoor_forward_7",
+        "indoor_45_9",
+        "indoor_45_12",
+        "indoor_forward_5",
+        "outdoor_forward_1"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 25.46658617474209,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 30.555574085672042,
+          "rank_loss": 16.50648549514272,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 19.98299998284512
+        },
+        "cumulative_ucb_cv": {
+          "cost": 30.12839504803914,
+          "rank_loss": 15.232954126939537,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 18.305590083058163
+        },
+        "sw_ce_32": {
+          "cost": 30.518301208010577,
+          "rank_loss": 15.858429136974927,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 19.836640052991505
+        },
+        "sw_ucb_cv_64": {
+          "cost": 30.13448425173542,
+          "rank_loss": 15.193554141167711,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 18.329500644350105
+        },
+        "sco_reset_ce": {
+          "cost": 30.384109974145545,
+          "rank_loss": 15.768537792481622,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 118.67088607594937,
+          "excess_pct": 19.30970945874435
+        },
+        "sco_reset_ucb": {
+          "cost": 30.20074535822604,
+          "rank_loss": 14.81082337729902,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 121.30801687763713,
+          "excess_pct": 18.58968905765357
+        },
+        "forced_reset_ucb": {
+          "cost": 30.34627073618416,
+          "rank_loss": 15.327472033156804,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 126.58227848101266,
+          "excess_pct": 19.16112559398231
+        },
+        "aoi": {
+          "cost": 34.78510334820338,
+          "rank_loss": 27.331480603714024,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.59115167428073
+        },
+        "round_robin": {
+          "cost": 34.78510334820338,
+          "rank_loss": 27.331480603714024,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.59115167428073
+        }
+      }
+    },
+    {
+      "seed": 410019,
+      "sequences": [
+        "indoor_45_4",
+        "indoor_45_12",
+        "indoor_45_13",
+        "outdoor_45_1",
+        "outdoor_forward_5",
+        "indoor_forward_7",
+        "indoor_forward_3",
+        "indoor_45_9",
+        "indoor_forward_5",
+        "outdoor_forward_1",
+        "indoor_forward_6",
+        "outdoor_forward_3"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 23.18787131061105,
+          "rank_loss": 0.0,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 26.90930678491058,
+          "rank_loss": 11.539691912319498,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.049060409424285
+        },
+        "cumulative_ucb_cv": {
+          "cost": 26.8000139227917,
+          "rank_loss": 11.232939589419233,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.577724077361466
+        },
+        "sw_ce_32": {
+          "cost": 27.07473252615389,
+          "rank_loss": 12.20722627567927,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.76247536255804
+        },
+        "sw_ucb_cv_64": {
+          "cost": 26.881173170086072,
+          "rank_loss": 11.509644611973497,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.927731398892675
+        },
+        "sco_reset_ce": {
+          "cost": 27.196102483458468,
+          "rank_loss": 12.954990051350446,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 130.5379746835443,
+          "excess_pct": 17.28589536812377
+        },
+        "sco_reset_ucb": {
+          "cost": 26.688622891513614,
+          "rank_loss": 11.39374964215712,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 126.58227848101266,
+          "excess_pct": 15.097339182232638
+        },
+        "forced_reset_ucb": {
+          "cost": 27.422350936019686,
+          "rank_loss": 13.381696463256173,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 121.30801687763713,
+          "excess_pct": 18.261614309852092
+        },
+        "aoi": {
+          "cost": 32.38315515181992,
+          "rank_loss": 26.344036233555933,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 39.655575615520156
+        },
+        "round_robin": {
+          "cost": 32.38315515181992,
+          "rank_loss": 26.344036233555933,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 39.655575615520156
+        }
+      }
+    },
+    {
+      "seed": 410020,
+      "sequences": [
+        "indoor_45_4",
+        "outdoor_45_1",
+        "indoor_45_12",
+        "indoor_forward_6",
+        "indoor_45_14",
+        "indoor_45_2",
+        "outdoor_forward_3",
+        "indoor_forward_7",
+        "indoor_45_9",
+        "indoor_forward_9",
+        "indoor_45_13",
+        "outdoor_forward_5"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 21.990703539678876,
+          "rank_loss": 0.0,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 26.152584154237196,
+          "rank_loss": 13.43654612667503,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 18.925636494752606
+        },
+        "cumulative_ucb_cv": {
+          "cost": 25.775092888117584,
+          "rank_loss": 12.159707899051913,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 17.20904172806639
+        },
+        "sw_ce_32": {
+          "cost": 26.21816452427991,
+          "rank_loss": 13.823341746467255,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 19.223855103013076
+        },
+        "sw_ucb_cv_64": {
+          "cost": 25.903275523225236,
+          "rank_loss": 12.407463834662446,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 17.791936381147245
+        },
+        "sco_reset_ce": {
+          "cost": 26.530676708224206,
+          "rank_loss": 15.109526197534157,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 102.84810126582279,
+          "excess_pct": 20.644965543524506
+        },
+        "sco_reset_ucb": {
+          "cost": 26.04529020141192,
+          "rank_loss": 13.317407534888225,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 118.67088607594937,
+          "excess_pct": 18.437730536529486
+        },
+        "forced_reset_ucb": {
+          "cost": 26.581987163559315,
+          "rank_loss": 14.70072561913256,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 112.07805907172995,
+          "excess_pct": 20.878293482498943
+        },
+        "aoi": {
+          "cost": 30.98165337405584,
+          "rank_loss": 24.430746452246645,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 40.88523051640509
+        },
+        "round_robin": {
+          "cost": 30.98165337405584,
+          "rank_loss": 24.430746452246645,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 40.88523051640509
+        }
+      }
+    },
+    {
+      "seed": 410021,
+      "sequences": [
+        "outdoor_forward_3",
+        "outdoor_forward_5",
+        "indoor_45_2",
+        "indoor_45_12",
+        "indoor_forward_9",
+        "indoor_forward_3",
+        "indoor_45_13",
+        "indoor_45_4",
+        "indoor_forward_5",
+        "indoor_forward_10",
+        "outdoor_forward_1",
+        "indoor_45_9"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 26.49018099398218,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 30.804851391661447,
+          "rank_loss": 14.620656618102453,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.287810183929817
+        },
+        "cumulative_ucb_cv": {
+          "cost": 30.971043004388022,
+          "rank_loss": 15.190402783538163,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.915180803875106
+        },
+        "sw_ce_32": {
+          "cost": 30.782458755199613,
+          "rank_loss": 14.179445765879345,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.203278347522488
+        },
+        "sw_ucb_cv_64": {
+          "cost": 30.5370603745655,
+          "rank_loss": 13.53776022133726,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.276903474169012
+        },
+        "sco_reset_ce": {
+          "cost": 31.1774365606946,
+          "rank_loss": 15.49499570364655,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 117.35232067510549,
+          "excess_pct": 17.694313103323942
+        },
+        "sco_reset_ucb": {
+          "cost": 30.929139181387193,
+          "rank_loss": 14.47243482174318,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 116.03375527426161,
+          "excess_pct": 16.756994557392503
+        },
+        "forced_reset_ucb": {
+          "cost": 31.05283158010712,
+          "rank_loss": 14.244462848003739,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 119.98945147679325,
+          "excess_pct": 17.223931339545963
+        },
+        "aoi": {
+          "cost": 34.977598389270426,
+          "rank_loss": 26.357296868383045,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 32.03986185378027
+        },
+        "round_robin": {
+          "cost": 34.977598389270426,
+          "rank_loss": 26.357296868383045,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 32.03986185378027
+        }
+      }
+    },
+    {
+      "seed": 410022,
+      "sequences": [
+        "indoor_forward_5",
+        "indoor_forward_7",
+        "indoor_forward_3",
+        "indoor_45_2",
+        "indoor_45_14",
+        "indoor_forward_6",
+        "indoor_45_9",
+        "indoor_45_13",
+        "indoor_forward_10",
+        "outdoor_forward_3",
+        "indoor_45_12",
+        "outdoor_45_1"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 22.2155378999137,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 25.811468572967996,
+          "rank_loss": 11.4638827444847,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.186556856083456
+        },
+        "cumulative_ucb_cv": {
+          "cost": 25.862434312839614,
+          "rank_loss": 11.101339188591947,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.41597169222755
+        },
+        "sw_ce_32": {
+          "cost": 25.99473595900914,
+          "rank_loss": 11.83398873607834,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 17.011508234109087
+        },
+        "sw_ucb_cv_64": {
+          "cost": 25.837946488060734,
+          "rank_loss": 10.90325762864401,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.305743324635436
+        },
+        "sco_reset_ce": {
+          "cost": 25.63786305767439,
+          "rank_loss": 10.857741783757527,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 96.25527426160338,
+          "excess_pct": 15.405096978426025
+        },
+        "sco_reset_ucb": {
+          "cost": 25.378484393135363,
+          "rank_loss": 9.954465708701914,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 110.75949367088607,
+          "excess_pct": 14.237541793817886
+        },
+        "forced_reset_ucb": {
+          "cost": 25.524532231935545,
+          "rank_loss": 10.107486832471807,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 105.48523206751055,
+          "excess_pct": 14.894954814642158
+        },
+        "aoi": {
+          "cost": 32.25409113901963,
+          "rank_loss": 29.81519249344449,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 45.18708160176903
+        },
+        "round_robin": {
+          "cost": 32.25409113901963,
+          "rank_loss": 29.81519249344449,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 45.18708160176903
+        }
+      }
+    },
+    {
+      "seed": 410023,
+      "sequences": [
+        "indoor_45_4",
+        "indoor_forward_7",
+        "indoor_45_9",
+        "indoor_45_12",
+        "outdoor_forward_5",
+        "outdoor_forward_1",
+        "indoor_forward_9",
+        "indoor_45_2",
+        "indoor_forward_3",
+        "outdoor_forward_3",
+        "indoor_forward_6",
+        "indoor_45_14"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 17.875522013441266,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 20.700744063661148,
+          "rank_loss": 8.633960180131526,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.804976481780454
+        },
+        "cumulative_ucb_cv": {
+          "cost": 20.67061416173044,
+          "rank_loss": 8.374104275048342,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.63642251223456
+        },
+        "sw_ce_32": {
+          "cost": 20.70197203275538,
+          "rank_loss": 9.162993968923422,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.811846038335542
+        },
+        "sw_ucb_cv_64": {
+          "cost": 20.71579739749035,
+          "rank_loss": 8.821495125018195,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.889188477479843
+        },
+        "sco_reset_ce": {
+          "cost": 20.326158986298108,
+          "rank_loss": 7.862180740266237,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 97.57383966244726,
+          "excess_pct": 13.709456826011102
+        },
+        "sco_reset_ucb": {
+          "cost": 20.35907901225071,
+          "rank_loss": 8.050604137505402,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 101.5295358649789,
+          "excess_pct": 13.893619425166804
+        },
+        "forced_reset_ucb": {
+          "cost": 20.87421967952339,
+          "rank_loss": 9.4169562497243,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 104.16666666666667,
+          "excess_pct": 16.77544109664204
+        },
+        "aoi": {
+          "cost": 26.658259392682403,
+          "rank_loss": 24.573318546878305,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 49.13276027764153
+        },
+        "round_robin": {
+          "cost": 26.658259392682403,
+          "rank_loss": 24.573318546878305,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 49.13276027764153
+        }
+      }
+    },
+    {
+      "seed": 410024,
+      "sequences": [
+        "indoor_forward_7",
+        "indoor_45_2",
+        "outdoor_forward_1",
+        "indoor_45_9",
+        "indoor_45_12",
+        "outdoor_forward_3",
+        "indoor_45_14",
+        "outdoor_forward_5",
+        "indoor_forward_10",
+        "indoor_forward_3",
+        "indoor_forward_9",
+        "indoor_forward_5"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 22.54254671020078,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 25.92478655720701,
+          "rank_loss": 10.606624619357884,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.003805428406736
+        },
+        "cumulative_ucb_cv": {
+          "cost": 25.768904335092657,
+          "rank_loss": 10.113252613527875,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 14.312303158861406
+        },
+        "sw_ce_32": {
+          "cost": 26.242900345417617,
+          "rank_loss": 11.372950250345779,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.414976013080107
+        },
+        "sw_ucb_cv_64": {
+          "cost": 25.87667425561716,
+          "rank_loss": 10.640655137386048,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 14.790376563388218
+        },
+        "sco_reset_ce": {
+          "cost": 26.427710913126212,
+          "rank_loss": 12.302278651951177,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 116.03375527426161,
+          "excess_pct": 17.234806044196183
+        },
+        "sco_reset_ucb": {
+          "cost": 26.13334830955944,
+          "rank_loss": 11.293906254690679,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 110.75949367088607,
+          "excess_pct": 15.928997045102179
+        },
+        "forced_reset_ucb": {
+          "cost": 26.598173285322176,
+          "rank_loss": 12.315813396896157,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 122.62658227848101,
+          "excess_pct": 17.990986676257712
+        },
+        "aoi": {
+          "cost": 32.10220693978582,
+          "rank_loss": 28.20605512336549,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 42.407188293677464
+        },
+        "round_robin": {
+          "cost": 32.10220693978582,
+          "rank_loss": 28.20605512336549,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 42.407188293677464
+        }
+      }
+    },
+    {
+      "seed": 410025,
+      "sequences": [
+        "indoor_forward_6",
+        "outdoor_45_1",
+        "indoor_forward_5",
+        "indoor_45_2",
+        "indoor_45_9",
+        "indoor_45_14",
+        "indoor_forward_9",
+        "outdoor_forward_5",
+        "indoor_forward_10",
+        "outdoor_forward_3",
+        "outdoor_forward_1",
+        "indoor_forward_7"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 16.32470991514252,
+          "rank_loss": 0.0,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 18.6842910342495,
+          "rank_loss": 6.821551331640387,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 14.454046236486406
+        },
+        "cumulative_ucb_cv": {
+          "cost": 18.671015427442683,
+          "rank_loss": 6.869152657901601,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 14.372724075934551
+        },
+        "sw_ce_32": {
+          "cost": 18.54080141362534,
+          "rank_loss": 6.632982622426221,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 13.575074289235678
+        },
+        "sw_ucb_cv_64": {
+          "cost": 18.574709666773085,
+          "rank_loss": 6.950971097721749,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 13.782785503241946
+        },
+        "sco_reset_ce": {
+          "cost": 18.32672261363138,
+          "rank_loss": 6.397570303770325,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 110.75949367088607,
+          "excess_pct": 12.263695397318063
+        },
+        "sco_reset_ucb": {
+          "cost": 18.098775622004524,
+          "rank_loss": 5.405774486675336,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 119.98945147679325,
+          "excess_pct": 10.867364357981103
+        },
+        "forced_reset_ucb": {
+          "cost": 18.567967554037423,
+          "rank_loss": 6.419105418948415,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 123.94514767932489,
+          "excess_pct": 13.741485457049961
+        },
+        "aoi": {
+          "cost": 25.617474643729043,
+          "rank_loss": 26.032158980979965,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 56.9245320553397
+        },
+        "round_robin": {
+          "cost": 25.617474643729043,
+          "rank_loss": 26.032158980979965,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 56.9245320553397
+        }
+      }
+    },
+    {
+      "seed": 410026,
+      "sequences": [
+        "indoor_45_2",
+        "indoor_forward_10",
+        "indoor_forward_9",
+        "indoor_forward_7",
+        "indoor_forward_3",
+        "indoor_45_14",
+        "indoor_45_9",
+        "indoor_forward_5",
+        "outdoor_forward_5",
+        "indoor_forward_6",
+        "indoor_45_12",
+        "indoor_45_4"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 23.102924615355935,
+          "rank_loss": 0.0,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 27.657686161836114,
+          "rank_loss": 14.847622370241842,
+          "max_gap": 5,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 19.715086389767045
+        },
+        "cumulative_ucb_cv": {
+          "cost": 27.799671751607676,
+          "rank_loss": 15.376131841203584,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 20.329664812782756
+        },
+        "sw_ce_32": {
+          "cost": 27.698502594200253,
+          "rank_loss": 14.90704985838812,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 19.891758534284243
+        },
+        "sw_ucb_cv_64": {
+          "cost": 27.879492754099033,
+          "rank_loss": 14.861148714662471,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 20.675166535271615
+        },
+        "sco_reset_ce": {
+          "cost": 27.93379750567007,
+          "rank_loss": 15.58589917100892,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 90.98101265822785,
+          "excess_pct": 20.91022228027
+        },
+        "sco_reset_ucb": {
+          "cost": 27.454081233172577,
+          "rank_loss": 13.877561406797644,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 96.25527426160338,
+          "excess_pct": 18.83379135005503
+        },
+        "forced_reset_ucb": {
+          "cost": 28.244301179269492,
+          "rank_loss": 16.334694193399876,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 102.84810126582279,
+          "excess_pct": 22.25422386781375
+        },
+        "aoi": {
+          "cost": 32.39147518466604,
+          "rank_loss": 26.69669264491535,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 40.20508539051475
+        },
+        "round_robin": {
+          "cost": 32.39147518466604,
+          "rank_loss": 26.69669264491535,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 40.20508539051475
+        }
+      }
+    },
+    {
+      "seed": 410027,
+      "sequences": [
+        "indoor_forward_9",
+        "outdoor_forward_1",
+        "outdoor_forward_3",
+        "indoor_45_14",
+        "outdoor_forward_5",
+        "indoor_forward_3",
+        "indoor_forward_5",
+        "indoor_45_4",
+        "indoor_45_2",
+        "indoor_forward_7",
+        "outdoor_45_1",
+        "indoor_forward_6"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 24.72597195675395,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 29.386219134308202,
+          "rank_loss": 14.781481425512998,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 18.84757932147254
+        },
+        "cumulative_ucb_cv": {
+          "cost": 28.904584465944026,
+          "rank_loss": 13.456602442831441,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.899689591570066
+        },
+        "sw_ce_32": {
+          "cost": 28.994970107128164,
+          "rank_loss": 14.057667139301541,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 17.265238987736264
+        },
+        "sw_ucb_cv_64": {
+          "cost": 29.06108955616461,
+          "rank_loss": 13.973679076046242,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 17.532647885360554
+        },
+        "sco_reset_ce": {
+          "cost": 29.286376077694225,
+          "rank_loss": 14.929017736208126,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 108.12236286919831,
+          "excess_pct": 18.44378101259876
+        },
+        "sco_reset_ucb": {
+          "cost": 29.39027885653734,
+          "rank_loss": 14.95689802957891,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 117.35232067510549,
+          "excess_pct": 18.863998179490473
+        },
+        "forced_reset_ucb": {
+          "cost": 29.426323798443253,
+          "rank_loss": 14.724042250032708,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 118.67088607594937,
+          "excess_pct": 19.009775833727716
+        },
+        "aoi": {
+          "cost": 33.77489598126311,
+          "rank_loss": 26.118448919320365,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.596838499759876
+        },
+        "round_robin": {
+          "cost": 33.77489598126311,
+          "rank_loss": 26.118448919320365,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.596838499759876
+        }
+      }
+    },
+    {
+      "seed": 410028,
+      "sequences": [
+        "indoor_45_14",
+        "indoor_45_2",
+        "indoor_forward_6",
+        "indoor_forward_3",
+        "indoor_forward_9",
+        "indoor_45_12",
+        "outdoor_forward_5",
+        "indoor_forward_10",
+        "indoor_45_13",
+        "outdoor_45_1",
+        "indoor_forward_5",
+        "outdoor_forward_3"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 24.94800382086045,
+          "rank_loss": 0.0,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 29.599244451137462,
+          "rank_loss": 14.619123347127367,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 18.643738648091123
+        },
+        "cumulative_ucb_cv": {
+          "cost": 29.538184032093824,
+          "rank_loss": 14.54905435841285,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 18.39898792782475
+        },
+        "sw_ce_32": {
+          "cost": 29.778299575930603,
+          "rank_loss": 15.184859511801186,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 19.361451881097057
+        },
+        "sw_ucb_cv_64": {
+          "cost": 29.464941993502247,
+          "rank_loss": 14.437398176773025,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 18.105409174520524
+        },
+        "sco_reset_ce": {
+          "cost": 29.941315778376175,
+          "rank_loss": 16.593979261580703,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 116.03375527426161,
+          "excess_pct": 20.0148757125832
+        },
+        "sco_reset_ucb": {
+          "cost": 30.15187334705515,
+          "rank_loss": 16.745741823178893,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 134.49367088607596,
+          "excess_pct": 20.858861348431603
+        },
+        "forced_reset_ucb": {
+          "cost": 30.230641789373905,
+          "rank_loss": 16.704724638034055,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 119.98945147679325,
+          "excess_pct": 21.174591788768037
+        },
+        "aoi": {
+          "cost": 34.03895400174821,
+          "rank_loss": 26.387148611786138,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.4395895004886
+        },
+        "round_robin": {
+          "cost": 34.03895400174821,
+          "rank_loss": 26.387148611786138,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 36.4395895004886
+        }
+      }
+    },
+    {
+      "seed": 410029,
+      "sequences": [
+        "indoor_45_14",
+        "indoor_45_4",
+        "outdoor_forward_3",
+        "indoor_forward_10",
+        "indoor_45_9",
+        "outdoor_forward_5",
+        "indoor_forward_6",
+        "indoor_45_12",
+        "indoor_45_13",
+        "indoor_forward_3",
+        "indoor_forward_7",
+        "indoor_forward_9"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 18.963908106148043,
+          "rank_loss": 0.0,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 22.062953983631914,
+          "rank_loss": 9.899444251857384,
+          "max_gap": 5,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.34181024363417
+        },
+        "cumulative_ucb_cv": {
+          "cost": 22.14308877560999,
+          "rank_loss": 9.926235672955633,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 16.76437499942991
+        },
+        "sw_ce_32": {
+          "cost": 22.24900749506958,
+          "rank_loss": 10.871641400380184,
+          "max_gap": 5,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 17.322902908691674
+        },
+        "sw_ucb_cv_64": {
+          "cost": 21.973111889217442,
+          "rank_loss": 9.774404333430336,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 15.868057186449992
+        },
+        "sco_reset_ce": {
+          "cost": 21.85825736357261,
+          "rank_loss": 9.676352677711211,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 90.98101265822785,
+          "excess_pct": 15.262409210294713
+        },
+        "sco_reset_ucb": {
+          "cost": 21.72632790097052,
+          "rank_loss": 9.179963601445499,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 96.25527426160338,
+          "excess_pct": 14.566722108967145
+        },
+        "forced_reset_ucb": {
+          "cost": 21.81936101739274,
+          "rank_loss": 9.250891084935992,
+          "max_gap": 6,
+          "alarms_per_10k_arm_slots": 90.98101265822785,
+          "excess_pct": 15.057301982595916
+        },
+        "aoi": {
+          "cost": 26.987539425502845,
+          "rank_loss": 22.468466787599713,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 42.310009489834876
+        },
+        "round_robin": {
+          "cost": 26.987539425502845,
+          "rank_loss": 22.468466787599713,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 42.310009489834876
+        }
+      }
+    },
+    {
+      "seed": 410030,
+      "sequences": [
+        "indoor_45_14",
+        "outdoor_forward_5",
+        "indoor_forward_9",
+        "indoor_forward_6",
+        "outdoor_45_1",
+        "indoor_45_12",
+        "indoor_45_9",
+        "indoor_forward_7",
+        "outdoor_forward_1",
+        "indoor_45_2",
+        "outdoor_forward_3",
+        "indoor_45_13"
+      ],
+      "methods": {
+        "oracle": {
+          "cost": 31.960486098867804,
+          "rank_loss": 0.0,
+          "max_gap": 9,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 0.0
+        },
+        "cumulative_ce": {
+          "cost": 39.064154782064634,
+          "rank_loss": 22.29069796408588,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 22.226410015235885
+        },
+        "cumulative_ucb_cv": {
+          "cost": 39.17137156179647,
+          "rank_loss": 22.466454188737877,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 22.561876689303894
+        },
+        "sw_ce_32": {
+          "cost": 38.64190958132343,
+          "rank_loss": 21.497004673848167,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 20.90526239740864
+        },
+        "sw_ucb_cv_64": {
+          "cost": 38.78885687583241,
+          "rank_loss": 21.65397246775544,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 21.365040430991744
+        },
+        "sco_reset_ce": {
+          "cost": 39.014846097371574,
+          "rank_loss": 23.407622663770994,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 102.84810126582279,
+          "excess_pct": 22.072129868993674
+        },
+        "sco_reset_ucb": {
+          "cost": 38.671081586020655,
+          "rank_loss": 22.0442710882197,
+          "max_gap": 7,
+          "alarms_per_10k_arm_slots": 105.48523206751055,
+          "excess_pct": 20.99653761959075
+        },
+        "forced_reset_ucb": {
+          "cost": 38.517089712466884,
+          "rank_loss": 21.051539258948328,
+          "max_gap": 8,
+          "alarms_per_10k_arm_slots": 110.75949367088607,
+          "excess_pct": 20.51471805940819
+        },
+        "aoi": {
+          "cost": 41.71944245540658,
+          "rank_loss": 29.019116141313962,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 30.534442831532793
+        },
+        "round_robin": {
+          "cost": 41.71944245540658,
+          "rank_loss": 29.019116141313962,
+          "max_gap": 3,
+          "alarms_per_10k_arm_slots": 0.0,
+          "excess_pct": 30.534442831532793
+        }
+      }
+    }
+  ]
+}

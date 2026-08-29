@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "access_date": "2026-08-05",
+  "privacy": "No absolute local path is recorded.",
+  "datasets": {
+    "uzh_fpv": {
+      "official_url": "https://fpv.ifi.uzh.ch/",
+      "license": "CC BY-NC-SA 3.0",
+      "status": "locally verified",
+      "file_count": 32,
+      "total_bytes": 7775921,
+      "files": [
+        {
+          "path": "indoor_45_12/leica.txt",
+          "bytes": 339601,
+          "sha256": "7bea4fbdd4f68845f1c085cffa8dcb97678d7d2e66766f101a1c4e122601e87b"
+        },
+        {
+          "path": "indoor_45_12.zip",
+          "bytes": 71859,
+          "sha256": "24bc112430aad75a4926a9e469a975e4c12385d26e7c3f99adc45f8bb6318ab9"
+        },
+        {
+          "path": "indoor_45_13/leica.txt",
+          "bytes": 292117,
+          "sha256": "c5b7ad2fc1db6cd83753e5ecf9e80b9a729aa3c60cd5a54dd3c5a8ce62e5dc81"
+        },
+        {
+          "path": "indoor_45_13.zip",
+          "bytes": 61987,
+          "sha256": "aacdc9459323de36c9e4a4020bd0c2778754938233f5bf8d088767c5cd889876"
+        },
+        {
+          "path": "indoor_45_14/leica.txt",
+          "bytes": 283764,
+          "sha256": "e519e7b1475e205e8ce13271e9a10402effe7b25065afb0a853ab454e1fb6228"
+        },
+        {
+          "path": "indoor_45_14.zip",
+          "bytes": 60059,
+          "sha256": "f555c6b12280b62c84449436ff543559ad6f6abad4de657ce508b6c5605b7466"
+        },
+        {
+          "path": "indoor_45_2/leica.txt",
+          "bytes": 393588,
+          "sha256": "8b432bfceb00816b37032ee6b39e43e6f9d8f2e1b743e3746689db189aa345c6"
+        },
+        {
+          "path": "indoor_45_2.zip",
+          "bytes": 83139,
+          "sha256": "5fb19e2a1cd1c9fc43737fb364000f45fb08163bf1f210e4a1bd1c06b50bf7ed"
+        },
+        {
+          "path": "indoor_45_4/leica.txt",
+          "bytes": 336152,
+          "sha256": "043e6615307b3f3eb83035894193f6dc837f611114957a6fb1c3cbf3fcd5cf34"
+        },
+        {
+          "path": "indoor_45_4.zip",
+          "bytes": 70885,
+          "sha256": "00382adc12365f0185bdafdf4b694087ca98046d2f2b9493c1b5f48679e3c0ac"
+        },
+        {
+          "path": "indoor_45_9/leica.txt",
+          "bytes": 289408,
+          "sha256": "3971c026ae5e348241c7584d8ab578d49a1f9e395b48c26c44743ffda7acc970"
+        },
+        {
+          "path": "indoor_45_9.zip",
+          "bytes": 62107,
+          "sha256": "4a4ade80bbfd53077b7c732651fe4231a1c32d82dd4fccc61ab41b82d9ba89c5"
+        },
+        {
+          "path": "indoor_forward_10/leica.txt",
+          "bytes": 369523,
+          "sha256": "26f480fd337eb6982826cae8bdc95d20df8d8e8b99d611df27bddc4cbdfbd7e3"
+        },
+        {
+          "path": "indoor_forward_10.zip",
+          "bytes": 68548,
+          "sha256": "c884f92821cef5c6007db9cf55171d051432bc40a55947fa3242b94920c6f7bb"
+        },
+        {
+          "path": "indoor_forward_3/leica.txt",
+          "bytes": 349250,
+          "sha256": "e754a41ca0f89736d0e8c06bf9110c6360363f3293f8c1bb9b1677964051b5e3"
+        },
+        {
+          "path": "indoor_forward_3.zip",
+          "bytes": 75706,
+          "sha256": "a180ad4f956132010df1c4c0ac049069904f7a86092664422943b9041ba07f21"
+        },
+        {
+          "path": "indoor_forward_5/leica.txt",
+          "bytes": 657248,
+          "sha256": "1ba3080c475073cc9a1e498a48d9a553d7c084dc9b44b4f659db3867d1cb1d16"
+        },
+        {
+          "path": "indoor_forward_5.zip",
+          "bytes": 142092,
+          "sha256": "f85f14e8fce097bcbe0598aef10f1c57883b1d41e57607299d95caad32f36054"
+        },
+        {
+          "path": "indoor_forward_6/leica.txt",
+          "bytes": 297110,
+          "sha256": "73b002ee28b99349d2ea35b7fa806e79c63387a1c10e272706159db379d7c139"
+        },
+        {
+          "path": "indoor_forward_6.zip",
+          "bytes": 58165,
+          "sha256": "4b60dc2540d84497b0a7f1f00562f4dde249a9f1585fd34f789a1560b36643f1"
+        },
+        {
+          "path": "indoor_forward_7/leica.txt",
+          "bytes": 458207,
+          "sha256": "5de7d7ee4316f9bbf920d360dc2f949bb3cb180349582825ad5050cb7a98d71d"
+        },
+        {
+          "path": "indoor_forward_7.zip",
+          "bytes": 94571,
+          "sha256": "47eebeec75e45b70eb4dc26c202d8fdfdfaedf9d9f00552cd6a701002a44663d"
+        },
+        {
+          "path": "indoor_forward_9/leica.txt",
+          "bytes": 331728,
+          "sha256": "0c7147eccdd3ad48383290a5593708732afc270136c2a5cb60d2692d6fa1b3ed"
+        },
+        {
+          "path": "indoor_forward_9.zip",
+          "bytes": 68215,
+          "sha256": "28ac9aabc01432b66d1c37655951e284a0d2a1effa055fd5c24a82116158b376"
+        },
+        {
+          "path": "outdoor_45_1/leica.txt",
+          "bytes": 230710,
+          "sha256": "4eba733b88a786d6313dae4ca6d77e2baab9255d31a8db80b0c2e383aad4e373"
+        },
+        {
+          "path": "outdoor_45_1.zip",
+          "bytes": 46314,
+          "sha256": "5f9776431b9f70d792c003fcd9aa403e5ab160a66eaa588bbf7f62f1dd293a83"
+        },
+        {
+          "path": "outdoor_forward_1/leica.txt",
+          "bytes": 877930,
+          "sha256": "a285f2a066a7608603e4ac15f950d9040b9b1cc88982bf55f9dd427e57c24a2c"
+        },
+        {
+          "path": "outdoor_forward_1.zip",
+          "bytes": 123336,
+          "sha256": "73946f3b7feefe93466c0163cf311773abdd8d937a9fdece3561a7af94b0b25c"
+        },
+        {
+          "path": "outdoor_forward_3/leica.txt",
+          "bytes": 581183,
+          "sha256": "4db3fe6ecd8ced8d13e67290ebda7cf43c7d5682d6d6fa8e56c7e0b866a213df"
+        },
+        {
+          "path": "outdoor_forward_3.zip",
+          "bytes": 117015,
+          "sha256": "c61c0aaaf0165a267b9518b6853610f95fe9ffd1cf17b4908964b5159c244679"
+        },
+        {
+          "path": "outdoor_forward_5/leica.txt",
+          "bytes": 411988,
+          "sha256": "467b81a28231de2f720ead03d67a2ababaf49103cdc5e0640e2e3abcf9f18f8d"
+        },
+        {
+          "path": "outdoor_forward_5.zip",
+          "bytes": 72416,
+          "sha256": "3f1e69c2ad3582e62f3318592baed9d0676fc0eb4c217560c8b9c00823ccc842"
+        }
+      ]
+    },
+    "m3ed_falcon": {
+      "official_url": "https://m3ed.io/",
+      "license": "CC BY-SA 4.0",
+      "status": "locally verified",
+      "file_count": 19,
+      "total_bytes": 6600960,
+      "files": [
+        {
+          "path": "falcon_forest_into_forest_1_pose_gt.h5",
+          "bytes": 520368,
+          "sha256": "59acae6d9f67f3a869d5f976e563834d254031907e811fc74b3556a491812f77"
+        },
+        {
+          "path": "falcon_forest_into_forest_2_pose_gt.h5",
+          "bytes": 434688,
+          "sha256": "237b54667e2b3b3a443ccbe1ba06be2575d234308a3a17a1d736cfb325bddfe0"
+        },
+        {
+          "path": "falcon_forest_into_forest_4_pose_gt.h5",
+          "bytes": 596800,
+          "sha256": "a6ae63c1b3939e9fc3a470f9132f87bf0aad113d2f55f8fa9dfe770b0a54b348"
+        },
+        {
+          "path": "falcon_forest_road_1_pose_gt.h5",
+          "bytes": 461888,
+          "sha256": "e1e0381980b15321ce35d1d349487787d2c2bb2038b22a5fffabf92310a9a44c"
+        },
+        {
+          "path": "falcon_forest_road_2_pose_gt.h5",
+          "bytes": 467056,
+          "sha256": "1b3a6e2cd8be3e4c4ec2689e962a9328de15c1490ca5e851169afac872ffe03a"
+        },
+        {
+          "path": "falcon_forest_road_forest_pose_gt.h5",
+          "bytes": 621552,
+          "sha256": "effc3c1c54583e816b65a1348816790007ae55090bcfbf1bd2fd2d47f32480c4"
+        },
+        {
+          "path": "falcon_indoor_flight_1_pose_gt.h5",
+          "bytes": 163232,
+          "sha256": "c942472fae9f06be061bb4e72c2f3e0bfc4eafb54172ff5e360cf0fd1a500364"
+        },
+        {
+          "path": "falcon_indoor_flight_2_pose_gt.h5",
+          "bytes": 162144,
+          "sha256": "54b5541a1b4a9093a0d350d647cd23f89337f18014e0f15a65507273d89da631"
+        },
+        {
+          "path": "falcon_indoor_flight_3_pose_gt.h5",
+          "bytes": 160784,
+          "sha256": "ed2b8e5a09e60dec433a822d7988d2c2c9d471fccc5e30c28e3104bb8508ee00"
+        },
+        {
+          "path": "falcon_outdoor_day_fast_flight_1_pose_gt.h5",
+          "bytes": 250000,
+          "sha256": "3d37700f017395e40af77ac6fe309fd27e68de4bc59a9bdb81d3fdf75b1472cb"
+        },
+        {
+          "path": "falcon_outdoor_day_fast_flight_2_pose_gt.h5",
+          "bytes": 451824,
+          "sha256": "762507dcdb95adf02881900940b4c0a702b51cf41dd9c67a39137bf88ba1e23c"
+        },
+        {
+          "path": "falcon_outdoor_day_penno_cars_pose_gt.h5",
+          "bytes": 342480,
+          "sha256": "e9e3c7d0b27f78e2c7ec9ff0559911d9029a61aa1fdf9b508a731593f1e102cb"
+        },
+        {
+          "path": "falcon_outdoor_day_penno_parking_1_pose_gt.h5",
+          "bytes": 314192,
+          "sha256": "fdfbd9b22d859fd88541998d1f261e06f2b434d5d17a2836aa22b23c232deb17"
+        },
+        {
+          "path": "falcon_outdoor_day_penno_parking_2_pose_gt.h5",
+          "bytes": 303584,
+          "sha256": "ec2b094e64d8f154a57e62931f5ab5fc452a3b8d51a46b91fd4d9f30616dd76e"
+        },
+        {
+          "path": "falcon_outdoor_day_penno_plaza_pose_gt.h5",
+          "bytes": 192608,
+          "sha256": "1fa2a57eb7b56e1bc2b990e5244b780b0b2d3fbf0db4da15348aa63568c4cd3d"
+        },
+        {
+          "path": "falcon_outdoor_day_penno_trees_pose_gt.h5",
+          "bytes": 366960,
+          "sha256": "dbe1f643555e1cd9ec8729549bbb826424ea216f4dc42f8604fd44ab9c969232"
+        },
+        {
+          "path": "falcon_outdoor_night_high_beams_pose_gt.h5",
+          "bytes": 184176,
+          "sha256": "54fab2c3f1559b276d748f784162c4eb1b80c4916deded38eb719f75e30709ff"
+        },
+        {
+          "path": "falcon_outdoor_night_penno_parking_1_pose_gt.h5",
+          "bytes": 288352,
+          "sha256": "109d43542b6fed2fd5086c957db3098c0d1a719c03786289b33383d8a29fac56"
+        },
+        {
+          "path": "falcon_outdoor_night_penno_parking_2_pose_gt.h5",
+          "bytes": 318272,
+          "sha256": "0f20dd4ecce2dd4c722834dedf4073a14dc88d395fccb98e484ef2a5283fd429"
+        }
+      ]
+    },
+    "6gl_cld26_v2": {
+      "doi": "10.5281/zenodo.21240929",
+      "license": "not explicitly displayed; redistribution disabled",
+      "status": "locally verified",
+      "filename": "6gl-cld26-v2.zip",
+      "bytes": 192117198,
+      "sha256": "a52c7a0fd2d90c72d97069a57e27df8de62e657135ec48262fd6d7f6558dcada"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "mode": "paper",
+  "seeds": [
+    20261000,
+    20261001,
+    20261002,
+    20261003,
+    20261004,
+    20261005,
+    20261006,
+    20261007,
+    20261008,
+    20261009,
+    20261010,
+    20261011
+  ],
+  "B": 4,
+  "K": 20,
+  "H": 800,
+  "change_t": 400,
+  "n0": 8,
+  "block_length": 64,
+  "settings": [
+    {
+      "family": "delivery",
+      "success_probability": 1.0,
+      "delay_slots": 0,
+      "capacity": 4
+    },
+    {
+      "family": "delivery",
+      "success_probability": 0.9,
+      "delay_slots": 0,
+      "capacity": 4
+    },
+    {
+      "family": "delivery",
+      "success_probability": 0.8,
+      "delay_slots": 0,
+      "capacity": 4
+    },
+    {
+      "family": "delivery",
+      "success_probability": 0.7,
+      "delay_slots": 0,
+      "capacity": 4
+    },
+    {
+      "family": "delay",
+      "success_probability": 0.9,
+      "delay_slots": 0,
+      "capacity": 4
+    },
+    {
+      "family": "delay",
+      "success_probability": 0.9,
+      "delay_slots": 1,
+      "capacity": 4
+    },
+    {
+      "family": "delay",
+      "success_probability": 0.9,
+      "delay_slots": 3,
+      "capacity": 4
+    },
+    {
+      "family": "delay",
+      "success_probability": 0.9,
+      "delay_slots": 5,
+      "capacity": 4
+    },
+    {
+      "family": "capacity",
+      "success_probability": 0.9,
+      "delay_slots": 1,
+      "capacity": 2
+    },
+    {
+      "family": "capacity",
+      "success_probability": 0.9,
+      "delay_slots": 1,
+      "capacity": 4
+    },
+    {
+      "family": "capacity",
+      "success_probability": 0.9,
+      "delay_slots": 1,
+      "capacity": 8
+    }
+  ],
+  "pairing": "same latent problem, observation-indexed CV bank, and attempt-indexed channel uniforms within each seed",
+  "oracle_boundary": "true-model Whittle under the same channel sample path; not a global optimum for delayed/lossy control"
+}
