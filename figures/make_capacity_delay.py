@@ -62,7 +62,7 @@ def setup_style() -> None:
     mpl.rcParams.update(
         {
             "font.family": "sans-serif",
-            "font.sans-serif": ["Arial", "DejaVu Sans"],
+            "font.sans-serif": ["Arial", "Liberation Sans", "DejaVu Sans"],
             "font.size": MIN_FONT_PT,
             "axes.titlesize": 8.3,
             "axes.labelsize": 8.0,
@@ -194,8 +194,8 @@ def build_figure(rows: list[dict[str, str]]) -> tuple[plt.Figure, list[dict[str,
         sharey="row",
     )
     fig.subplots_adjust(
-        left=0.090,
-        right=0.988,
+        left=0.105,
+        right=0.975,
         bottom=0.100,
         top=0.870,
         wspace=0.16,

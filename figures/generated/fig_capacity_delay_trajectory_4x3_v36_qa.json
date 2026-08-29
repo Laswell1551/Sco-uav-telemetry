@@ -415,18 +415,18 @@
   "outputs": {
     "pdf": {
       "path": "figures/generated/fig_capacity_delay_trajectory_4x3_v36.pdf",
-      "bytes": 109333,
-      "sha256": "c49825c8e07829b4e7420312654757783f59459090e2f003932c139a0e87e0d0"
+      "bytes": 109383,
+      "sha256": "e99cb5ef8a4d3b77412eb25c5eae380ecaef4bb28bfef573880a39dd522ad931"
     },
     "svg": {
       "path": "figures/generated/fig_capacity_delay_trajectory_4x3_v36.svg",
-      "bytes": 294928,
-      "sha256": "2f7bc34590b4d45eff5732d4d57b35ae2f519a916a4f879b8a80f0dfcb1096ca"
+      "bytes": 295647,
+      "sha256": "44750a2d6bc117b87344cde159fc951a9dbcd4941941a92b5e7f163da5a3ddfb"
     },
     "png": {
       "path": "figures/generated/fig_capacity_delay_trajectory_4x3_v36.png",
-      "bytes": 344504,
-      "sha256": "7378fca7b744ca254cbd1d4f2c50a9985e43c11f8df57b38c9095a28ab6b4b6d"
+      "bytes": 339781,
+      "sha256": "7ce9feddab64b24d31406028ddf5c78665edcc136b529633958a15cb2b7d8e52"
     }
   }
 }

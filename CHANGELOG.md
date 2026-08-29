@@ -5,8 +5,10 @@
 - aligned the capacity--delay figure, metadata, and documentation with the
   manuscript's delay-unaware immediate-reset reference terminology;
 - expanded the capacity--delay legend to the formal method names;
-- hardened schematic node padding and Linux font fallbacks for consistent
-  publication QA across local and GitHub Actions renderers;
+- hardened schematic node padding, multi-panel labels, canvas margins, and
+  Linux font fallbacks for consistent publication QA across renderers;
+- upgraded the GitHub Actions runtime dependencies to their Node.js 24
+  generations;
 - refreshed the frozen manifest, release verification, and distributable
   archive after the final manuscript consistency audit.
 

@@ -21,7 +21,7 @@ def main():
     plt.rcParams.update(
         {
             "font.family": "sans-serif",
-            "font.sans-serif": ["Arial", "DejaVu Sans"],
+            "font.sans-serif": ["Arial", "Liberation Sans", "DejaVu Sans"],
             "font.size": 8,
             "axes.titlesize": 9,
             "axes.labelsize": 8,

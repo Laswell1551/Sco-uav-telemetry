@@ -92,7 +92,7 @@ def setup_style() -> None:
     mpl.rcParams.update(
         {
             "font.family": "sans-serif",
-            "font.sans-serif": ["Arial", "DejaVu Sans"],
+            "font.sans-serif": ["Arial", "Liberation Sans", "DejaVu Sans"],
             "font.size": 7.2,
             "axes.titlesize": 8.1,
             "axes.labelsize": 7.4,
@@ -388,7 +388,7 @@ def make_channel_pipeline_figure() -> dict[str, object]:
             "n": 4,
         },
         {
-            "label": r"Delivery: $p=.9$  [delay anchor]",
+            "label": r"Delivery: $p=.9$ ($d=0$)",
             "family": "delivery",
             "p": 0.9,
             "d": 0,
@@ -409,7 +409,7 @@ def make_channel_pipeline_figure() -> dict[str, object]:
             "n": 4,
         },
         {
-            "label": r"Delay: $d=1$  [capacity anchor]",
+            "label": r"Delay: $d=1$ ($N/K=.2$)",
             "family": "delay",
             "p": 0.9,
             "d": 1,
@@ -1077,7 +1077,7 @@ def make_random_delay_performance_mechanism_figure() -> dict[str, object]:
     ax_b.set_xticks([-10, 0, 20, 40])
     ax_b.tick_params(axis="y", labelleft=False)
     ax_b.set_xlabel("Share or paired change (percentage points)")
-    panel_title(ax_b, "(b) Concurrency and stale-arrival boundary")
+    panel_title(ax_b, "(b) Concurrency/stale-arrival boundary")
     grid_x(ax_b)
 
     legend_handles = [

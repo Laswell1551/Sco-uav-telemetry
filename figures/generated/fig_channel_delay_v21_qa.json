@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "renderer": "make_channel_delay.py",
-  "renderer_sha256": "41F0891CE72A3FA234963B3BFD4C7F1594D22AAC25BC4F94029FF7B09DF1092E",
+  "renderer_sha256": "E2CEE058091E231444BC5F185C8D6876C517CB5AD63F32505621BC647FE6AF47",
   "output_directory": "generated",
   "design_contract": {
     "target": "IEEE TMC single- and full-width figures",
@@ -94,7 +94,7 @@
               6.694249813119471
             ]
           },
-          "Delivery: $p=.9$  [delay anchor]": {
+          "Delivery: $p=.9$ ($d=0$)": {
             "cumulative_ucb_cv": [
               10.09074955524549,
               9.079214952424246,
@@ -145,7 +145,7 @@
               9.763856111839221
             ]
           },
-          "Delay: $d=1$  [capacity anchor]": {
+          "Delay: $d=1$ ($N/K=.2$)": {
             "cumulative_ucb_cv": [
               12.082897679569927,
               10.855294943280928,
@@ -427,18 +427,18 @@
       "outputs": {
         "pdf": {
           "path": "generated/fig_channel_pipeline_evidence_v21.pdf",
-          "bytes": 62819,
-          "sha256": "D718B036315D75148E2D87FCBC2FC5E6A6925D5FA9B374863ADBB77B8527EF57"
+          "bytes": 62717,
+          "sha256": "BC78F4B3C4BD5AC68A300FAD9F8A2689233DCD40E1C7B6659B4CF3FF384EC894"
         },
         "svg": {
           "path": "generated/fig_channel_pipeline_evidence_v21.svg",
-          "bytes": 70504,
-          "sha256": "5ECB74F20BE9B17FB1A7634552EDE9D1BCC9AA717567851FC924166B96241295"
+          "bytes": 70771,
+          "sha256": "450186F56AF6D786ED0A1D540911B059AEB3EA1329CA4E6BC697B01BD8B7E837"
         },
         "png": {
           "path": "generated/fig_channel_pipeline_evidence_v21.png",
-          "bytes": 216486,
-          "sha256": "1035691A4D50D441F640A730B62ACA7AA05BD67A48743621163654235C9CCB7B"
+          "bytes": 215781,
+          "sha256": "ED0AC721490D6E3057EC07DFAC0F41CCF357788B0CCD4437D552BD8017819D7B"
         }
       }
     },
@@ -626,12 +626,12 @@
         "pdf": {
           "path": "generated/fig_random_delay_profiles_v21.pdf",
           "bytes": 49336,
-          "sha256": "9E0D768D10EF0E38A04572258E67211E235661F033E50451D70BD5030293D8AD"
+          "sha256": "527D51CDA8AAB0851909D798B4811C28D13B741C4C83F8463D992B5AE54631F2"
         },
         "svg": {
           "path": "generated/fig_random_delay_profiles_v21.svg",
-          "bytes": 26073,
-          "sha256": "5E2B4EE77D7EFA9CF1144FF8E1686B49F199A871B3BDA725E8A4597987B5197D"
+          "bytes": 26358,
+          "sha256": "F40CA46006AFB2F74D3CA3C7139619B74C467265AE60FD2C8399837B4805F7E5"
         },
         "png": {
           "path": "generated/fig_random_delay_profiles_v21.png",
@@ -915,18 +915,18 @@
       "outputs": {
         "pdf": {
           "path": "generated/fig_random_delay_performance_mechanism_v21.pdf",
-          "bytes": 55097,
-          "sha256": "A4BC6EC549715879EF507208B3D3A6642F263A11BD58CD0FF9D032A17DB68D9D"
+          "bytes": 55313,
+          "sha256": "9C0DDBAD70EEF459DA4E16279B26AB1EBCEE96D7C62A14EEEE52077A23E17B9F"
         },
         "svg": {
           "path": "generated/fig_random_delay_performance_mechanism_v21.svg",
-          "bytes": 40429,
-          "sha256": "1A60D783ADE8E9637ED73B8318C2C92EBEB7BC9BB76BC633E103BEF208C9D298"
+          "bytes": 40881,
+          "sha256": "AB3B559BF5BA791290A2B268026A11D8B261C9C1EEB54B11D3DD4F84D8249A14"
         },
         "png": {
           "path": "generated/fig_random_delay_performance_mechanism_v21.png",
-          "bytes": 106965,
-          "sha256": "D4A61E3DB02030F40C9D2703634F7EA24CB9A13A0EC00667AF4F301A878C2FC0"
+          "bytes": 107497,
+          "sha256": "554A8F6E650C9A6A7C1487BF7D59949DFE5E0647D826505520654C12774EFFF5"
         }
       }
     }

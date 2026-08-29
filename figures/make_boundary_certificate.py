@@ -54,7 +54,7 @@ def setup_style() -> None:
     mpl.rcParams.update(
         {
             "font.family": "sans-serif",
-            "font.sans-serif": ["Arial", "DejaVu Sans"],
+            "font.sans-serif": ["Arial", "Liberation Sans", "DejaVu Sans"],
             "font.size": 7.4,
             "axes.titlesize": 8.1,
             "axes.labelsize": 7.5,
