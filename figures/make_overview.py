@@ -468,7 +468,7 @@ def main() -> None:
     )
 
     # Age-only state.
-    row1_y, row1_h, row1_c = 0.285, 0.105, 0.3375
+    row1_y, row1_h, row1_c = 0.275, 0.125, 0.3375
     add_node(
         ax,
         tracked,
